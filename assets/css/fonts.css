@@ -1,0 +1,14 @@
+@font-face {
+	font-family: "PigPen";
+	src: url("../fonts/PigpenCipher.otf");
+}
+
+@font-face {
+	font-family: "Braille";
+	src: url("../fonts/Braille.ttf");
+}
+
+@font-face {
+	font-family: "Morse";
+	src: url("../fonts/Morse.ttf");
+}

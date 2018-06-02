@@ -1,0 +1,42 @@
+<section class="cv">
+	<div class = "cv-author">
+		<ul id = "double">
+		<!--
+		{% if site.email %}
+			<li class><i class="fa fa-envelope-o"></i><a href="mailto:{{site.email}}">{{site.email}}</a></li>
+		{% endif %}
+		
+		{% if site.phone %}
+			<li><i class="fa fa-phone"></i><a href="tel:{{site.phone}}">{{site.phone}}</a></li>
+		{% endif %}
+		
+		{% if site.address1 %}
+			<li><i class="fa fa-map"></i><span>{{site.address1}}<br/>{{site.address2}}<br/>{{site.address3}}</span></li>
+		{% endif %}  		
+		
+		{% if site.googlemap-address %}
+		<li><i class="fa fa-map-marker"></i><a href="https://goo.gl/maps/{{site.googlemap-address}}">Google Map</a></li>
+		{% endif %}  
+
+		{% if site.website %}
+			<li><i class="fa fa-globe"></i><a href="http://{{site.website}}" target="_blank">{{site.website}}</a></li>
+		{% endif %}
+		-->
+		{% if site.viadeo %}
+			<li><i class="fa fa-viadeo"></i><a href="http://www.viadeo.com/p/{{site.viadeo}}" target="_blank">www.viadeo.com/p/{{site.viadeo}}</a></li>
+		{% endif %}
+		
+		{% if site.linkedin %}
+			<li><i class="fa fa-linkedin"></i><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank">in.linkedin.com/in/{{site.linkedin}}</a></li>
+		{% endif %}
+		
+		{% if site.github %}
+			<li><i class="fa fa-github"></i><a href="http://github.com/{{site.github}}" target="_blank">github.com/{{site.github}}</a></li>
+		{% endif %}
+		
+		{% if site.bitbucket %}
+			<li><i class="fa fa-bitbucket"></i><a href="https://bitbucket.org/{{site.bitbucket}}" target="_blank">bitbucket.org/{{site.bitbucket}}</a></li>
+		{% endif %}
+		</ul>
+	</div>
+</section>

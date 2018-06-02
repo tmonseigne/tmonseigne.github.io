@@ -1,0 +1,154 @@
+
+/* ======= Base ======= */
+.cv .cv-author {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #8f98a3;
+	margin-bottom: -40px;
+}
+
+.cv .cv-author ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.cv .cv-author ul li span {
+    display: inline-block;  
+    vertical-align: middle;     
+}
+
+.cv .cv-author li{
+	min-height: 35px;
+	float:left;
+	display:inline;
+}
+#double li	{ width:50%;}
+/*
+#triple li	{ width:33.333%; }
+#quad li	{ width:25%; }
+#six li		{ width:16.666%; }
+*/
+/* ======= Title ======= */
+.cv .cv-title {
+	text-transform: uppercase;
+	font-size: 24px;
+	color: #2d7788;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.cv .cv-title .fa, .cv .cv-author .fa {
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+	display: inline-block;
+	color: #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background: #2d7788;
+	text-align: center;
+	padding-top: 8px;
+	font-size: 16px;
+	position: relative;
+	top: -2px;
+}
+
+.cv {
+	margin-bottom: 60px;
+	font-size: 12px;
+	color: #222222;
+}
+
+.cv .xp-item {
+	margin-bottom: 20px;
+}
+
+.cv .xp-upper-row, .form-item {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 2px;
+}
+
+.cv .form-item {
+	margin-top: 10px;
+}
+
+.cv .xp-title, .form-title {
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.cv .xp-time, .form-time {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #8f98a3;
+}
+
+.cv .xp-company, .school {
+	color: #8f98a3;
+}
+
+.cv .xp-details{
+	margin-top: -10px;
+}
+
+/* ======= Skill ======= */
+.cv .skill-group {
+	margin-bottom: 10px;	
+	
+}
+.cv .skill-group .skill-group-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0px;	
+}
+.cv .skill-group .skill-item, .skill-list {
+	font-size: 12px;
+	margin: 0px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+.cv .skill-group .level-bar {
+	height: 12px;
+	background: #D0D0D0;
+}
+.cv .skill-group .level-bar-inner {
+	height: 12px;
+	background: #7bc2d3;
+}
+
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.skill-title {
+	  display: inline-block;
+	  float: left;
+	  width: 30%;
+	  margin-bottom: 0;
+	}
+	.level-bar {
+	  display: inline-block;
+	  width: 70%;
+	  float: left;
+	  position: relative;
+	  top: 1px;
+	}
+  }
+  /* Large devices (large desktops, 1200px and up) */
+  /* Ex-Large devices (large desktops, 1200px and up) */
+  

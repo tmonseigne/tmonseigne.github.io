@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#311e3e">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#311e3e">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="../../assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="../../assets/css/main.css">
+	<link rel="stylesheet" href="../../assets/css/highlight.css">
+	<link rel="stylesheet" href="../../assets/css/cv.css">
+	<link rel="stylesheet" href="../../assets/css/articles.css">
+	<link rel="stylesheet" href="../../assets/css/friends.css">
+	<link rel="stylesheet" href="../../assets/css/portfolio.css">
+	<link rel="stylesheet" href="../../assets/css/lightbox.css">
+	<link rel="stylesheet" href="../../assets/css/fonts.css">
+	<!-- Mathjax -->
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+	<!-- JS -->
+	<script src="../../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../../assets/js/jekyll-search.js"></script>
+
+	<script src="../../assets/js/main.js"></script>
+	<script src="../../assets/js/lightbox.js"></script>
+	<script>
+		lightbox.option({
+			'wrapAround': true
+		})
+	</script>
+
+	<script language="JavaScript">
+		// Elements
+		var IntTab, ExtTab, MobTab, DivTab, AniTab,
+			IntPrev, IntNext;
+
+		var TabIds = ["IntTab", "ExtTab", "MobTab", "DivTab", "AniTab"];
+		var Path = "/assets/img/3Dart/";
+		var ImgCurrent = [1, 1, 1, 1, 1];
+		var ImgPath = ["interieur", "exterieur", "mobilier", "divers", "anim"];
+		var ImgName = [["Chambre_01.jpg", "Chambre_02.jpg", "Cuisine_01.jpg", "Cuisine_02.jpg", "Cuisine_03.jpg", "Cuisine_04.jpg", "Cuisine_05.jpg", "Cuisine_06.jpg", "Cuisine_07.jpg", "Cuisine_08.jpg", "Dressing.jpg", "Local_01.jpg", "Local_02.jpg", "Petite_Chambre.jpg", "Restaurant.jpg", "Salon.jpg", "SDB_01.jpg", "SDB_02.jpg", "SDB_03.jpg", "SDB_04.jpg", "SDB_05.jpg"]];
+		var AltImg = [["Conception d'une chambre de bébé évolutive 01", "Conception d'une chambre de bébé évolutive 02", "Prototype de Cuisine", "Conception d'une cuisine dans un espace restreint", "Conception d'une cuisine dans un espace restreint", "Conception d'une cuisine avec une véranda", "Conception d'une cuisine avec une véranda", "Conception d'une cuisine ouverte", "Conception d'une cuisine dans un chateau restauré", "Conception d'une cuisine avec ouverture sur cour intérieure", "Conception d'un dressing attenant à la chambre", "Conception d'un magasin de vins régionaux", "Conception d'un magasin de vins régionaux", "Petite Chambre", "Conception/Rénovation d'un restaurant", "Conception d'un ensemble TV", "Conception d'une salle de bain chic", "Conception d'une salle de bain chic", "Conception d'une salle de bain zen", "Conception d'une salle de bain zen", "Conception d'une salle de bain chaude"]];
+
+		function CorrectInterval(val, min, max) {
+			if (val >= max) { return min; }
+			if (val < min) { return max - 1; }
+			return val;
+		}
+
+		function ChangeImg(slide, sens) {
+			ImgCurrent[slide] += sens;
+			var nb = ImgName[slide].length;
+			ImgCurrent[slide] = CorrectInterval(ImgCurrent[slide], 0, nb);
+			PrevNumber = CorrectInterval(ImgCurrent[slide] - 1, 0, nb);
+			NextNumber = CorrectInterval(ImgCurrent[slide] + 1, 0, nb);
+
+			var Tab = document.getElementById(TabIds[slide]);
+			var Imgs = Tab.getElementsByTagName('img');
+			Imgs[0].src = Path + ImgPath[slide] + "/" + ImgName[slide][PrevNumber];
+			Imgs[1].src = Path + ImgPath[slide] + "/" + ImgName[slide][ImgCurrent[slide]];
+			Imgs[2].src = Path + ImgPath[slide] + "/" + ImgName[slide][NextNumber];
+
+			Imgs[0].alt = Path + ImgPath[slide] + "/" + AltImg[slide][PrevNumber];
+			Imgs[1].alt = Path + ImgPath[slide] + "/" + AltImg[slide][ImgCurrent[slide]];
+			Imgs[2].alt = Path + ImgPath[slide] + "/" + AltImg[slide][NextNumber];
+
+			var As = Tab.getElementsByTagName('a');
+			As[0].href = Path + ImgPath[slide] + "/" + ImgName[slide][PrevNumber];
+			As[1].href = Path + ImgPath[slide] + "/" + ImgName[slide][ImgCurrent[slide]];
+			As[2].href = Path + ImgPath[slide] + "/" + ImgName[slide][NextNumber];
+
+			//As[0].data-title = Path + ImgPath[slide] + "/" + AltImg[slide][PrevNumber];
+			//As[1].data-title = Path + ImgPath[slide] + "/" + AltImg[slide][ImgCurrent[slide]];
+			//As[2].data-title = Path + ImgPath[slide] + "/" + AltImg[slide][NextNumber];
+		}
+
+		window.onload = function () {
+			IntTab = document.getElementById("IntTab");
+			IntPrev = document.getElementById("IntPrev");
+			IntNext = document.getElementById("IntNext");
+			IntPrev.onclick = IntPrevHandler;
+			IntNext.onclick = IntNextHandler;
+		}
+
+		function IntPrevHandler() {
+			ChangeImg(0, -1)
+		}
+		function IntNextHandler() {
+			ChangeImg(0, 1)
+		}
+	</script>
+</head>
+
+<body>
+	<div class="small-wrapper">
+		<h1>Test</h1>
+		<table id="IntTab" style="width:100%">
+			<tr align="center" valign="middle">
+				<td id="IntPrev" style="width:10%">
+					<input type="image" src="/assets/img/lightbox/prev.png" alt="Prev" />
+				</td>
+				<td style="width:15%">
+					<a href="/assets/img/3Dart/interieur/Chambre_01.jpg" data-lightbox="Interieur" data-title="Conception d'une chambre de bébé évolutive 01">
+						<img src="/assets/img/3Dart/interieur/Chambre_01.jpg" alt="Conception d'une chambre de bébé évolutive 01" />
+					</a>
+				</td>
+				<td style="width:50%">
+					<a href="/assets/img/3Dart/interieur/Chambre_02.jpg" data-lightbox="Interieur" data-title="Conception d'une chambre de bébé évolutive 02">
+						<img src="/assets/img/3Dart/interieur/Chambre_02.jpg" alt="Conception d'une chambre de bébé évolutive 02" />
+					</a>
+				</td>
+				<td style="width:15%">
+					<a href="/assets/img/3Dart/interieur/Cuisine_01.jpg" data-lightbox="Interieur" data-title="Prototype de Cuisine">
+						<img src="/assets/img/3Dart/interieur/Cuisine_01.jpg" alt="Prototype de Cuisine" />
+					</a>
+				</td>
+				<td id="IntNext" style="width:10%">
+					<input type="image" src="/assets/img/lightbox/next.png" alt="Next" />
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- End Small Wrapper -->
+</body>
+
+</html>

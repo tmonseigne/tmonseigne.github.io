@@ -1,0 +1,466 @@
+<script language="JavaScript">
+	MajAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	MinAlphabet = 'abcdefghijklmnopqrstuvwxyz';
+	Alphabet = ''.concat(MajAlphabet, MinAlphabet);
+	AlphabetCrypt = '';
+
+	// Elements
+	var RadioCaesar, RadioGridH, RadioGridV, RadioParticular,
+		SettingCaesarRow, SettingGridRow, SettingParticularRow,
+		SettingCaesar, SettingGrid, SettingParticular,
+		ComputeCaesar, ComputeGrid,
+		ButtonCrypt, ButtonUnCrypt,
+		Original_TextArea, Encrypting_TextArea;
+
+	// Suppression des nombre, espace et ponctuation
+	function StandardizationKey(key) {
+		key = key.toUpperCase();
+		var Res = '';
+		for (var i = 0; i < key.length; ++i) {
+			if (MajAlphabet.indexOf(key.charAt(i)) != -1) {
+				Res += key.charAt(i);
+			}
+		}
+		return Res;
+	}
+
+	function CleanSpace(text) {
+		var Res = '';
+		for (var i = 0; i < text.length; ++i) {
+			var car = text.charAt(i);
+			if (car != " ") {
+				Res += car;
+			}
+		}
+		return Res;
+	}
+
+	function CleanText(text) {
+		var Res = '';
+		for (var i = 0; i < text.length; ++i) {
+			var car = text.charAt(i)
+			if (car == "ç") {
+				car = "c"
+			} else if ((car == "ê") || (car == "ë") || (car == "é") || (car == "è")) {
+				car = "e"
+			} else if ((car == "â") || (car == "ä") || (car == "à")) {
+				car = "a"
+			} else if ((car == "î") || (car == "ï")) {
+				car = "i"
+			} else if ((car == "ô") || (car == "ö")) {
+				car = "o"
+			} else if ((car == "û") || (car == "ü") || (car == "ù")) {
+				car = "u"
+			}
+			Res += car;
+		}
+		return Res;
+	}
+
+	function ChangeCase(text) {
+		var Res = '';
+		if (document.getElementById("TypeCasseNoChange").checked == true) {
+			Res = text;
+		} else if (document.getElementById("TypeCasseUpper").checked == true) {
+			Res = text.toUpperCase();
+		} else if (document.getElementById("TypeCasseLower").checked == true) {
+			Res = text.toLocaleLowerCase();
+		} else if (document.getElementById("TypeCasseRandom").checked == true) {
+			for (var i = 0; i < text.length; ++i) {
+				Res += (Math.random() >= 0.5 ? text.charAt(i).toUpperCase() : text.charAt(i).toLowerCase());
+			}
+		}
+		return Res;
+	}
+
+	function ChangeSpace(text) {
+		var Res = '';
+		if (document.getElementById("TypeSpaceNoChange").checked == true) {
+			Res = text;
+		} else {
+			var tmp = CleanSpace(text);
+			if (document.getElementById("TypeSpaceRandom").checked == true) {
+				for (var i = 0; i < tmp.length; ++i) {
+					Res += tmp.charAt(i);
+					if (Math.random() >= 0.75) {
+						Res += " ";
+					}
+				}
+			} else {
+				var N = (document.getElementById("TypeSpace4").checked == true) ? 4 : 5;
+				for (var i = 0; i < tmp.length; ++i) {
+					if ((i % N == 0) && (i > 0)) {
+						Res += " ";
+					}
+					Res += tmp.charAt(i);
+				}
+			}
+		}
+		return Res;
+	}
+
+	function GetCaesarAlphabet(alphabet, key) {
+		while (key < 0) {
+			key += 26;
+		}
+		while (key > 25) {
+			key -= 26;
+		}
+		return ''.concat(alphabet.slice(key), alphabet.slice(0, key));
+	}
+
+	function GetGrid(alphabet, key) {
+		key = StandardizationKey(key);
+		var Grid = '';
+		// Remplissage avec le mot clef
+		for (var i = 0; i < key.length; ++i) {
+			var Character = key.charAt(i);
+			if (Grid.indexOf(Character) < 0) {
+				Grid += Character;
+			}
+		}
+		// Fin de Remplissage
+		var N = Grid.length
+		for (var i = 0; i < alphabet.length; ++i) {
+			var Character = alphabet.charAt(i);
+			if (Grid.indexOf(Character) < 0) {
+				Grid += Character;
+			}
+		}
+		// Stop Si Grille Horizontale
+		if (RadioGridH.checked == true) {
+			return Grid;
+		}
+
+		// Si grille verticale on modifie les positions
+		var Tab = '';
+		for (var i = 0; i < N; ++i) {
+			for (var j = 0; j < alphabet.length; j += N) {
+				Tab += Grid.charAt(i + j);
+			}
+		}
+		return Tab;
+
+	}
+
+	function WriteGrid(grid) {
+		var Letters = document.getElementsByName("GridLetter");
+		var L = grid.length;
+		for (i = 0; i < L; ++i) {
+			Letters[i].innerText = grid.charAt(i);
+		}
+	}
+
+	function Crypt(text, alphabet, alphabet_crypt) {
+		text = CleanText(text);
+		var Res = '';
+		var L = text.length;
+		for (var i = 0; i < L; ++i) {
+			var Character = text.charAt(i);
+			var idx = alphabet.indexOf(Character);
+			if (idx > -1) {
+				Res += alphabet_crypt.charAt(idx);
+			} else {
+				Res += Character;
+			}
+		}
+
+		Res = ChangeCase(Res);
+		Res = ChangeSpace(Res);
+
+		return Res;
+	}
+
+	function RadioHandler() {
+		if (RadioCaesar.checked == true) {
+			SettingCaesarRow.style.display = 'table-row';
+			SettingGridRow.style.display = 'none';
+			SettingParticularRow.style.display = 'none';
+		} else if (RadioGridH.checked == true || RadioGridV.checked == true) {
+			SettingCaesarRow.style.display = 'none';
+			SettingGridRow.style.display = 'table-row';
+			SettingParticularRow.style.display = 'none';
+		} else if (RadioParticular.checked == true) {
+			SettingCaesarRow.style.display = 'none';
+			SettingGridRow.style.display = 'none';
+			SettingParticularRow.style.display = 'table-row';
+		}
+	}
+
+	function CaesarGridHandler() {
+		var Key = parseInt(SettingCaesar.value);
+		var Grid = GetCaesarAlphabet(MajAlphabet, Key);
+		WriteGrid(Grid);
+		AlphabetCrypt = ''.concat(Grid, Grid.toLowerCase());
+	}
+
+	function ComputeGridHandler() {
+		var Key = SettingGrid.value;
+		Key = CleanText(Key);
+		Key = CleanSpace(Key);
+
+		var Grid = GetGrid(MajAlphabet, Key);
+		WriteGrid(Grid);
+		AlphabetCrypt = ''.concat(Grid, Grid.toLowerCase());
+	}
+
+	function ParticularHandler() {
+		var id = SettingParticular.value;
+		var Key;
+		if (id == 'Atbash') {
+			Key = 'ZYXWVUTSRQPONMLKJIHGFEDCBA';
+		} else if (id == "Albam") {
+			Key = 'NOPQRSTUVWXYZABCDEFGHIJKLM';
+		} else if (id == "Atbah") {
+			Key = 'IHGFNDCBARQPOEMLKJZYXWVUTS';
+		} else if (id == "Azerty") {
+			Key = 'AZERTYUIOPQSDFGHJKLMWXCVBN';
+		} else if (id == "Kendorimien") {
+			Key = 'ECDFIGHJOKLMNPUQRSTVYWXZAB';
+		}
+		var Grid = GetGrid(MajAlphabet, Key);
+		WriteGrid(Grid);
+		AlphabetCrypt = ''.concat(Grid, Grid.toLowerCase());
+	}
+
+	function CryptHandler() {
+		if (RadioCaesar.checked == true) {
+			CaesarGridHandler();
+		} else if (RadioGridH.checked == true || RadioGridV.checked == true) {
+			ComputeGridHandler();
+		} else if (RadioParticular.checked == true) {
+			ParticularHandler();
+		} else {
+			alert("YOLOOOOOOOOOOOOOOO");
+		}
+		Encrypting_TextArea.value = Crypt(Original_TextArea.value, Alphabet, AlphabetCrypt);
+	}
+
+	function UnCryptHandler() {
+		if (RadioCaesar.checked == true) {
+			CaesarGridHandler();
+		} else if (RadioGridH.checked == true || RadioGridV.checked == true) {
+			ComputeGridHandler();
+		} else if (RadioParticular.checked == true) {
+			ParticularHandler();
+		} else {
+			alert("YOLOOOOOOOOOOOOOOO");
+		}
+		Original_TextArea.value = Crypt(Encrypting_TextArea.value, AlphabetCrypt, Alphabet);
+	}
+
+
+	window.onload = function () {
+		// Affectation
+		RadioCaesar = document.getElementById('TypeCaesar');
+		RadioGridH = document.getElementById('TypeGridH');
+		RadioGridV = document.getElementById('TypeGridV');
+		RadioParticular = document.getElementById('TypeParticular');
+		SettingCaesarRow = document.getElementById("SettingCaesarRow");
+		SettingGridRow = document.getElementById("SettingGridRow");
+		SettingParticularRow = document.getElementById("SettingParticularRow");
+		SettingCaesar = document.getElementById("SettingCaesar");
+		SettingGrid = document.getElementById("SettingGrid");
+		SettingParticular = document.getElementById("SettingParticular");
+		ComputeCaesar = document.getElementById("ComputeCaesar");
+		ComputeGrid = document.getElementById("ComputeGrid");
+		Original_TextArea = document.getElementById("Original_TextArea");
+		Encrypting_TextArea = document.getElementById("Encrypting_TextArea");
+		ButtonCrypt = document.getElementById("ButtonCrypt");
+		ButtonUnCrypt = document.getElementById("ButtonUnCrypt");
+
+		//Handler
+		RadioCaesar.onclick = RadioHandler;
+		RadioGridH.onclick = RadioHandler;
+		RadioGridV.onclick = RadioHandler;
+		RadioParticular.onclick = RadioHandler;
+		ComputeCaesar.onclick = CaesarGridHandler;
+		SettingCaesar.onchange = CaesarGridHandler;
+		ComputeGrid.onclick = ComputeGridHandler;
+		SettingGrid.onchange = ComputeGridHandler;
+		SettingParticular.onchange = ParticularHandler;
+		ButtonCrypt.onclick = CryptHandler;
+		ButtonUnCrypt.onclick = UnCryptHandler;
+
+		RadioCaesar.checked = true;
+
+	}
+</script>
+
+
+<form>
+	<p>Méthode de Chiffrement : </p>
+	<!-- Méthode de Chiffrement -->
+	<table style="width:100%">
+		<tr>
+			<th>
+				<input type="radio" id="TypeCaesar" name="Choix Chiffrement" value="Radio César" checked>
+				<label for="TypeCaesar">Code de César</label>
+			</th>
+			<th>
+				<input type="radio" id="TypeGridH" name="Choix Chiffrement" value="Radio Grille Horizontale">
+				<label for="TypeGridH">Grille Horizontale</label>
+			</th>
+			<th>
+				<input type="radio" id="TypeGridV" name="Choix Chiffrement" value="Radio Grille Verticale">
+				<label for="TypeGridV">Grille Verticale</label>
+			</th>
+			<th>
+				<input type="radio" id="TypeParticular" name="Choix Chiffrement" value="Radio Particulier">
+				<label for="TypeParticular">Chiffrements Particuliers</label>
+			</th>
+		</tr>
+	</table>
+	<!-- Options de la méthode -->
+	<table style="width:100%">
+		<tr id="SettingCaesarRow">
+			<th width="15%" align="left">Décalage</th>
+			<td>
+				<input type="number" min="-25" max="25" style="width:12%" id="SettingCaesar" value="3">
+				<input type="button" id="ComputeCaesar" value="Calculer">
+			</td>
+		</tr>
+		<tr id="SettingGridRow" style="display: none">
+			<th width="15%" align="left">Mot clef</th>
+			<td>
+				<input type="text" name="clef" size="50" id="SettingGrid" value="mot clef">
+				<input type="button" id="ComputeGrid" value="Calculer">
+			</td>
+		</tr>
+		<tr id="SettingParticularRow" style="display: none">
+			<th width="15%" align="left">Chiffrement</th>
+			<td>
+				<select id="SettingParticular">
+					<option>Atbash</option>
+					<option>Albam</option>
+					<option>Atbah</option>
+					<option>Kendorimien</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<!-- Grille de Codage -->
+	<p>Grille de Chiffrement : </p>
+	<table style="width:100%" border="1">
+		<tr align="center">
+			<th width="15%" align="left">Original</th>
+			<td>A</td>
+			<td>B</td>
+			<td>C</td>
+			<td>D</td>
+			<td>E</td>
+			<td>F</td>
+			<td>G</td>
+			<td>H</td>
+			<td>I</td>
+			<td>J</td>
+			<td>K</td>
+			<td>L</td>
+			<td>M</td>
+			<td>N</td>
+			<td>O</td>
+			<td>P</td>
+			<td>Q</td>
+			<td>R</td>
+			<td>S</td>
+			<td>T</td>
+			<td>U</td>
+			<td>V</td>
+			<td>W</td>
+			<td>X</td>
+			<td>Y</td>
+			<td>Z</td>
+		</tr>
+		<tr align="center" bgcolor="#F0F0F0">
+			<th width="15%" align="left">Chiffrement</th>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+			<td name="GridLetter"></td>
+		</tr>
+	</table>
+
+	<p>Chiffrement : </p>
+	<table style="width:100%">
+		<tr>
+			<th width="15%" align="left">Casse</th>
+			<td>
+				<input type="radio" id="TypeCasseNoChange" name="Choix Casse" value="Aucun Changement" checked>
+				<label for="TypeCasseNoChange">Aucun Changement</label>
+			</td>
+			<td>
+				<input type="radio" id="TypeCasseUpper" name="Choix Casse" value="Majuscule">
+				<label for="TypeCasseUpper">Majuscule</label>
+			</td>
+			<td>
+				<input type="radio" id="TypeCasseLower" name="Choix Casse" value="Minuscule">
+				<label for="TypeCasseLower">Minuscule</label>
+			</td>
+			<td>
+				<input type="radio" id="TypeCasseRandom" name="Choix Casse" value="Aléatoire">
+				<label for="TypeCasseRandom">Aléatoire</label>
+			</td>
+		</tr>
+		<tr>
+			<th width="15%" align="left">Espacement</th>
+			<td>
+				<input type="radio" id="TypeSpaceNoChange" name="Choix Espace" value="Aucun Changement" checked>
+				<label for="TypeSpaceNoChange">Aucun Changement</label>
+			</td>
+			<td>
+				<input type="radio" id="TypeSpace4" name="Choix Espace" value="Bloc4">
+				<label for="TypeSpace4">Bloc de 4 Caractères</label>
+			</td>
+			<td>
+				<input type="radio" id="TypeSpace5" name="Choix Espace" value="Bloc5">
+				<label for="TypeSpace5">Bloc de 5 Caractères</label>
+			</td>
+			<td>
+				<input type="radio" id="TypeSpaceRandom" name="Choix Espace" value="Aléatoire">
+				<label for="TypeSpaceRandom">Aléatoire</label>
+			</td>
+		</tr>
+	</table>
+	<table style="width:100%">
+		<tr>
+			<th>Texte Original</th>
+			<th></th>
+			<th>Texte Chiffré</th>
+		</tr>
+		<tr>
+			<th style="width:47%">
+				<textarea style="width:100%" id="Original_TextArea">Texte original</textarea>
+			</th>
+			<th style="width:5%">
+				<input style="width:100%" type="button" id="ButtonCrypt" value=">">
+				<br>
+				<input style="width:100%" type="button" id="ButtonUnCrypt" value="<">
+			</th>
+			<th style="width:47%">
+				<textarea style="width:100%" id="Encrypting_TextArea">Texte chiffré</textarea>
+			</th>
+		</tr>
+	</table>
+</form>
