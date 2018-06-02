@@ -1,0 +1,43 @@
+# Site settings
+title: Thibaut Monseigne
+email: monseignethibaut@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Site de Thibaut Monseigne.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Author settings
+author: Thibaut Monseigne
+author-pic: Ange.jpg
+about-author: Étudiant en Master Informatique Image et Son.
+
+# Contact links
+email: monseignethibaut@gmail.com
+website: tmonseigne.github.io
+viadeo: 0024ykm81kv8x6d
+linkedin: thibaut-monseigne
+github: tmonseigne # Add your Github handle
+bitbucket: Rack07 # Add your Github handle
+
+# Paginate
+paginate: 6
+paginate_path: /page:num/
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]

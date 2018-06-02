@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Slider et slideshow</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<style>
+		body {
+			width: 996px;
+			margin: 0 auto;
+		}
+
+		.button {
+			-moz-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+			-webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+			box-shadow: inset 0px 1px 0px 0px #bee2f9;
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf));
+			background: -moz-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+			background: -webkit-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+			background: -o-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+			background: -ms-linear-gradient(top, #63b8ee 5%, #468ccf 100%);
+			background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf', GradientType=0);
+			background-color: #63b8ee;
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+			border: 1px solid #3866a3;
+			display: inline-block;
+			cursor: pointer;
+			color: #14396a;
+			font-family: Arial;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 6px 24px;
+			text-decoration: none;
+			text-shadow: 0px 1px 1px #7cacde;
+		}
+
+		.button:hover {
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee));
+			background: -moz-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+			background: -webkit-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+			background: -o-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+			background: -ms-linear-gradient(top, #468ccf 5%, #63b8ee 100%);
+			background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee', GradientType=0);
+			background-color: #468ccf;
+		}
+
+		.button:active {
+			position: relative;
+			top: 1px;
+		}
+
+		.container {
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			margin: 40px 0;
+		}
+
+		.container span {
+			margin-right: 10px;
+		}
+
+		.bx-wrapper {
+			position: absolute;
+			width: 350px;
+			height: 250px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+
+		.sliders {
+			position: relative;
+			height: 300px;
+			width: 100%;
+		}
+
+		.bx-viewport {
+			height: 250px !important;
+		}
+
+		.li,
+		.bx-clone {
+			width: 350px !important;
+			height: 150px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<span class="button" data-slider="Interieur">
+			Architecture (Intérieur)
+		</span>
+		<span class="button" data-slider="Exterieur">
+			Architecture (Extérieur)
+		</span>
+		<span class="button" data-slider="Mobilier">
+			Mobilier
+		</span>
+		<span class="button" data-slider="Divers">
+			Divers
+		</span>
+		<span class="button" data-slider="Animations">
+			Animations
+		</span>
+	</div>
+
+	<div class="sliders">
+		<ul class="bxslider Interieur">
+			<li>
+				<img src="/assets/img/3Dart/interieur/Chambre_01.jpg" alt="Conception d'une chambre de bébé évolutive 01" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Chambre_02.jpg" alt="Conception d'une chambre de bébé évolutive 02" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_01.jpg" alt="Prototype de Cuisine" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_02.jpg" alt="Conception d'une cuisine dans un espace restreint" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_03.jpg" alt="Conception d'une cuisine dans un espace restreint" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_04.jpg" alt="Conception d'une cuisine avec une véranda" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_05.jpg" alt="Conception d'une cuisine avec une véranda" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_06.jpg" alt="Conception d'une cuisine ouverte" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_07.jpg" alt="Conception d'une cuisine dans un chateau restauré" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Cuisine_08.jpg" alt="Conception d'une cuisine avec ouverture sur cour intérieure" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Dressing.jpg" alt="Conception d'un dressing attenant à la chambre" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Local_01.jpg" alt="Conception d'un magasin de vins régionaux" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Local_02.jpg" alt="Conception d'un magasin de vins régionaux" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Petite_Chambre.jpg" alt="Petite Chambre" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Restaurant.jpg" alt="Conception/Rénovation d'un restaurant" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/Salon.jpg" alt="Conception d'un ensemble TV" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/SDB_01.jpg" alt="Conception d'une salle de bain chic" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/SDB_02.jpg" alt="Conception d'une salle de bain chic" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/SDB_03.jpg" alt="Conception d'une salle de bain zen" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/SDB_04.jpg" alt="Conception d'une salle de bain zen" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/interieur/SDB_05.jpg" alt="Conception d'une salle de bain chaude" />
+			</li>
+		</ul>
+
+		<!-- slider 2 -->
+		<ul class="bxslider Exterieur">
+			<li>
+				<img src="/assets/img/3Dart/exterieur/Maison_01.jpg" alt="Prototype de maison familiale" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/exterieur/Maison_02.jpg" alt="Conception d'une façade d'un garage transformé en loft" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/exterieur/Maison_03.jpg" alt="Conception d'une extension de maison dans une forêt" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/exterieur/Maison_04.jpg" alt="Conception d'une extension de maison en ville avec terrasse"
+				/>
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/exterieur/Maison_05.jpg" alt="Conception d'une extension de maison en ville avec terrasse"
+				/>
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/exterieur/Terrasse.jpg" alt="Conception d'une extension de maison en ville avec terrasse"
+				/>
+			</li>
+		</ul>
+
+		<!-- slider 3 -->
+		<ul class="bxslider Mobilier">
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Bureau.jpg" alt="Conception d'un bureau ergonomique pour un magasin d'orthopédie"
+				/>
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Chaise.jpg" alt="Chaise" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Ilot_01.jpg" alt="Conception d'un ilot central pour une cuisine 01" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Ilot_02.jpg" alt="Conception d'un ilot central pour une cuisine 02" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Ilot_03.jpg" alt="Conception d'un ilot central pour une cuisine 03" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Meuble_DVD.jpg" alt="Conception d'un meuble DVD de grande capacité et de taille minimale"
+				/>
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Meuble_SDB_01.jpg" alt="Conception d'un meuble de buanderie/salle de bain secondaire"
+				/>
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Meuble_SDB_02.jpg" alt="Conception d'un meuble de salle de bain chaude" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/mobilier/Meuble_SDB_03.jpg" alt="Conception d'un meuble de salle de bain zen" />
+			</li>
+		</ul>
+
+		<!-- slider 4 -->
+		<ul class="bxslider Divers">
+			<li>
+				<img src="/assets/img/3Dart/divers/Angels.jpg" alt="Angels" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Chevalier.jpg" alt="Chevalier" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Courage.jpg" alt="Courage" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Dreammaker.jpg" alt="Dreammaker" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Fraicheur.jpg" alt="Fraicheur" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Legos.jpg" alt="Legos" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Dragster.jpg" alt="Dragster" />
+			</li>
+			<li>
+				<img src="/assets/img/3Dart/divers/Moto.jpg" alt="Moto" />
+			</li>
+		</ul>
+
+		<!-- slider 5 -->
+		<ul class="bxslider Animations">
+			<li>
+				<video src="/assets/img/3Dart/anim/Faren_Sombrepierre.webm" controls loop>
+					Votre navigateur ne gère pas l'élément
+					<code>video</code>.
+				</video>
+			</li>
+			<li>
+				<video src="/assets/img/3Dart/anim/Feilan_Bown.webm" controls loop>
+					Votre navigateur ne gère pas l'élément
+					<code>video</code>.
+				</video>
+			</li>
+			<li>
+				<video src="/assets/img/3Dart/anim/Gaelyth_Sangdacier.webm" controls loop>
+					Votre navigateur ne gère pas l'élément
+					<code>video</code>.
+				</video>
+			</li>
+			<li>
+				<video src="/assets/img/3Dart/anim/Melinda_Hawken.webm" controls loop>
+					Votre navigateur ne gère pas l'élément
+					<code>video</code>.
+				</video>
+			</li>
+			<li>
+				<video src="/assets/img/3Dart/anim/Merrill_Salinia.webm" controls loop>
+					Votre navigateur ne gère pas l'élément
+					<code>video</code>.
+				</video>
+			</li>
+			<li>
+				<video src="/assets/img/3Dart/anim/Mickael_Dellis.webm" controls loop>
+					Votre navigateur ne gère pas l'élément
+					<code>video</code>.
+				</video>
+			</li>
+		</ul>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<script>
+
+		// declare global
+		var slider_array = new Array();
+
+		jQuery(document).ready(function ($) {
+
+			// launch bxslider
+			$('.bxslider').each(function (i) {
+				slider_array[i] = $(this).bxSlider({ controls: true });
+			});
+
+			//init slider hiding
+			//$('.bx-wrapper').hide();
+
+			$(".button").click(function () {
+				var slider = $(this).data('slider');
+				$('.bx-wrapper').hide();
+				$('.bxslider.' + slider).closest('.bx-wrapper').show();
+			});
+
+		});
+	</script>
+</body>
+
+</html>

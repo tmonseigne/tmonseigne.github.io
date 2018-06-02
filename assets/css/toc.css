@@ -1,0 +1,30 @@
+ul.toc-post {
+	display: block;
+	list-style-type: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 20px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 100;
+	left: -350px;
+	width: 300px;
+}
+
+ul.toc-post ul {
+	list-style-type: none;
+	padding: 0;
+	padding-left: 20px;
+}
+
+ul.toc-post li a {
+	display: block;
+	color: #311e3e;
+	padding: 0.2em 1em;
+	text-decoration: none;
+}
+
+ul.toc-post li a:hover {
+	opacity: .8;
+	color: #87314e;
+}
