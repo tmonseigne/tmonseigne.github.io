@@ -5,6 +5,10 @@
 	<meta charset="UTF-8">
 	<title>Slider et slideshow</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/portfolio.css">
+	<link rel="stylesheet" href"/assets/fonts/font-awesome/css/font-awesome.min.css">
+
 	<style>
 		body {
 			width: 996px;
@@ -91,221 +95,238 @@
 			width: 350px !important;
 			height: 150px;
 		}
+
+		.small-wrapper{
+			background-color:rgb(200, 200, 200);
+		}
 	</style>
 </head>
 
 <body>
-	<div class="container">
-		<span class="button" data-slider="Interieur">
-			Architecture (Intérieur)
-		</span>
-		<span class="button" data-slider="Exterieur">
-			Architecture (Extérieur)
-		</span>
-		<span class="button" data-slider="Mobilier">
-			Mobilier
-		</span>
-		<span class="button" data-slider="Divers">
-			Divers
-		</span>
-		<span class="button" data-slider="Animations">
-			Animations
-		</span>
-	</div>
+	<div class="flex-container">
+		<header class="main-header">
+			<div class="wrapper">
+				<div class="header-flex">
+					<div class="menu-icon-container"><span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span></div>
+					<nav class="main-nav">
+						<span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+						<ul>
+							<li><a href="{{site.baseurl}}/">Projets</a></li>
+							<li><a href="{{site.baseurl}}/tags">Catégories/Étiquettes</a></li>
+							<li><a href="{{site.baseurl}}/cv">Curriculum Vitæ</a></li>
+							<li><a href="{{site.baseurl}}/portfolio">Portfolio Graphique</a></li>
+							<li><a href="{{site.baseurl}}/friends">Amis</a></li>
+							<li><a href="{{site.baseurl}}/articles">Articles</a></li>
+							<li><a href="{{site.baseurl}}/about">À propos</a></li>
+						</ul>
+					</nav>
+					<p class="logo"><a href="">Thibaut Monseigne</a></p>
+					<div class="search-icon-container"><span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span></div>
+				</div>
+			</div>
+		</header>
 
-	<div class="sliders">
-		<ul class="bxslider Interieur">
-			<li>
-				<img src="/assets/img/3Dart/interieur/Chambre_01.jpg" alt="Conception d'une chambre de bébé évolutive 01" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Chambre_02.jpg" alt="Conception d'une chambre de bébé évolutive 02" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_01.jpg" alt="Prototype de Cuisine" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_02.jpg" alt="Conception d'une cuisine dans un espace restreint" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_03.jpg" alt="Conception d'une cuisine dans un espace restreint" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_04.jpg" alt="Conception d'une cuisine avec une véranda" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_05.jpg" alt="Conception d'une cuisine avec une véranda" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_06.jpg" alt="Conception d'une cuisine ouverte" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_07.jpg" alt="Conception d'une cuisine dans un chateau restauré" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Cuisine_08.jpg" alt="Conception d'une cuisine avec ouverture sur cour intérieure" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Dressing.jpg" alt="Conception d'un dressing attenant à la chambre" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Local_01.jpg" alt="Conception d'un magasin de vins régionaux" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Local_02.jpg" alt="Conception d'un magasin de vins régionaux" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Petite_Chambre.jpg" alt="Petite Chambre" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Restaurant.jpg" alt="Conception/Rénovation d'un restaurant" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/Salon.jpg" alt="Conception d'un ensemble TV" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/SDB_01.jpg" alt="Conception d'une salle de bain chic" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/SDB_02.jpg" alt="Conception d'une salle de bain chic" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/SDB_03.jpg" alt="Conception d'une salle de bain zen" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/SDB_04.jpg" alt="Conception d'une salle de bain zen" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/interieur/SDB_05.jpg" alt="Conception d'une salle de bain chaude" />
-			</li>
-		</ul>
+		<div class="small-wrapper">
 
-		<!-- slider 2 -->
-		<ul class="bxslider Exterieur">
-			<li>
-				<img src="/assets/img/3Dart/exterieur/Maison_01.jpg" alt="Prototype de maison familiale" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/exterieur/Maison_02.jpg" alt="Conception d'une façade d'un garage transformé en loft" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/exterieur/Maison_03.jpg" alt="Conception d'une extension de maison dans une forêt" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/exterieur/Maison_04.jpg" alt="Conception d'une extension de maison en ville avec terrasse"
-				/>
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/exterieur/Maison_05.jpg" alt="Conception d'une extension de maison en ville avec terrasse"
-				/>
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/exterieur/Terrasse.jpg" alt="Conception d'une extension de maison en ville avec terrasse"
-				/>
-			</li>
-		</ul>
+			<div class="container">
+				<span class="button" data-slider="Interieur">Architecture (Intérieur)</span>
+				<span class="button" data-slider="Exterieur">Architecture (Extérieur)</span>
+				<span class="button" data-slider="Mobilier">Mobilier</span>
+				<span class="button" data-slider="Divers">Divers</span>
+				<span class="button" data-slider="Animations">Animations</span>
+			</div>
 
-		<!-- slider 3 -->
-		<ul class="bxslider Mobilier">
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Bureau.jpg" alt="Conception d'un bureau ergonomique pour un magasin d'orthopédie"
-				/>
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Chaise.jpg" alt="Chaise" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Ilot_01.jpg" alt="Conception d'un ilot central pour une cuisine 01" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Ilot_02.jpg" alt="Conception d'un ilot central pour une cuisine 02" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Ilot_03.jpg" alt="Conception d'un ilot central pour une cuisine 03" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Meuble_DVD.jpg" alt="Conception d'un meuble DVD de grande capacité et de taille minimale"
-				/>
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Meuble_SDB_01.jpg" alt="Conception d'un meuble de buanderie/salle de bain secondaire"
-				/>
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Meuble_SDB_02.jpg" alt="Conception d'un meuble de salle de bain chaude" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/mobilier/Meuble_SDB_03.jpg" alt="Conception d'un meuble de salle de bain zen" />
-			</li>
-		</ul>
+			<div class="sliders">
+				<ul class="bxslider Interieur">
+					<li>
+						<img src="/assets/img/3Dart/interieur/Chambre_01.jpg" alt="Conception d'une chambre de bébé évolutive 01" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Chambre_02.jpg" alt="Conception d'une chambre de bébé évolutive 02" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_01.jpg" alt="Prototype de Cuisine" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_02.jpg" alt="Conception d'une cuisine dans un espace restreint" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_03.jpg" alt="Conception d'une cuisine dans un espace restreint" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_04.jpg" alt="Conception d'une cuisine avec une véranda" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_05.jpg" alt="Conception d'une cuisine avec une véranda" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_06.jpg" alt="Conception d'une cuisine ouverte" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_07.jpg" alt="Conception d'une cuisine dans un chateau restauré" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Cuisine_08.jpg" alt="Conception d'une cuisine avec ouverture sur cour intérieure" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Dressing.jpg" alt="Conception d'un dressing attenant à la chambre" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Local_01.jpg" alt="Conception d'un magasin de vins régionaux" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Local_02.jpg" alt="Conception d'un magasin de vins régionaux" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Petite_Chambre.jpg" alt="Petite Chambre" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Restaurant.jpg" alt="Conception/Rénovation d'un restaurant" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/Salon.jpg" alt="Conception d'un ensemble TV" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/SDB_01.jpg" alt="Conception d'une salle de bain chic" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/SDB_02.jpg" alt="Conception d'une salle de bain chic" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/SDB_03.jpg" alt="Conception d'une salle de bain zen" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/SDB_04.jpg" alt="Conception d'une salle de bain zen" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/interieur/SDB_05.jpg" alt="Conception d'une salle de bain chaude" />
+					</li>
+				</ul>
 
-		<!-- slider 4 -->
-		<ul class="bxslider Divers">
-			<li>
-				<img src="/assets/img/3Dart/divers/Angels.jpg" alt="Angels" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Chevalier.jpg" alt="Chevalier" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Courage.jpg" alt="Courage" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Dreammaker.jpg" alt="Dreammaker" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Fraicheur.jpg" alt="Fraicheur" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Legos.jpg" alt="Legos" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Dragster.jpg" alt="Dragster" />
-			</li>
-			<li>
-				<img src="/assets/img/3Dart/divers/Moto.jpg" alt="Moto" />
-			</li>
-		</ul>
+				<!-- slider 2 -->
+				<ul class="bxslider Exterieur">
+					<li>
+						<img src="/assets/img/3Dart/exterieur/Maison_01.jpg" alt="Prototype de maison familiale" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/exterieur/Maison_02.jpg" alt="Conception d'une façade d'un garage transformé en loft" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/exterieur/Maison_03.jpg" alt="Conception d'une extension de maison dans une forêt" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/exterieur/Maison_04.jpg" alt="Conception d'une extension de maison en ville avec terrasse" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/exterieur/Maison_05.jpg" alt="Conception d'une extension de maison en ville avec terrasse" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/exterieur/Terrasse.jpg" alt="Conception d'une extension de maison en ville avec terrasse" />
+					</li>
+				</ul>
 
-		<!-- slider 5 -->
-		<ul class="bxslider Animations">
-			<li>
-				<video src="/assets/img/3Dart/anim/Faren_Sombrepierre.webm" controls loop>
-					Votre navigateur ne gère pas l'élément
-					<code>video</code>.
-				</video>
-			</li>
-			<li>
-				<video src="/assets/img/3Dart/anim/Feilan_Bown.webm" controls loop>
-					Votre navigateur ne gère pas l'élément
-					<code>video</code>.
-				</video>
-			</li>
-			<li>
-				<video src="/assets/img/3Dart/anim/Gaelyth_Sangdacier.webm" controls loop>
-					Votre navigateur ne gère pas l'élément
-					<code>video</code>.
-				</video>
-			</li>
-			<li>
-				<video src="/assets/img/3Dart/anim/Melinda_Hawken.webm" controls loop>
-					Votre navigateur ne gère pas l'élément
-					<code>video</code>.
-				</video>
-			</li>
-			<li>
-				<video src="/assets/img/3Dart/anim/Merrill_Salinia.webm" controls loop>
-					Votre navigateur ne gère pas l'élément
-					<code>video</code>.
-				</video>
-			</li>
-			<li>
-				<video src="/assets/img/3Dart/anim/Mickael_Dellis.webm" controls loop>
-					Votre navigateur ne gère pas l'élément
-					<code>video</code>.
-				</video>
-			</li>
-		</ul>
+				<!-- slider 3 -->
+				<ul class="bxslider Mobilier">
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Bureau.jpg" alt="Conception d'un bureau ergonomique pour un magasin d'orthopédie" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Chaise.jpg" alt="Chaise" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Ilot_01.jpg" alt="Conception d'un ilot central pour une cuisine 01" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Ilot_02.jpg" alt="Conception d'un ilot central pour une cuisine 02" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Ilot_03.jpg" alt="Conception d'un ilot central pour une cuisine 03" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Meuble_DVD.jpg" alt="Conception d'un meuble DVD de grande capacité et de taille minimale"
+						/>
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Meuble_SDB_01.jpg" alt="Conception d'un meuble de buanderie/salle de bain secondaire"
+						/>
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Meuble_SDB_02.jpg" alt="Conception d'un meuble de salle de bain chaude" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/mobilier/Meuble_SDB_03.jpg" alt="Conception d'un meuble de salle de bain zen" />
+					</li>
+				</ul>
+
+				<!-- slider 4 -->
+				<ul class="bxslider Divers">
+					<li>
+						<img src="/assets/img/3Dart/divers/Angels.jpg" alt="Angels" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Chevalier.jpg" alt="Chevalier" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Courage.jpg" alt="Courage" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Dreammaker.jpg" alt="Dreammaker" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Fraicheur.jpg" alt="Fraicheur" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Legos.jpg" alt="Legos" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Dragster.jpg" alt="Dragster" />
+					</li>
+					<li>
+						<img src="/assets/img/3Dart/divers/Moto.jpg" alt="Moto" />
+					</li>
+				</ul>
+
+				<!-- slider 5 -->
+				<ul class="bxslider Animations">
+					<li>
+						<video src="/assets/img/3Dart/anim/Faren_Sombrepierre.webm" controls loop>
+							Votre navigateur ne gère pas l'élément
+							<code>video</code>.
+						</video>
+					</li>
+					<li>
+						<video src="/assets/img/3Dart/anim/Feilan_Bown.webm" controls loop>
+							Votre navigateur ne gère pas l'élément
+							<code>video</code>.
+						</video>
+					</li>
+					<li>
+						<video src="/assets/img/3Dart/anim/Gaelyth_Sangdacier.webm" controls loop>
+							Votre navigateur ne gère pas l'élément
+							<code>video</code>.
+						</video>
+					</li>
+					<li>
+						<video src="/assets/img/3Dart/anim/Melinda_Hawken.webm" controls loop>
+							Votre navigateur ne gère pas l'élément
+							<code>video</code>.
+						</video>
+					</li>
+					<li>
+						<video src="/assets/img/3Dart/anim/Merrill_Salinia.webm" controls loop>
+							Votre navigateur ne gère pas l'élément
+							<code>video</code>.
+						</video>
+					</li>
+					<li>
+						<video src="/assets/img/3Dart/anim/Mickael_Dellis.webm" controls loop>
+							Votre navigateur ne gère pas l'élément
+							<code>video</code>.
+						</video>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
