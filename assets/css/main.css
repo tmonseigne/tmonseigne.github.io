@@ -21,6 +21,7 @@ html {
  */
 body {
 	margin: 0;
+	text-align:justify;
 }
 
 /**
@@ -48,11 +49,16 @@ figcaption, figure, main {
 	display: block;
 }
 
+figcaption{
+	margin-left:5%;
+	margin-right:5%;
+}
+
 /**
  * Add the correct margin in IE 8.
  */
 figure {
-	margin: 1em 40px;
+	margin: 2em 10%;
 }
 
 /**
@@ -921,6 +927,18 @@ pre code {
 
 .recent-box .recent-list .recent-item:hover {
 	opacity: 0.8;
+}
+
+.toc-post{
+	text-align:left;
+}
+
+div.footnotes:before{
+	margin-top:2em;
+	content:' ';
+	display:block;
+	border: 1px solid #999;
+	width:70%;
 }
 
 /* = = = = = = = = = = Author Box Styles = = = = = = = = = = */
