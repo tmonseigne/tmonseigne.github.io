@@ -10,7 +10,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Author settings
 author: Thibaut Monseigne
 author-pic: Ange.jpg
-about-author: Étudiant en Master Informatique Image et Son.
+about-author: Ingénieur Recherche et Développement en Interface Cerveau-Machine.
 
 # Contact links
 email: monseignethibaut@gmail.com
@@ -34,9 +34,12 @@ compress_html:
 # Build settings
 markdown: kramdown
 
+#toc: # Marche pas
+#  min_level: 1
+#  max_level: 3
+
 plugins:
   - jekyll-paginate
-  - jekyll-feed
   - jekyll-sitemap
 
 include: [_pages]
