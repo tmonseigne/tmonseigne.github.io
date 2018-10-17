@@ -14,10 +14,12 @@ author: Thibaut Monseigne # Add name author (optional)
 
 Ce post est une traduction du rapport technique `Notes on the Ward BRDF` de Bruce Walter d'Avril 2005 disponible sur le site de l'[université de Cornell](http://www.graphics.cornell.edu/pubs/2005/Wal05.html){:target="_blank"} ou sur [Semantic Scholar](https://www.semanticscholar.org/paper/on-the-Ward-BRDF-Walter/330e59117d7da6c794750730a15f9a178391b9fe){:target="_blank"}
 
-# Résumé
+**Résumé**  
 La BRDF anisotrope introduite dans `[Ward 1992]` est devenue largement utilisée dans l'infographie, mais certains détails de mise en œuvre importants sont moins connus. Nous discutons de la façon d'évaluer efficacement le Ward BRDF.
 Ensuite, nous dérivons la fonction de densité de probabilité pour son système d'échantillonnage de Monte Carlo associé et les poids corrects à utiliser avec les échantillons générés.
 Enfin, pour la version isotrope, nous décrivons comment limiter la valeur BRDF maximale possible sur une région de l'espace (une direction).
+{: .Note}
+
 
 # Introduction
 

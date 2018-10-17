@@ -821,7 +821,7 @@ pre code {
 }
 
 .page-content {
-	margin-top: -80px;
+	margin-top: -100px;
 	margin-bottom: 100px;
 	background-color: #fff;
 	padding: 20px;
@@ -1210,7 +1210,7 @@ div.footnotes:before{
 		max-width: 95%;
 	}
 	.page-content {
-		margin-top: -50px;
+		margin-top: -75px;
 		padding: 15px;
 	}
 	.header-page {
@@ -1296,4 +1296,10 @@ div.footnotes:before{
 	.author-box .author-desc p {
 		margin: 0 0 15px;
 	}
+}
+
+.Note{
+	background-color: #F5F5F5;
+	margin: 0em 2em 0em;
+	padding: 1em;
 }
