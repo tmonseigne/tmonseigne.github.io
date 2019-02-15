@@ -12,11 +12,9 @@ author: Thibaut Monseigne # Add name author (optional)
 {:toc}
 {: .toc-post}
 
-![WIP](/assets/img/WIP.png){:style="max-width:50%;"}
-
 **Sources principales :** 
 1. [fr.wikipedia.org/wiki/Matrice_(mathématiques)](https://fr.wikipedia.org/wiki/Matrice_(mathématiques)){:target="_blank"}
-2. **Petersen, Kaare Brandt and Pedersen, Michael Syskind 2012**. The Matrix Cookbook. *Technical University of Denmark*, 72.
+2. **Petersen, Kaare Brandt and Pedersen, Michael Syskind 2012**. The Matrix Cookbook. *Technical University of Denmark*, 72. [[pdf]](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
 
 **Outils en ligne :** 
 1. [matrixcalc.org/fr/](https://matrixcalc.org/fr/){:target="_blank"}
