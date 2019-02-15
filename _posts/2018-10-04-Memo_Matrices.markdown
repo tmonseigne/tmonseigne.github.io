@@ -3,7 +3,7 @@ layout: post
 title: Mémo Matrices
 date: 2018-10-04
 description: Mémo Matrices
-img: theme/Memo-Theme.jpg # Add image post (optional)
+img: theme/Memo-Theme.png # Add image post (optional)
 tags: [Mémos]
 author: Thibaut Monseigne # Add name author (optional)
 ---
@@ -15,11 +15,11 @@ author: Thibaut Monseigne # Add name author (optional)
 ![WIP](/assets/img/WIP.png){:style="max-width:50%;"}
 
 **Sources principales :** 
-1. [fr.wikipedia.org/wiki/Matrice_(mathématiques)](https://fr.wikipedia.org/wiki/Matrice_(mathématiques))
+1. [fr.wikipedia.org/wiki/Matrice_(mathématiques)](https://fr.wikipedia.org/wiki/Matrice_(mathématiques)){:target="_blank"}
 2. **Petersen, Kaare Brandt and Pedersen, Michael Syskind 2012**. The Matrix Cookbook. *Technical University of Denmark*, 72.
 
 **Outils en ligne :** 
-1. [matrixcalc.org/fr/](https://matrixcalc.org/fr/)
+1. [matrixcalc.org/fr/](https://matrixcalc.org/fr/){:target="_blank"}
 
 # Formes, Transformations, Relations, Propriétés
 ## Formes
