@@ -3,7 +3,7 @@ layout: post
 title: Traduction &#58; Notes sur la BRDF de Ward
 date: 2017-05-04
 description: Traduction &#58; Notes sur la BRDF de Ward
-img: theme/Trad-Theme.jpg # Add image post (optional)
+img: theme/Trad-Theme.png # Add image post (optional)
 tags: [Traduction, Article, 3D]
 author: Thibaut Monseigne # Add name author (optional)
 ---

@@ -3,7 +3,7 @@ layout: post
 title: Mémo Espace Vectoriel
 date: 2017-05-04
 description: Mémo Espace Vectoriel
-img: theme/Memo-Theme.jpg # Add image post (optional)
+img: theme/Memo-Theme.png # Add image post (optional)
 tags: [Mémos]
 author: Thibaut Monseigne # Add name author (optional)
 ---
