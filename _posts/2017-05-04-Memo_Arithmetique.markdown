@@ -15,8 +15,8 @@ author: Thibaut Monseigne # Add name author (optional)
 	var id_NbP_Is, id_NbP_True, id_NbP_False,
 		id_NbP_Decompo, id_NbP_Decompo_Res,
 		id_NbP_Facto,id_NbP_Facto_Res,
-		id_NbP_Frac_Num,id_NbP_Frac_Den,id_NbP_Frac_Res, 
-		id_PGCD_a, id_PGCD_b, id_PGCD_Res, 
+		id_NbP_Frac_Num,id_NbP_Frac_Den,id_NbP_Frac_Res,
+		id_PGCD_a, id_PGCD_b, id_PGCD_Res,
 		id_PPCM_a, id_PPCM_b, id_PPCM_Res,
 		id_Fact, id_Fact_Res,
 		id_Fibo, id_Fibo_Res;
@@ -66,7 +66,7 @@ author: Thibaut Monseigne # Add name author (optional)
 		*/
 		return (b==0) ? a : PGCD(b,a%b);
 	}
-	
+
 	function PPCM(a,b)
 	{
 		return ((a*b) / PGCD(a,b));
@@ -81,14 +81,14 @@ author: Thibaut Monseigne # Add name author (optional)
 		return res;
 	}
 
-	function Fibonacci(n) 
+	function Fibonacci(n)
 	{
 		if (n == 0)	{return 0;}
 		if (n == 1)	{return 1;}
 		return Fibonacci(n - 1) + Fibonacci(n - 2);
 	}
 
-	function EstPremierHandler() 
+	function EstPremierHandler()
 	{
 		var n = parseInt(id_NbP_Is.value);
 		id_NbP_True.style.display = 'none';
@@ -198,7 +198,6 @@ author: Thibaut Monseigne # Add name author (optional)
 		FibonacciHandler();
 	}
 
-
 	window.onload = function () {
 		// Affectation
 		id_NbP_Is = document.getElementById('NbP_Is');
@@ -217,17 +216,16 @@ author: Thibaut Monseigne # Add name author (optional)
 
 		id_PGCD_a = document.getElementById('PGCD_a');
 		id_PGCD_b = document.getElementById('PGCD_b');
-		id_PGCD_Res = document.getElementById('PGCD_Res'); 
+		id_PGCD_Res = document.getElementById('PGCD_Res');
 
 		id_PPCM_a = document.getElementById('PPCM_a');
 		id_PPCM_b = document.getElementById('PPCM_b');
 		id_PPCM_Res = document.getElementById('PPCM_Res');
-	
+
 		id_Fact = document.getElementById('Fact');
 		id_Fact_Res = document.getElementById('Fact_Res');
 		id_Fibo = document.getElementById('Fibo');
 		id_Fibo_Res = document.getElementById('Fibo_Res');
-
 
 		//Handler
 		id_NbP_Is.onchange = EstPremierHandler;
@@ -246,7 +244,7 @@ author: Thibaut Monseigne # Add name author (optional)
 	}
 </script>
 
-#Définitions
+## Définitions
 
 **Nombres Premiers** : Un nombre premier est un entier naturel qui admet exactement deux diviseurs distincts entiers et positifs (qui sont alors 1 et lui-même). Ainsi, 1 n'est pas premier, car il n'a qu'un seul diviseur entier positif ; 0 non plus, car il est divisible par tous les entiers positifs.
 
@@ -258,7 +256,7 @@ author: Thibaut Monseigne # Add name author (optional)
 
 **Fibonacci** : La suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Elle commence généralement par les termes 0 et 1 (parfois 1 et 1) et ses premiers termes sont : 0, 1, 1, 2, 3, 5, 8, 13, 21, etc.
 
-# Exemples
+## Exemples
 
 |:----|:----|:----|:----|
 |Savoir si un nombre est premier : |<input type="number" style="width: 5em;" min="0" id="NbP_Is" value="2">|&nbsp;=>&nbsp;|<font size="6"><span style="color:green" id="NbP_True">&#10004;</span><span style="color:red" id="NbP_False">&#10008;</span></font>|
