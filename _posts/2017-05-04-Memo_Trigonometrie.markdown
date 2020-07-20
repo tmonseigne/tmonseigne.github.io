@@ -12,9 +12,10 @@ author: Thibaut Monseigne # Add name author (optional)
 {:toc}
 {: .toc-post}
 
-# Définition
+## Définition
+
 <a href = "/assets/img/Memo/triangle.png" data-lightbox = "Memo" data-title = "Triangle"><img src = "/assets/img/Memo/triangle.png" alt = "Triangle" style = "max-width:25%;"/></a>
-Une définition de la trigonométrie se base sur les triangles rectangles. 
+Une définition de la trigonométrie se base sur les triangles rectangles.
 Dans ce cas, on a :
 
 $$\sin\alpha = \frac{a}{c} \quad\quad\quad \cos\alpha = \frac{b}{c} \quad\quad\quad \tan\alpha = \frac{a}{b}$$
@@ -23,42 +24,43 @@ $$\sin\alpha = \frac{a}{c} \quad\quad\quad \cos\alpha = \frac{b}{c} \quad\quad\q
 |Al-Kashi ∶ &nbsp;&nbsp;&nbsp;|$$a = \sqrt{b^2+c^2-2\times b\times c\times \cos\alpha}$$|
 |Thalès ∶ &nbsp;&nbsp;&nbsp;|$$\frac{AD}{AB} = \frac{AE}{AC} = \frac{DE}{BC}$$|
 
-# Identités Remarquables
+## Identités Remarquables
+
 Quel que soit l’angle $$\alpha$$, on a (d’après le théorème de Pythagore) : $$\cos^2⁡\alpha + \sin^2\alpha = 1$$
 
-## Formules d’addition et de différence des arcs :
+### Formules d’addition et de différence des arcs
 
 |:---|:---|:---|:---|:---|:---|:---|
 |$$\sin⁡(\alpha -\beta ) $$|$$=$$|$$ \sin⁡\alpha \times \cos⁡\beta - \cos⁡\alpha \times \sin⁡\beta $$|$$ \quad \quad \quad $$|$$ \sin⁡(\alpha + \beta ) $$|$$=$$|$$ \sin⁡\alpha \times \cos⁡\beta + \cos⁡\alpha \times \sin⁡\beta\quad$$|
 |$$\cos(\alpha -\beta ) $$|$$=$$|$$ \cos\alpha \times \cos⁡\beta + \sin\alpha \times \sin⁡\beta $$|$$ \quad \quad \quad $$|$$ \cos(\alpha + \beta ) $$|$$=$$|$$ \cos\alpha \times \cos⁡\beta - \sin\alpha \times \sin⁡\beta\quad$$|
 |$$\tan(\alpha -\beta ) $$|$$=$$|$$ \left(\tan\alpha - \tan\beta\right)/\left(1 + \tan\alpha \times \tan\beta\right) $$|$$ \quad \quad \quad $$|$$ \tan(\alpha + \beta ) $$|$$=$$|$$ \left(\tan\alpha - \tan\beta\right)/\left(1 + \tan\alpha \times \tan\beta\right)\quad$$|
 
-## Formules de duplication des arcs :
+### Formules de duplication des arcs
 
 |:---|:---|:---|:---|:---|:---|:---|
 |$$\cos(2\alpha) $$|$$=$$|$$ \begin{cases} \cos^2⁡\alpha - \sin^2\alpha \\ 2\times \cos^2⁡\alpha - 1 \\ 1 - 2 \times \sin^2\alpha \end{cases} $$|$$ \quad \quad \quad $$|$$ \cos(3\alpha) $$|$$=$$|$$ 4\times \cos^3⁡\alpha-3 \times \cos\alpha$$|
 |$$\sin(2\alpha) $$|$$=$$|$$ 2\times \sin \alpha\times \cos\alpha $$|$$ \quad \quad \quad $$|$$ \sin(3\alpha) $$|$$=$$|$$ 3 \times \sin \alpha - 4 \times \sin^3⁡\alpha$$|
 |$$\tan⁡(2\alpha) $$|$$=$$|$$ \left(2 \times \tan⁡\alpha\right)/\left(1-\tan^2⁡\alpha\right) $$|$$ \quad \quad \quad $$|$$ \tan⁡(3\alpha) $$|$$=$$|$$ \left(3 \times \tan⁡\alpha - \tan^3⁡\alpha\right)/\left(1 - 3 \times \tan^2⁡\alpha\right)\quad\quad\quad$$|
 
-## Formules d’addition et de différence de deux sinus et de deux cosinus converties en produit :
+### Formules d’addition et de différence de deux sinus et de deux cosinus converties en produit
 
 |:---|:---|:---|:---|:---|:---|:---|
 |$$ \cos(\alpha + \beta ) - \cos(\alpha - \beta ) $$|$$=$$|$$ - 2 \times \sin\alpha \times \sin\beta $$|$$ \quad \quad \quad $$|$$ \cos(\alpha + \beta ) + \cos(\alpha - \beta ) $$|$$=$$|$$ 2 \times \cos\alpha \times \cos⁡\beta\quad\quad\quad$$|
 |$$ \sin(\alpha + \beta ) - \sin(\alpha - \beta ) $$|$$=$$|$$ 2 \times \cos\alpha \times \sin\beta $$|$$ \quad \quad \quad $$|$$ \sin(\alpha + \beta ) + \sin(\alpha - \beta ) $$|$$=$$|$$ 2 \times \sin\alpha \times \cos\beta\quad\quad\quad$$|
 
-## Identités trigonométrique :
+### Identités trigonométrique
 
 $$\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \quad\quad\quad \cos^2⁡\alpha + \sin^2\alpha = 1 \quad\quad\quad \tan^2⁡\alpha + 1 = \frac{1}{\cos^2\alpha}$$
 
-## Relation entre les fonctions trigonométriques :
+### Relation entre les fonctions trigonométriques
 
 $$\cos\alpha = \sqrt{1-\sin^2\alpha} = \frac{1}{\sqrt{1+\tan^2\alpha}}\\
 \sin\alpha = \sqrt{1-\cos^2\alpha} = \frac{\tan\alpha}{\sqrt{1+\tan^2\alpha}}\\
 \tan\alpha = \frac{\sqrt{1-\cos^2\alpha}}{\cos\alpha} = \frac{\sin\alpha}{\sqrt{1-\sin^2\alpha}}\\$$
 
-# Cercle Trigonométrique
-<a href = "/assets/img/Memo/Cercle_Trigo.png" data-lightbox = "Memo" data-title = "Cercle Trigonométrique"><img src = "/assets/img/Memo/Cercle_Trigo.png" alt = "Cercle Trigonométrique" style = "max-width:50%;"/></a>
+## Cercle Trigonométrique
 
+<a href = "/assets/img/Memo/Cercle_Trigo.png" data-lightbox = "Memo" data-title = "Cercle Trigonométrique"><img src = "/assets/img/Memo/Cercle_Trigo.png" alt = "Cercle Trigonométrique" style = "max-width:50%;"/></a>
 
 <form><table style="width:100%; border-collapse:collapse;" border="1">
 	<tr align="center">
@@ -83,7 +85,7 @@ $$\cos\alpha = \sqrt{1-\sin^2\alpha} = \frac{1}{\sqrt{1+\tan^2\alpha}}\\
 	</tr>
 </table></form>
 
-## Propriétés liées au cercle Trigonométrique
+### Propriétés liées au cercle Trigonométrique
 
 |Propriété||Sinus||||Cosinus||||Tangente|||
 |:--------|:----|:------|:-------|:---|:---|:---|:---|:---|:---|:---|
