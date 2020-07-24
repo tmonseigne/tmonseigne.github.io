@@ -1,0 +1,118 @@
+---
+layout: post
+title: Artifact Subspace Reconstruction (ASR) - Reconstruction du Sous-espace d'Artéfact (RSA)
+date: 2020-07-20
+description: Artifact Subspace Reconstruction (ASR) - Reconstruction du Sous-espace d'Artéfact (RSA)
+img: theme/Geo3D-Theme.png
+tags: [Explication]
+author: Thibaut Monseigne
+---
+
+* TOC
+{:toc}
+{: .toc-post}
+
+![WIP](/assets/img/WIP.png){:style="max-width:50%;"}
+
+**Sources Principales :**
+
+* Plugin Matlab [EEGLAB](https://sccn.ucsd.edu/eeglab/index.php) ([github](https://github.com/sccn/eeglab)).
+* [Page Wikipedia](https://sccn.ucsd.edu/wiki/Artifact_Subspace_Reconstruction_(ASR)) associé à l'ASR de EEGLAB.
+* [Version Riemannienne](https://github.com/s4rify/rASRMatlab) de l'lASR
+* **Blum Sarah, Jacobsen Nadine S. J., Bleichner Martin G., Debener Stefan 2019**. A Riemannian Modification of Artifact Subspace Reconstruction for EEG Artifact Handling. *Frontiers in Human Neuroscience*, 13, 141. [[link]](https://doi.org/10.3389/fnhum.2019.00141){:target="_blank"}
+
+**Incorporé à la Bibliothèque C++ Libre** : [Riemann Geometrie](https://github.com/tmonseigne/RIGBy-cpp)
+
+## Principe de base
+
+Les différentes étapes de l'ASR ne sont pas entièrement décrites quelques part et celles-ci changent légèrement en fonction du contexte.
+Mais le principe de base peut être décrit comme suit :
+
+* Il faut définir un modèle type qui servira de base à la détection d'artéfact.
+  * On récupère un ensemble de données contenant plusieurs entrées exempt d'artéfacts.
+  * On identifie des métriques génériques permettant de définir cet ensemble de données et des métriques spécifiques pour ce jeu de donnée.
+  * On calcule la moyenne ($$\mu$$) et la variance ($$\sigma$$) de ces métriques sur notre jeu de données.
+* Ensuite, on peut évaluer une nouvelle donnée.
+  * On calcule nos différentes métriques
+  * Si l'une d'elles sort de la limite $$\left[ \mu - 3\sigma ; \mu + 3\sigma \right]$$ (définition de cette limite selon [la règle empirique](https://fr.wikipedia.org/wiki/R%C3%A8gle_68-95-99.7))
+    * On cherche, si en supprimant une des métriques génériques, on peut régler cette anomalie.
+    * Une fois cette métrique générique supprimée, on recalcule nos différentes métriques spécifiques.
+    * Avec ces métriques recalculées, on peut reconstruire celle qui a été supprimée et ainsi reconstruire les différentes entrées de cette donnée.
+
+Un exemple est fourni sur ce document : [ASR for dummies](https://sccn.ucsd.edu/mediawiki/images/c/c5/AsrForDummies_ver21_web.pdf) présent sur la [Page Wikipedia](https://sccn.ucsd.edu/wiki/Artifact_Subspace_Reconstruction_(ASR)) associée à l'ASR de EEGLAB.
+
+## ASR adapté aux données EEG
+
+### Définition
+
+La Reconstruction du Sous-espace d'Artéfact (Artifact Subspace Reconstruction (ASR)) garantit que les données ne contiennent aucun évènement ayant une puissance anormalement forte.
+Les sous-espaces sur lesquels ces évènements se produisent sont reconstruits (interpolés) sur la base du reste du signal EEG pendant ces périodes de temps.
+
+### Algorithme (analyse du code [MATLAB](https://github.com/sccn/eeglab))
+
+Le principe de base est de trouver d'abord une section de données qui représente un EEG "de référence" propre et d'y calculer des statistiques.
+Ensuite, la fonction parcourt l'ensemble des données dans une fenêtre glissante et trouve les sous-espaces dans lesquels il y a une activité à plus de quelques écarts-types de l'EEG de référence (ce seuil est un paramètre ajustable).
+Une fois que la fonction a trouvé les mauvais sous-espaces, elle les traitera comme des données manquantes et reconstruira leur contenu en utilisant une matrice de mélange qui a été calculée sur les données propres.
+
+#### Calcul du modèle ([fichier MATLAB](https://github.com/sccn/clean_rawdata/blob/master/private/asr_calibrate.m))
+
+##### Convention des données d'étalonnage
+
+La première étape consiste à utiliser des données d'étalonnage pour calculer nos différentes statistiques.
+Il est nécessaire d'avoir une durée d'au moins 30 secondes (cette méthode est généralement utilisée avec 1 minute ou plus).
+Il s'agit de données propres (sans artéfacts) au repos. Il est possible d'utiliser des données durant l'exécution d'une tâche si la quantité d'artéfact est inférieure à 30%.
+Les données d'étalonnage doivent avoir été enregistrées avec le même matériel que pour les données à nettoyer, et devraient idéalement provenir de la même session et du même sujet, mais il est possible de réutiliser les données d'étalonnage d'une session précédente (dans la limite où le matériel doit être disposé de la même façon).
+Les données d'étalonnage doivent avoir été filtrées passe-haut (par exemple à 0,5 Hz ou 1 Hz à l'aide d'un filtre Butterworth IIR).
+Les données ont une moyenne nulle (l'utilisation d'un filtre temporel permet de "recentrer" les données) et sont sous le format `Channel x Samples`.
+
+##### Application d'un filtre IIR (optionnel)
+
+Un filtre IIR peut être utilisé pour façonner le spectre du signal lors du calcul des statistiques d'artéfacts. **Le signal de sortie ne passe pas par ce filtre.** Il s'agit d'une manière facultative d'ajuster la sensibilité de l'algorithme à chaque composante de fréquence du signal.  
+Le filtre par défaut est moins sensible aux fréquences alpha et bêta et plus sensible aux fréquences delta (clignement) et gamma (muscle). On associe donc un coefficient en fonction de la fréquence. Par Défaut :
+
+<form><table style="width:100%" border="1">
+	<tr align="center">
+		<th width="15%" align="left">Fréquence</th>
+		<td>0</td><td>4</td><td>6</td><td>26</td><td>32</td><td>80</td><td>160</td><td>Sampling</td>
+	</tr>
+	<tr align="center">
+		<th width="15%" align="left">Amplitude</th>
+		<td>3</td><td>0.75</td><td>0.33</td><td>0.33</td><td>1</td><td>1</td><td>3</td><td>3</td>
+	</tr>
+</table></form>
+
+**Remarque :** Ces paramètres ont été définis de manière empirique.
+{: .Note}
+
+##### Calcul du modèle
+
+L'ensemble du signal doit être séparé en fonction des fenêtres d'analyse (par exemple fenêtre glissante de 1s avec un décalage de 0.5).  
+On calcule sur ce fragment de signal la matrice de covariance (de taille `nChannel x nChannel`).  
+On calcule par la suite la racine carré de la [médiane géométrique](https://en.wikipedia.org/wiki/Geometric_median) ($$\mathcal{M}$$) de ces matrices (en utilisant la'algorithme de [Weiszfeld](https://en.wikipedia.org/wiki/Geometric_median#Computation)).  
+On récupère ensuite les vecteurs propres (eigen vector) de notre précédente matrice pour multiplier notre signal par ce vecteur et récupérer la valeur absolue de cette opération.  
+Ensuite, on calcule la moyenne ($$\mu$$) de l'amplitude RMS (carré du signal) de chaque canal de chaque fenêtre.  
+On peut donc par la suite trouver une moyenne ($$\mu$$) et un ecart-type ($$\sigma$$) pour chaque canal. Ceux-ci sont calculés avec un ensemble de contraintes : un taux minimum d'élément qui doivent être exempt d'artéfacts, taux maximum d'éléments étant considérés comme artéfacts, une plage quantile...  
+On aura ainsi, en plus d'une moyenne ($$\mu$$) et d'un écart-type ($$\sigma$$), un paramètre de mise à l'échelle ($$\alpha$$) et un paramètre de mise en forme ($$\beta$$). Mais ceux-ci ne seront pas utilisés.
+Nos seuil pour chaque canaux peuvent être calculés comme la multiplication des vecteurs propres (eigen vector) par la limite $$\mu + a_{cutoff}\sigma$$ avec $$a_{cutoff}$$ par défaut à 5.
+
+**Remarque :** Comme précédemment $$a_{cutoff}$$ a été définis de manière empirique pour être extrêmement laxiste. Sachant que pour une distribution normale il existe [la règle empirique](https://fr.wikipedia.org/wiki/R%C3%A8gle_68-95-99.7) qui le définit à 3. EEGLAB estime que 2.5 est une bonne valeur ([lien vers le fichier MATLAB](https://github.com/sccn/clean_rawdata/blob/master/private/asr_calibrate.m)).
+{: .Note}
+
+##### Paramètres de sortie
+
+On récupère à la fin de la calibration une structure contenant :
+
+* Notre matrice médiane ($$\mathcal{M}$$)
+* Notre vecteur de seuil pour chaque canal.
+* Nos deux vecteurs de filtre IIR.
+
+**Remarque :** Il y a d'autres paramètres vides à l'heure actuelle, mais utilisés durant l'application de l'ASR de MATLAB.
+{: .Note}
+
+#### Correction du signal ([fichier MATLAB](https://github.com/sccn/clean_rawdata/blob/master/private/asr_process.m))
+
+Comme pour le calibrage, Les données ont une moyenne nulle (l'utilisation d'un filtre temporel permet de "recentrer" les données) et sont sous le format `Channel x Samples`. Ilest également découpé en fenêtres d'analyses.  
+On applique le filtre IIR (optionnel) comme lors du calibrage.  
+On calcule sur cette fenêtre la matrice de covariance (de taille `nChannel x nChannel`).  
+On découpe maintenant notre fenêtre pour selectionner un sous ensemble de fenêtres sur lesquelles appliquer la reconstruction.
+POur ces fragments, on calcul de nouveau les valeurs propres.
