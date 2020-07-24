@@ -19,7 +19,7 @@ author: Thibaut Monseigne # Add name author (optional)
 3. **Congedo, Marco and Afsari, Bijan and Barachant, Alexandre and Moakher Maher 2015**. Approximate Joint Diagonalization and Geometric Mean of Symmetric Positive Definite Matrices. *PLOS ONE*, 10, 25. [hal-01149652](https://hal.inria.fr/hal-01149652){:target="_blank"} [[pdf]](https://hal.inria.fr/hal-01149652/document)
 
 **Source Bibliothèque Libre** : [pyRiemann](https://github.com/alexandrebarachant/pyRiemann)  
-**Ma Bibliothèque C++ Libre** : [Riemann Geometrie](https://github.com/tmonseigne/Riemann-Geometrie)
+**Ma Bibliothèque C++ Libre** : [Riemann Geometrie](https://github.com/tmonseigne/RIGBy-cpp)
 
 ## Base
 
@@ -149,7 +149,7 @@ Lorsque le point touche la frontière du cône, l'inégalité devient une égali
 <figure id="Fig3">
 	<a href = "/assets/img/GeoRem/SPD_Cone.png" data-lightbox = "Memo" data-title = "Cône convexe symétrique des matrices SPD"><img src = "/assets/img/GeoRem/SPD_Cone.png" alt = "Cône convexe symétrique des matrices SPD" style = "max-width:50%;"/></a>
 	<figcaption>
-		Matrices définies positives symétriques, par ex. matrices de covariance, sont contraintes par leur symétrie, la positivité stricte des éléments diagonaux (variance) et les inégalités de Cauchy-Schwarz délimitant la valeur absolue des éléments hors diagonale: 
+		Matrices définies positives symétriques, par ex. matrices de covariance, sont contraintes par leur symétrie, la positivité stricte des éléments diagonaux (variance) et les inégalités de Cauchy-Schwarz délimitant la valeur absolue des éléments hors diagonale:
 		<script type="math/tex">\left\lvert\operatorname{Cov}\left(x_i,w_j\right)\right\rvert \leq \sqrt{\operatorname{Var}{\left(x_i\right)}\operatorname{Var}{\left(x_j\right)}},~ \forall i,j \in \{1, \dots N\}</script>.
 		Cette topologie est facilement visualisable dans le cas de matrices 2x2; toute matrice de covariance 2x2 peut être vue comme un point dans l'espace euclidien 3D, avec deux coordonnées données par les deux variances (éléments diagonaux) et la troisième coordonnée donnée par la covariance (l'un ou l'autre des éléments non diagonaux). Par construction, une matrice de covariance doit rester dans les limites du cône. Dès que le point touche la limite du cône, l'inégalité devient égalité et la matrice n'est plus définie positive. <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
 	</figcaption>
