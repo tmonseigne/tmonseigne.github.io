@@ -1,0 +1,174 @@
+---
+layout: post
+title: (Très) courte introduction à Git
+date: 2022-04-05
+description: Mémo Git
+img: theme/Memo-Theme.png # Add image post (optional)
+tags: [Mémos, Explication]
+author: Thibaut Monseigne # Add name author (optional)
+---
+
+* TOC
+{:toc}
+{: .toc-post}
+
+## Définitions
+
+### Définitions de base
+
+* **Git** est un logiciel de gestion de versions décentralisé.
+* **Github** est un site (le plus connu) qui héberge votre code en utilisant Git.
+* **Gitlab** est une surcouche à Git permettant de créer son propre *Github*.
+
+### Git, un logiciel de gestion de versions décentralisé
+
+* le **versionning** permet de conserver en mémoire toutes les modifications apportées aux fichiers afin de garder une trace et permettre de passer facilement d'une version à l'autre
+* **Décentraliser** les versions de notre développement permet à plusieurs personnes d'intervenir en même temps sur un même projet.
+
+### Définitions techniques
+
+* **Dépôt** : Il s'agit simplement de votre dossier Git (repository en anglais)
+* **Commit** : C'est le nom donné à une modification enregistrée (modification pouvant concerner plusieurs fichiers)
+* **Branches** : Un dépôt peut avoir plusieurs branches indépendantes. Chaque branche vit sa vie et peut être fusionnée avec une autre.  
+* **Issues** : C'est un ticket (une sorte de point dans une todo list). Cela peut être un bug trouvé à corriger, des suggestions... Cela permet de garder une trace, surtout si l'on n'a pas le temps de corriger tout de suite un point.
+* **CI** : Intégration Continue (Continuous Integration), souvent présente dans de gros projets, il s'agit d'une routine automatique qui se lance pour vérifier que le code marche toujours. Cela peut être juste : compiler un programme, le lancer et voir si ça explose ou, si le programme est bien propre, le compiler le lancer avec des tests, analyser le code, la gestion de la mémoire... Cela peut être lancé à chaque commit ou tous les jours, semaines... ou à la demande.
+
+## Avantages et inconvénients d'un système de Git
+
+### Avantages
+
+* Garder une trace du développement
+* Permettre un partage automatique de nos projets (si on le désire, le dépôt peut être privé)
+  * Ce partage concerne aussi juste des bouts de codes : par exemple, votre visualisation de données est magnifique et un collègue veut la même.
+* La visualisation rapide et précise des modifications à chaque version
+
+Pour des projets plus imposants qu'un simple test, analyse de datas :
+
+* Gérer les versions.
+* Gérer les développeurs (droits d’accès).
+* Gérer les “issues” (rapports de bug, suggestions d’évolution...).
+* Créer une documentation en ligne pour un projet.
+* Construction, test et déploiement automatiques.
+
+### Inconvénients
+
+* Le versionning est ultra performant pour les fichiers textes bruts (code, fichier texte...). Les fichiers plus compliqués (images, sons, word, pdf, binaires...) sont intégralement remplacés à chaque changement. Mais cet inconvénient a tendance à disparaitre.
+
+### Fausses excuses pour ne pas l'utiliser
+
+* Mon code ne sert à rien pour les autres. *Vous seriez étonné des petits éléments utiles pour éviter de réinventer la roue à chaque fois.*
+* Mon code est moche et pas documenté. *Comme la plupart des codes sur internet, et quelques petites habitudes permettent de grandement réduire cette impression.*
+* C'est trop compliqué, je ne comprends rien. *Faux, ça à l'air compliqué, mais il y a des interfaces graphiques performantes.*
+* Je n’aime pas les lignes de commandes. *Moi non plus, au 21e siècle, on a des interfaces graphiques pour un peu tout.*
+* Je ne veux pas que tout soit pris dans le dossier. *Git n'est pas bête, il est possible d'automatiquement sélectionner des dossiers à exclure.*
+
+## Exemple d'un nouveau dépôt Github
+
+### Prérequis
+
+* Création d'un compte [Github](https://github.com/)
+* Si éligible, Mise à jour vers un compte [Github éducation](https://education.github.com/) : une adresse mail académique ainsi qu'une preuve d'affiliation est nécessaire (carte d'étudiant, enseignant, chercheur...). Cela vous permettra d'avoir accès à un tas de logiciels et services complètement et gratuitement (IDEs Jetbrains et Gitkraken entre autres)
+* Installation de [Git](https://git-scm.com/downloads)
+* Installation de [Gitkraken](https://www.gitkraken.com/) (avec un compte Github éducation vous aurez accès à l'ensemble du logiciel sinon pas de service ou dépôt privé)
+
+### Github : Premier Dépôt
+
+<figure id="Fig1">
+	<a href = "/assets/img/Git/Github_Main.png" data-lightbox = "Memo" data-title = "Page principale Github"><img src = "/assets/img/Git/Github_Main.png" alt = "Page principale Github" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Page principale Github</figcaption>
+</figure>
+
+La page principale de Github vous montre vos derniers projets et un bouton pour créer un nouveau dépôt.
+
+<figure id="Fig2">
+	<a href = "/assets/img/Git/Github_New.png" data-lightbox = "Memo" data-title = "Page création de dépôt"><img src = "/assets/img/Git/Github_New.png" alt = "Page création de dépôt" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Page création de dépôt</figcaption>
+</figure>
+
+Lors de la création d'un dépôt, vous devez indiquer un nom. Tout le reste est falcutatif, mais recommandé, un premier commit sera automatiquement créé avec le readme, la licence et le gitignore par défaut que vous aurez sélectionné.
+
+<figure id="Fig3">
+	<a href = "/assets/img/Git/Github_Basic.png" data-lightbox = "Memo" data-title = "Page dépôt exemple"><img src = "/assets/img/Git/Github_Basic.png" alt = "Page dépôt exemple" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Page dépôt exemple</figcaption>
+</figure>
+
+Voici un dépôt basique créé sans aucune modification ([lien](https://github.com/tmonseigne/Basic-Repo)).
+
+### Gitkraken : Interface graphique pour Git
+
+<figure id="Fig4">
+	<a href = "/assets/img/Git/GitKraken_Start.png" data-lightbox = "Memo" data-title = "Gitkraken recherche dépôt"><img src = "/assets/img/Git/GitKraken_Start.png" alt = "Gitkraken recherche dépôt" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Gitkraken recherche dépôt</figcaption>
+</figure>
+
+GitKraken permet de se passer de lignes de commande. Selon moi, c'est l'outil le plus performant et facile d'utilisation pour cette tache. En revanche, il est limité (pas de dépôts et de services privés comme un Gitlab personnel) si vous ne possédez pas de compte Github éducation. Visual studio Code avec GitLens (fait par les mêmes personnes que GitKraken) et Gitgraph permet de s'en passer, mais est beaucoup moins intuitif et ne possède pas toutes les fonctionnalités de son grand frère.
+
+<figure id="Fig5">
+	<a href = "/assets/img/Git/GitKraken_Basic.png" data-lightbox = "Memo" data-title = "Gitkraken Dépôt exemple avec des modifs"><img src = "/assets/img/Git/GitKraken_Basic.png" alt = "Gitkraken Dépôt exemple avec des modifs" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Gitkraken Dépôt exemple avec des modifs</figcaption>
+</figure>
+
+Une fois un dépôt ouvert, vous voyez un graphique représentant vos commits ainsi que les différentes branches de votre dépôt. Vous pouvez également voir l'état actuel de votre dépôt sur votre ordinateur.  
+Dans cet exemple, vous voyez les 4 types d'icônes pour visualiser l'état du dépôt :
+
+* ➕ Pour les ajouts de fichiers.
+* ➖ Pour les suppressions de fichiers.
+* 🖊️ Pour les modifications de fichiers.
+* 📝 Pour les déplacements ou renommages de fichiers.
+
+<figure id="Fig6">
+	<a href = "/assets/img/Git/GitKraken_Change.png" data-lightbox = "Memo" data-title = "Gitkraken exemple de fichier modifié"><img src = "/assets/img/Git/GitKraken_Change.png" alt = "Gitkraken exemple de fichier modifié" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Gitkraken exemple de fichier modifié</figcaption>
+</figure>
+
+Lors de la sélection d'un fichier modifié, vous pourrez voir les ajouts et suppressions directement et valider ou annuler chaque ligne indépendamment.
+
+## Bonus track de gens qui aime bien les fioritures
+
+### Gitmoji
+
+[Gitmoji](https://gitmoji.dev/) est une tentative de standardisation d’utilisation d’emoji dans les messages de commits. Le principe est simple, si vous avez besoin de plusieurs emoji pour catégoriser votre commit c’est que vous devez (ou auriez dû) faire plusieurs commits à la place. Pour ma part, j’utilise, à l’heure actuelle, presque exclusivement un sous-ensemble de ce site avec une définition plus générique pour certains.
+
+| Gitmoji | Code | Utilisation commune | Mon utilisation additionnelle |
+|:-------:|:-----|:--------------------|:-----------------------------|
+|   🎉   | :tada:                      | Début du projet | Démarrage d'une nouvelle feature |
+|   ✨   | :sparkles:                  | Ajout d'une nouvelle Feature |  |
+|   🚧   | :construction:              | Work in progress |  |
+|   🙈   | :see_no_evil:               | Mise à jour du Gitignore |  |
+|   📝   | :memo:                      | Maj Documentation | Maj documentation de code, readme, license, et tous fichiers d'informations |
+|   🐛   | :bug:                       | Correction d'un bug | Hotfix (critique ou non) |
+|   💥   | :boom:                      | Changement cassant le code |  |
+|   🔥   | :fire:                       | Suppression de fichiers | Suppression de code historique ou inutile |
+|   🏗️   | :building_construction:     | Mise à jour architecturale |  |
+|   ♻️   | :recycle:                   | Refactoring de code  | Reformatage, mise en page, changement de type, nom de variable, fichiers  |
+|   💄   | :lipstick:                  | Maj UI & Design |  |
+|   ✅   | :white_check_mark:          | Ajout, Mise à jour de Tests |  |
+|   🔊   | :loud_sound:                | Ajout de Log |  |
+|   🔇   | :mute:                      | Suppression de Log |  |
+|   👷   | :construction_worker:       | Mise en place ou Mise à jour d'un CI |  |
+|   🔀   | :twisted_rightwards_arrows: | Fusion de branche |  |
+|   ➕   | :heavy_plus_sign:           | Ajout de dépendance | Ajout de sous-module |
+|   ➖   | :heavy_minus_sign:          | Suppression de dépendance | Suppression de sous-module |
+|   ⬆️   | :arrow_up:                  | Mise à jour de dépendance | Mise à jour de sous-module |
+|   ⬇️   | :arrow_down:                | Mise à jour (rétrograde) de dépendance | Mise à jour (rétrograde) de sous-module |
+
+### Badges
+
+Les badges sont souvent utilisés, car étant des images référencées grâce à un lien, un fichier markdown peut les afficher (comme le readme) et se mettre à jour tout seul, ils servent notamment à afficher le statut de l’intégration, le type de licence, le lien vers la documentation…
+[Shields.IO](https://shields.io/) est un générateur de badge ainsi qu’un guide pour trouver (créer) le lien vers certains (un grand nombre) de badges automatiques.  
+Exemple pour le dépôt précédent : ![License dépôt exemple](https://img.shields.io/github/license/tmonseigne/Basic-Repo) (lien : `https://img.shields.io/github/license/tmonseigne/Basic-Repo`)  
+Exemple de Badge Custom :  ![Custom Badge](https://img.shields.io/badge/Custom-Badge-informational) (lien : `https://img.shields.io/badge/Custom-Badge-informational`)  
+
+## Exemple avec un template cpp
+
+Voici des captures pour un Dépôt template ([lien](https://github.com/tmonseigne/cpp-crossplatform-ci-template)).
+
+<figure id="Fig7">
+	<a href = "/assets/img/Git/Github_Template.png" data-lightbox = "Memo" data-title = "Github Dépôt Template"><img src = "/assets/img/Git/Github_Template.png" alt = "Github Dépôt Template" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Github Dépôt Template</figcaption>
+</figure>
+
+<figure id="Fig8">
+	<a href = "/assets/img/Git/GitKraken_Template.png" data-lightbox = "Memo" data-title = "Gitkraken Dépôt Template"><img src = "/assets/img/Git/GitKraken_Template.png" alt = "Gitkraken Dépôt Template" style = "max-width:75%;"/></a>
+	<figcaption style = "text-align:center">Gitkraken Dépôt Template</figcaption>
+</figure>
