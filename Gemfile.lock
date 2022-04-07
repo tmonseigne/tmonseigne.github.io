@@ -66,10 +66,10 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  jekyll (~> 4.2.2)
+  jekyll
   jekyll-paginate
   jekyll-sitemap
-  wdm (>= 0.1.0)
+  wdm
   webrick
 
 BUNDLED WITH
