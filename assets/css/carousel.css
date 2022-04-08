@@ -1,0 +1,139 @@
+.carousel {
+	width: 640px !important;
+	height: 360px !important;
+	position: relative;
+	display: block;
+	overflow: hidden
+}
+
+.carousel .slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 0
+}
+
+.carousel .slide img {
+	max-width: 100%;
+	max-height: 100%
+}
+
+.carousel .slide video {
+	max-width: 100%;
+	max-height: 100%
+}
+
+.carousel .slide div.subslide {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 2
+}
+
+.carousel .slide img.cover {
+	position: absolute;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 1;
+	width: 100%;
+	min-height: 100%
+}
+
+.carousel .slide:first-child {
+	display: block
+}
+
+.carousel .controls {
+	position: absolute;
+	top: 50%;
+	z-index: 100;
+	display: block;
+	width: auto;
+	height: auto;
+	min-width: 40px;
+	min-height: 40px;
+	margin-top: -20px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: .25;
+	-webkit-transition: opacity 0.6s;
+	-moz-transition: opacity 0.6s;
+	-o-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+.carousel .controls.right {
+	background: url(../img/lightbox/next.png) right 48% no-repeat;
+	right: 0;
+	left: auto
+}
+
+
+.carousel .controls.left {
+	background: url(../img/lightbox/prev.png) left 48% no-repeat;
+	left: 0;
+	right: auto
+}
+
+.carousel .controls:hover {
+	opacity: 1
+}
+
+.carousel .markers {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 100;
+	display: block;
+	padding: 0;
+	margin: 0
+}
+
+.carousel .markers>ul {
+	padding-left: 0;
+	list-style: none
+}
+
+.carousel .markers>ul li ul,
+.carousel .markers>ul li ol {
+	padding-left: 25px;
+	list-style: none
+}
+
+.carousel .markers li {
+	display: block;
+	float: left;
+	margin-right: 5px
+}
+
+.carousel .markers li a {
+	display: block;
+	float: left;
+	background-color: #fff;
+	border: 1px #fff solid
+}
+
+.carousel .markers li.active a {
+	background-color: #ccc
+}
+
+.carousel .markers.default>ul>li>a {
+	width: 20px;
+	height: 6px
+}
+
+.carousel .markers.cycle>ul>li>a {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%
+}
+
+.carousel .markers.square>ul>li>a {
+	width: 10px;
+	height: 10px
+}
