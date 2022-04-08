@@ -6,9 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
 	<link rel="shortcut icon" href="{{ "/assets/img/favicon/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-	<link rel="apple-touch-icon" href="{{ "/assets/img/favicon/apple-touch-icon.png" | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/favicon/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/img/favicon/apple-touch-icon-114x114.png" | prepend: site.baseurl }}">
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#311e3e">
 	<!-- Windows Phone -->
@@ -25,13 +22,16 @@
 	<link rel="stylesheet" href="{{ "/assets/css/highlight.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/assets/css/cv.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/assets/css/friends.css" | prepend: site.baseurl }}">
-	<link rel="stylesheet" href="{{ "/assets/css/portfolio.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/assets/css/lightbox.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/assets/css/fonts.css" | prepend: site.baseurl }}">
 	<link rel="stylesheet" href="{{ "/assets/css/toc.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/assets/css/carousel.css" | prepend: site.baseurl }}">
 	<!-- Hall Styles-->
 	<link rel="stylesheet" type="text/css" href="https://haltools.archives-ouvertes.fr/css/VisuGen.css" />
 	<link rel="stylesheet" type="text/css" href="https://haltools.archives-ouvertes.fr/css/VisuOmbreVignettes.css" />
 	<!-- Mathjax -->
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+	{% include javascripts.html %}
+
 </head>
