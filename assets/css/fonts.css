@@ -1,14 +1,31 @@
 @font-face {
 	font-family: "PigPen";
-	src: url("../fonts/PigpenCipher.otf");
+	src: url("../fonts/Pigpen.woff2") format('woff2'),
+		url("../fonts/Pigpen.woff") format('woff'),
+		url("../fonts/Pigpen.ttf") format('truetype'),
+		url("../fonts/Pigpen.otf") format('opentype');
 }
 
 @font-face {
 	font-family: "Braille";
-	src: url("../fonts/Braille.ttf");
+	src: url("../fonts/Braille.woff2") format('woff2'),
+		url("../fonts/Braille.woff") format('woff'),
+		url("../fonts/Braille.ttf") format('truetype'),
+		url("../fonts/Braille.otf") format('opentype');
 }
 
 @font-face {
 	font-family: "Morse";
-	src: url("../fonts/Morse.ttf");
+	src: url("../fonts/Morse.woff2") format('woff2'),
+		url("../fonts/Morse.woff") format('woff'),
+		url("../fonts/Morse.ttf") format('truetype'),
+		url("../fonts/Morse.otf") format('opentype');
+}
+
+@font-face {
+	font-family: "Templar";
+	src: url("../fonts/Templar.woff2") format('woff2'),
+		url("../fonts/Templar.woff") format('woff'),
+		url("../fonts/Templar.ttf") format('truetype'),
+		url("../fonts/Templar.otf") format('opentype');
 }
