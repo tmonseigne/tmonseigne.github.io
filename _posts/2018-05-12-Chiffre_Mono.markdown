@@ -241,19 +241,13 @@ Le parc à cochon est un ancien système de chiffrement aujourd'hui largement co
 		<th width="15%" align="left">Original</th>
 		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
 	</tr>
-	<tr align="center" bgcolor="#F0F0F0" style="font-family:PigPen">
-		<th width="15%" align="left" style="font-family: 'Montserrat', sans-serif;">Pig Pen</th>
-		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
+	<tr align="center" bgcolor="#F0F0F0">
+		<th width="15%" align="left">Pig Pen</th>
+		<td style="font-family:PigPen">A</td><td style="font-family:PigPen">B</td><td style="font-family:PigPen">C</td><td style="font-family:PigPen">D</td><td style="font-family:PigPen">E</td><td style="font-family:PigPen">F</td><td style="font-family:PigPen">G</td><td style="font-family:PigPen">H</td><td style="font-family:PigPen">I</td><td style="font-family:PigPen">J</td><td style="font-family:PigPen">K</td><td style="font-family:PigPen">L</td><td style="font-family:PigPen">M</td><td style="font-family:PigPen">N</td><td style="font-family:PigPen">O</td><td style="font-family:PigPen">P</td><td style="font-family:PigPen">Q</td><td style="font-family:PigPen">R</td><td style="font-family:PigPen">S</td><td style="font-family:PigPen">T</td><td style="font-family:PigPen">U</td><td style="font-family:PigPen">V</td><td style="font-family:PigPen">W</td><td style="font-family:PigPen">X</td><td style="font-family:PigPen">Y</td><td style="font-family:PigPen">Z</td>
 	</tr>
 </table></form>
 
 La grille ci-dessus utilise cette [Police](https://www.dafont.com/pigpen-cipher.font){:target="_blank"} venant du site [www.dafont.com](http://www.dafont.com/){:target="_blank"}.
-
-### Le cryptogramme de La Buse
-
-Olivier Levasseur dit "la Buse" (ou "la Bouche") est un pirate du XVIIIe siècle qui, avant d'être pendu, lança le message chiffré ci-dessous dans la foule en criant: "mes trésors à qui saura comprendre!". À l’heure actuelle, un chiffrement style parc à cochons est utilisé, mais le texte reste assez obscur. Les recherches se focalisent sur l'ile de la Réunion par Emmanuel Mezino qui a publié un livre "*Mon Trésor à qui saura le prendre : le secret du cryptogramme du pirate Olivier Levasseur dit La Buse, enfin dévoilé*" en 2014.
-
-<a href="/assets/img/chiffre/LaBuse1.png" data-lightbox="Chiffrement MonoAlphabétique" data-title="Cryptogramme du Forban"><img src="/assets/img/chiffre/LaBuse1.png" alt="Cryptogramme du Forban" style="max-width:25%;"/></a>
 
 ### Le chiffrement des templiers
 
@@ -261,6 +255,25 @@ Les templiers chiffraient les lettres de crédit qu'ils mettaient en circulation
 
 <a href="/assets/img/chiffre/Templier2.png" data-lightbox="Chiffrement MonoAlphabétique" data-title="Croix des huit béatitudes"><img src="/assets/img/chiffre/Templier2.png" alt="Croix des huit béatitudes" style="max-width:25%;"/></a>
 <a href="/assets/img/chiffre/Templier1.png" data-lightbox="Chiffrement MonoAlphabétique" data-title="Chiffre des templiers"><img src="/assets/img/chiffre/Templier1.png" alt="Chiffre des templiers" style="max-width:75%;"/></a>
+
+<form><table style="width:100%" border="1">
+	<tr align="center">
+		<th width="15%" align="left">Original</th>
+		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
+	</tr>
+	<tr align="center" bgcolor="#F0F0F0">
+		<th width="15%" align="left">Templier</th>
+		<td style="font-family:Templar">A</td><td style="font-family:Templar">B</td><td style="font-family:Templar">C</td><td style="font-family:Templar">D</td><td style="font-family:Templar">E</td><td style="font-family:Templar">F</td><td style="font-family:Templar">G</td><td style="font-family:Templar">H</td><td style="font-family:Templar">I</td><td style="font-family:Templar">J</td><td style="font-family:Templar">K</td><td style="font-family:Templar">L</td><td style="font-family:Templar">M</td><td style="font-family:Templar">N</td><td style="font-family:Templar">O</td><td style="font-family:Templar">P</td><td style="font-family:Templar">Q</td><td style="font-family:Templar">R</td><td style="font-family:Templar">S</td><td style="font-family:Templar">T</td><td style="font-family:Templar">U</td><td style="font-family:Templar">V</td><td style="font-family:Templar">W</td><td style="font-family:Templar">X</td><td style="font-family:Templar">Y</td><td style="font-family:Templar">Z</td>
+	</tr>
+</table></form>
+
+la grille ci-dessus utilise cette [Police](https://www.dafont.com/fr/templarscipherplus.font){:target="_blank"} venant du site [www.dafont.com](http://www.dafont.com/){:target="_blank"}.
+
+### Le cryptogramme de La Buse
+
+Olivier Levasseur dit "la Buse" (ou "la Bouche") est un pirate du XVIIIe siècle qui, avant d'être pendu, lança le message chiffré ci-dessous dans la foule en criant: "mes trésors à qui saura comprendre!". À l’heure actuelle, un chiffrement style parc à cochons est utilisé, mais le texte reste assez obscur. Les recherches se focalisent sur l'ile de la Réunion par Emmanuel Mezino qui a publié un livre "*Mon Trésor à qui saura le prendre : le secret du cryptogramme du pirate Olivier Levasseur dit La Buse, enfin dévoilé*" en 2014.
+
+<a href="/assets/img/chiffre/LaBuse1.png" data-lightbox="Chiffrement MonoAlphabétique" data-title="Cryptogramme du Forban"><img src="/assets/img/chiffre/LaBuse1.png" alt="Cryptogramme du Forban" style="max-width:25%;"/></a>
 
 ### Voir plus loin
 
@@ -284,9 +297,9 @@ Il s'agit d'un système d’écriture tactile à points saillants, à l’usage 
 		<th width="15%" align="left">Original</th>
 		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
 	</tr>
-	<tr align="center" bgcolor="#F0F0F0" style="font-family:Braille">
-		<th width="15%" align="left" style="font-family: 'Montserrat', sans-serif;">Braille</th>
-		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
+	<tr align="center" bgcolor="#F0F0F0">
+		<th width="15%" align="left">Braille</th>
+		<td style="font-family:Braille">A</td><td style="font-family:Braille">B</td><td style="font-family:Braille">C</td><td style="font-family:Braille">D</td><td style="font-family:Braille">E</td><td style="font-family:Braille">F</td><td style="font-family:Braille">G</td><td style="font-family:Braille">H</td><td style="font-family:Braille">I</td><td style="font-family:Braille">J</td><td style="font-family:Braille">K</td><td style="font-family:Braille">L</td><td style="font-family:Braille">M</td><td style="font-family:Braille">N</td><td style="font-family:Braille">O</td><td style="font-family:Braille">P</td><td style="font-family:Braille">Q</td><td style="font-family:Braille">R</td><td style="font-family:Braille">S</td><td style="font-family:Braille">T</td><td style="font-family:Braille">U</td><td style="font-family:Braille">V</td><td style="font-family:Braille">W</td><td style="font-family:Braille">X</td><td style="font-family:Braille">Y</td><td style="font-family:Braille">Z</td>
 	</tr>
 </table></form>
 
@@ -306,9 +319,9 @@ Tout comme le Braille, le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_inter
 		<th width="15%" align="left">Original</th>
 		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
 	</tr>
-	<tr align="center" bgcolor="#F0F0F0" style="font-family:Morse">
-		<th width="15%" align="left" style="font-family: 'Montserrat', sans-serif;">Morse</th>
-		<td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
+	<tr align="center" bgcolor="#F0F0F0">
+		<th width="15%" align="left">Morse</th>
+		<td style="font-family:Morse">A</td><td style="font-family:Morse">B</td><td style="font-family:Morse">C</td><td style="font-family:Morse">D</td><td style="font-family:Morse">E</td><td style="font-family:Morse">F</td><td style="font-family:Morse">G</td><td style="font-family:Morse">H</td><td style="font-family:Morse">I</td><td style="font-family:Morse">J</td><td style="font-family:Morse">K</td><td style="font-family:Morse">L</td><td style="font-family:Morse">M</td><td style="font-family:Morse">N</td><td style="font-family:Morse">O</td><td style="font-family:Morse">P</td><td style="font-family:Morse">Q</td><td style="font-family:Morse">R</td><td style="font-family:Morse">S</td><td style="font-family:Morse">T</td><td style="font-family:Morse">U</td><td style="font-family:Morse">V</td><td style="font-family:Morse">W</td><td style="font-family:Morse">X</td><td style="font-family:Morse">Y</td><td style="font-family:Morse">Z</td>
 	</tr>
 </table></form>
 
