@@ -28,8 +28,8 @@ Voici quelques définitions d'objets généraux utilisé par la suite.
 
 $$\times$$ correspond à multiplier sauf lorsque l'un a deux vecteurs, il s'agit du produit croisés, on utilisera * à la place.
 
-[Mémo Trigonométrie](../Memo-Trigonometrie/){:target="_blank"}  
-[Mémo Espace vectoriel](../Memo-Vecteurs/){:target="_blank"}
+[Mémo Trigonométrie](../Memo_Trigonometrie/){:target="_blank"}  
+[Mémo Espace vectoriel](../Memo_Vecteurs/){:target="_blank"}
 
 ## Intersection
 Pour calculer une intersection à partir d’équation, il suffit de trouver un point commun à ces équations.  
@@ -72,7 +72,7 @@ On substitue $$\mathcal{p}$$ par $$\mathcal{R}(t)$$ :
 |$$\left(\mathcal{R_D}\times t \right) \cdot \mathcal{P_N} + \mathcal{RP} \cdot \mathcal{P_N}$$|$$=$$|$$0$$|
 |$$ t \times \left(\mathcal{R_D} \cdot \mathcal{P_N}\right) + \left(\mathcal{RP} \cdot \mathcal{P_N}\right)$$|$$=$$|$$0$$|
 
-$$t=\frac{\mathcal{RP} \cdot \mathcal{P_N}}{\mathcal{R_D} \cdot \mathcal{P_N}}$$
+$$t=\frac{\mathcal{RP} \cdot \mathcal{P_N}}{\mathcal{R_D} \cdot \mathcal{P_N}}$${: .Formule}
 
 On a quatre cas de figure :
 
@@ -92,7 +92,7 @@ On commence par translater le triangle pour le ramener à l'origine (on soustrai
 
 avec $$\begin{cases} E_1 & = & A-C\\ E_2 & = & B-C\\ T & = & \mathcal{R_O}-C\end{cases}$$, on a :
 
-$$\begin{bmatrix} t\\ u\\ v\end{bmatrix}=\frac{1}{\left\lvert -D \quad E_1 \quad E_2 \right\rvert}*\begin{bmatrix} \left\lvert T \quad E_1 \quad E_2 \right\rvert\\ \left\lvert -D \quad T \quad E_2 \right\rvert\\ \left\lvert -D \quad E_1 \quad T \right\rvert\end{bmatrix}=\frac{1}{\left(D \times E_2 \right) \cdot E_1}*\begin{bmatrix} \left(T \times E_2 \right) \cdot E_1\\ \left(D \times E_2 \right) \cdot T\\ \left(T \times E_1 \right) \cdot D\end{bmatrix}$$
+$$\begin{bmatrix} t\\ u\\ v\end{bmatrix}=\frac{1}{\left\lvert -D \quad E_1 \quad E_2 \right\rvert}*\begin{bmatrix} \left\lvert T \quad E_1 \quad E_2 \right\rvert\\ \left\lvert -D \quad T \quad E_2 \right\rvert\\ \left\lvert -D \quad E_1 \quad T \right\rvert\end{bmatrix}=\frac{1}{\left(D \times E_2 \right) \cdot E_1}*\begin{bmatrix} \left(T \times E_2 \right) \cdot E_1\\ \left(D \times E_2 \right) \cdot T\\ \left(T \times E_1 \right) \cdot D\end{bmatrix}$${: .Formule}
 
 On a trois cas de figure :
 
@@ -107,22 +107,29 @@ Pour effectuer une transformation dans l’espace, il suffit de faire le produit
 
 ### Rappel Matrice Identité et enchainement
 
-La matrice Identité est une matrice qui multiplié à un point donne le même point. $$\mathcal{M}_{Id}\begin{pmatrix}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{pmatrix}$$
+La matrice Identité est une matrice qui multiplié à un point donne le même point. 
+
+$$\mathcal{M}_{Id}\begin{pmatrix}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{pmatrix}$${: .Formule}
 
 La multiplication de différentes matrices de transformation permet d'obtenir une nouvelle matrice qui sera l’application de toute ses transformations successives. Evidemment, changer l’ordre des transformations peut changer le résultat.
 
 ### Translation
 
-Pour déplacer un point $$\mathcal{P}$$ par le vecteur $$\vec{T}$$, la matrice de translation sera :	$$\mathcal{M}_\vec{T}\begin{pmatrix}1&0&0&x_T\\0&1&0&y_T\\0&0&1&z_T\\0&0&0&1\end{pmatrix}$$
+Pour déplacer un point $$\mathcal{P}$$ par le vecteur $$\vec{T}$$, la matrice de translation sera :
+
+$$\mathcal{M}_\vec{T}\begin{pmatrix}1&0&0&x_T\\0&1&0&y_T\\0&0&1&z_T\\0&0&0&1\end{pmatrix}$${: .Formule}
 
 ### Homothétie
 
-Pour multiplier la distance à l’origine d’un point  $$\mathcal{P}$$ par le facteur $$H$$, la matrice d’homothétie sera : $$\mathcal{M}_H\begin{pmatrix}x_H&0&0&0\\0&y_H&0&0\\0&0&z_H&0\\0&0&0&1\end{pmatrix}$$
+Pour multiplier la distance à l’origine d’un point $$\mathcal{P}$$ par le facteur $$H$$, la matrice d’homothétie sera : 
+
+$$\mathcal{M}_H\begin{pmatrix}x_H&0&0&0\\0&y_H&0&0\\0&0&z_H&0\\0&0&0&1\end{pmatrix}$${: .Formule}
 
 ### Rotation
 
-Rotation d’un point P par l’angle θ centré sur l’origine, la matrice de rotation sera (autour d’un axe) :
-$$\mathcal{M}_{R_x}\begin{pmatrix}1&0&0&0\\0&cos⁡θ&-sin⁡θ&0\\0&sin⁡θ&cos⁡θ&0\\0&0&0&1\end{pmatrix} \quad \quad \quad \mathcal{M}_{R_y}\begin{pmatrix}cos⁡θ&0&sin⁡θ&0\\0&1&0&0\\-sin⁡θ&0&cos⁡θ&0\\0&0&0&1\end{pmatrix} \quad \quad \quad \mathcal{M}_{R_z}\begin{pmatrix}cos⁡θ&-sin⁡θ&0&0\\sin⁡θ&cos⁡θ&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}$$
+Rotation d’un point P par l’angle θ centré sur l’origine, la matrice de rotation sera (autour d’un axe $$x$$, $$y$$ ou $$z$$) :
+
+$$\mathcal{M}_{R_x}\begin{pmatrix}1&0&0&0\\0&cos⁡θ&-sin⁡θ&0\\0&sin⁡θ&cos⁡θ&0\\0&0&0&1\end{pmatrix} \quad \quad \quad \mathcal{M}_{R_y}\begin{pmatrix}cos⁡θ&0&sin⁡θ&0\\0&1&0&0\\-sin⁡θ&0&cos⁡θ&0\\0&0&0&1\end{pmatrix} \quad \quad \quad \mathcal{M}_{R_z}\begin{pmatrix}cos⁡θ&-sin⁡θ&0&0\\sin⁡θ&cos⁡θ&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}$${: .Formule}
 
 ### Repère global VS Repère Local
 
