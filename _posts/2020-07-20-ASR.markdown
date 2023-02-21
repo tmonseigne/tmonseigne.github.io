@@ -12,8 +12,6 @@ author: Thibaut Monseigne
 {:toc}
 {: .toc-post}
 
-![WIP](/assets/img/WIP.png){:style="max-width:50%;"}
-
 **Sources Principales :**
 
 * Plugin Matlab [EEGLAB](https://sccn.ucsd.edu/eeglab/index.php) ([github](https://github.com/sccn/eeglab)).

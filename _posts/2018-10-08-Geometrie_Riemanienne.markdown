@@ -73,15 +73,15 @@ Soit $$(S,d)$$ l’espace métrique des nombres réels positifs dotés de la mé
 
 La métrique la plus connue sur S est la distance euclidienne "habituelle" :
 
-$$ d_E(a,b) = \lvert a - b \rvert $$
+$$ d_E(a,b) = \lvert a - b \rvert $${: .Formule}
 
 la moyenne euclidienne correspondante d'un ensemble de points $$\{c_1, \dots, c_K\}$$ est le point $$m$$ qui résout la minimisation :
 
-$$ \arg_m \min \frac{1}{K} \sum_{k=1}^K{d_E^2(m,c_k)} = \arg_m \min \frac{1}{K} \sum_{k=1}^K{\lvert m - c_k \rvert^2} $$
+$$ \arg_m \min \frac{1}{K} \sum_{k=1}^K{d_E^2(m,c_k)} = \arg_m \min \frac{1}{K} \sum_{k=1}^K{\lvert m - c_k \rvert^2} $${: .Formule}
 
 Cela se révèle être la moyenne arithmétique habituelle :
 
-$$ \frac{1}{K} \sum_{k=1}^K{c_k} $$  
+$$ \frac{1}{K} \sum_{k=1}^K{c_k} $${: .Formule}
 
 Ainsi, la moyenne euclidienne est le point minimisant la variance de l'échantillon, la dispersion de l'ensemble autour de la moyenne en fonction de la distance euclidienne.
 
@@ -89,19 +89,19 @@ Ainsi, la moyenne euclidienne est le point minimisant la variance de l'échantil
 
 En BCI, la distance euclidienne ne fournit pas de bonne performance. À l'instar des décibels pour le son, on utilise le logarithme pour avoir la distance Log-Euclidienne (Log-Euclidian) appelée Distance Géométrique (ou Hyperbolique) sur S, définie par :
 
-$$ d_G(a,b) = \left\lvert \log{a} - \log{b} \right\rvert = \left\lvert \log{\frac{a}{b}} \right\rvert $$
+$$ d_G(a,b) = \left\lvert \log{a} - \log{b} \right\rvert = \left\lvert \log{\frac{a}{b}} \right\rvert $${: .Formule}
 
 En statistique, si $$a$$ et $$b$$ sont deux variances d’échantillon, leur ratio est la statistique habituelle de Snedecor $$F$$ pour tester l’égalité de deux variances et le log de ce ratio correspond à la distribution générale de Fisher $$z$$. Contrairement à la distance euclidienne, la distance géométrique bénéficie de l'invariance d'échelle et l'invariance sous inversion.
 
-$$d_G(xa,xb) = d_G(a,b), ~\forall~ a, b, x > 0 \\ d_G(a^{-1},b^{-1}) = d_G(a,b), ~\forall~ a, b > 0$$
+$$d_G(xa,xb) = d_G(a,b), ~\forall~ a, b, x > 0 \\ d_G(a^{-1},b^{-1}) = d_G(a,b), ~\forall~ a, b > 0$${: .Formule}
 
 La moyenne de Fréchet des $$K$$ points $$\{c_1, \dots, c_K\}$$ correspondant à la distance géométrique est le point $$g$$ qui résout le problème de minimisation :
 
-$$ \arg_g \min \frac{1}{K} \sum_{k=1}^K{d_G^2(g,c_k)} = \arg_g \min \frac{1}{K} \sum_{k=1}^K{\left\lvert \log{g} - \log{c_k} \right\rvert^2} $$
+$$ \arg_g \min \frac{1}{K} \sum_{k=1}^K{d_G^2(g,c_k)} = \arg_g \min \frac{1}{K} \sum_{k=1}^K{\left\lvert \log{g} - \log{c_k} \right\rvert^2} $${: .Formule}
 
 Cela se révèle être une autre moyenne célèbre de Pythagore, la moyenne géométrique:
 
-$$ g = \sqrt[K]{c_1 \cdot c_2 \cdot ~...~ \cdot c_k } = \exp{\left( \frac{1}{K} \sum_{k=1}^K{\log{c_k}} \right)} $$
+$$ g = \sqrt[K]{c_1 \cdot c_2 \cdot ~...~ \cdot c_k } = \exp{\left( \frac{1}{K} \sum_{k=1}^K{\log{c_k}} \right)} $${: .Formule}
 
 Cette moyenne est plus adaptée aux variables ayant une distribution asymétrique ou possédant des valeurs aberrantes.
 
@@ -141,7 +141,7 @@ Avec deux électrodes (C3 et C4 par exemple), on a :
 
 Du fait de l'inégalité de Cauchy-Schwartz, on a :
 
-$$ \left\lvert\operatorname{Cov}{\left(x_{1k},x_{2k}\right)}\right\rvert^2 \leq \operatorname{Var}{\left(x_{1k}\right)} \operatorname{Var}{\left(x_{2k}\right)}$$
+$$ \left\lvert\operatorname{Cov}{\left(x_{1k},x_{2k}\right)}\right\rvert^2 \leq \operatorname{Var}{\left(x_{1k}\right)} \operatorname{Var}{\left(x_{2k}\right)}$${: .Formule}
 
 Donc tout point est à l'intérieur d'un Cône convexe symétrique. Toute matrice définie positive symétrique se situe à l'intérieur d'un cône ouvert en raison de l'inégalité de Cauchy-Schwarz.
 Lorsque le point touche la frontière du cône, l'inégalité devient une égalité et la matrice n'est plus définie positive.
@@ -163,13 +163,13 @@ Pour toute dimension supérieure N, le cône deviendra un hypercône, mais cela 
 L’espace des matrices symétriques $$N \times N$$ est un espace linéaire de dimension $$N\left(N + 1\right) / 2$$.
 Il a un produit intérieur naturel (produit scalaire) donné par $$\langle A,B \rangle = \operatorname{tr}{\left(AB\right)}$$ et la norme euclidienne associée $$\lVert A \rVert_2$$, définie par :
 
-$$\lVert A\rVert_2^2 = \operatorname{tr}{A^2} = \sum_n{\lambda_n\left(A\right)^2}$$
+$$\lVert A\rVert_2^2 = \operatorname{tr}{A^2} = \sum_n{\lambda_n\left(A\right)^2}$${: .Formule}
 
 où $$\lambda_n\left(A\right)^2$$  sont les $$N$$ Les valeurs propres de A et $$\operatorname{tr}$$ est l'opérateur de trace.
 
 Si la matrice A a des éléments $$a_{ij}$$, alors :
 
-$$\lVert A \rVert_2^2 = \sum_{i,j=1}^N{\left\lvert A \right\rvert^2}$$
+$$\lVert A \rVert_2^2 = \sum_{i,j=1}^N{\left\lvert A \right\rvert^2}$${: .Formule}
 
 Donc, $$\lVert A\rVert_2$$ est une extension naturelle aux matrices de la norme euclidienne sur les vecteurs. Le cône des matrices positives est un sous-ensemble de matrices symétriques et hérite naturellement de cette norme euclidienne.
 
@@ -177,11 +177,11 @@ Cela peut être satisfaisant pour certains problèmes, mais présente plusieurs 
 
 L'ensemble $$ S_{++} (N) $$ des matrices positives $$N \times N$$ est une variété différentiable. C’est-à-dire que chaque petit voisinage autour d'un point P "ressemble" à l'espace euclidien de matrices symétriques, dont il est un ensemble ouvert. L'espace de toutes les matrices symétriques à n'importe quel point de base du collecteur s'appelle l'espace tangent. La géométrie riemannienne commence par équiper avec un produit interne chaque espace tangent, de manière à ce que la métrique résultante varie progressivement d'un point à un autre. Dans ce cas, le produit intérieur en un point donné $$P$$ est :
 
-$$\langle A,B \rangle_P = \operatorname{tr}{\left( P^{-1}AP^{-1}B \right)}$$
+$$\langle A,B \rangle_P = \operatorname{tr}{\left( P^{-1}AP^{-1}B \right)}$${: .Formule}
 
 La norme associée est alors $$\lVert A \rVert_{2,P}$$, donnée par :
 
-$$\lVert A \rVert_{2,P}^2 = \left\lVert P^{-1}A \right\rVert_2^2 = \left\lVert P^{-1/2}AP^{-1/2} \right\rVert_2^2$$
+$$\lVert A \rVert_{2,P}^2 = \left\lVert P^{-1}A \right\rVert_2^2 = \left\lVert P^{-1/2}AP^{-1/2} \right\rVert_2^2$${: .Formule}
 
 Lorsque $$P=I$$, la matrice d’identité, cela se réduit à la norme $$\lVert A \rVert_2$$ introduite précédemment.
 
@@ -200,7 +200,7 @@ Lorsque $$P=I$$, la matrice d’identité, cela se réduit à la norme $$\lVert 
 On calcule la longueur de toute courbe dans l'espace $$S_{++}(N)$$ à l'aide du produit interne sur l'espace tangent.
 Étant donné deux points (Matrices de Covariance) quelconques $$C_1$$ et $$C_2$$ en $$S_{++}(N)$$, plusieurs courbes pourraient les traverser. La variété des matrices positives avec un produit intérieur sur l'espace tangent possède, pour deux points quelconques, une longueur minimale appelée géodésique. Elle est donnée par :
 
-$$ \delta_G\left(C_1,C_2\right) = \left\lVert \operatorname{Log}{\left( C_1^{-1/2}C_2C_1^{-1/2}\right)} \right\rVert_F = \sqrt{\sum_{n=1}^N{\log^2{\lambda_n}}} $$
+$$ \delta_G\left(C_1,C_2\right) = \left\lVert \operatorname{Log}{\left( C_1^{-1/2}C_2C_1^{-1/2}\right)} \right\rVert_F = \sqrt{\sum_{n=1}^N{\log^2{\lambda_n}}} $${: .Formule}
 
 [Définition de la norme de Frobenius ici : $$\left\lVert A \right\rVert_F$$](../Memo_Matrices/#norme-de-frobenius){:target="_blank"}  
 
@@ -212,11 +212,11 @@ La définition de distance en tant que longueur d’une géodésique garantit qu
 
 La distance est invariante sous toute [congruence](../Memo_Matrices/#relations){:target="_blank"}, c'est-à-dire :
 
-$$ \delta_G\left( XC_1X^{\mathsf{T}},XC_2X^{\mathsf{T}} \right) = \delta_G\left( C_1,C_2 \right) $$
+$$ \delta_G\left( XC_1X^{\mathsf{T}},XC_2X^{\mathsf{T}} \right) = \delta_G\left( C_1,C_2 \right) $${: .Formule}
 
 elle est également invariante sous inversion, c'est-à-dire
 
-$$ \delta_G\left( C_1^{-1},C_2^{-1} \right) = \delta_G\left( C_1,C_2 \right) $$
+$$ \delta_G\left( C_1^{-1},C_2^{-1} \right) = \delta_G\left( C_1,C_2 \right) $${: .Formule}
 
 Ces deux propriétés sont des extensions simples des équations de la partie **Distance et Moyenne Géométrique** et sont déterminantes pour la robustesse des décodeurs BCI riemanniens.
 
@@ -230,11 +230,11 @@ La condition de minimisation de la dispersion existe et il est unique. En fait, 
 
 Encore une fois, la moyenne arithmétique $$ M=\frac{1}{K}\sum_{k=1}^K{C_k} $$ est la minimisation de la dispersion en fonction de la distance euclidienne, c’est-à-dire :
 
-$$ \arg_M \min \frac{1}{K} \sum_{k=1}^K{\delta_E^2\left(C_k,M\right)} = \frac{1}{K} \sum_{k=1}^K{\left\lVert C_k - M \right\rVert_F^2} $$
+$$ \arg_M \min \frac{1}{K} \sum_{k=1}^K{\delta_E^2\left(C_k,M\right)} = \frac{1}{K} \sum_{k=1}^K{\left\lVert C_k - M \right\rVert_F^2} $${: .Formule}
 
 Avec la distance géométrique, nous avons :
 
-$$ \arg_G \min \frac{1}{K} \sum_{k=1}^K{\delta_G^2\left(C_k,G\right)} $$
+$$ \arg_G \min \frac{1}{K} \sum_{k=1}^K{\delta_G^2\left(C_k,G\right)} $${: .Formule}
 
 La métrique riemannienne $$\delta_G$$ a plusieurs propriétés intéressantes garantissant que $$G$$ ainsi défini existe et est unique. $$G$$ est diversement appelé moyenne de Cartan, Karcher, Fréchet, Riemannienne ou géométrique, ainsi que le centre de masse de $$\{C_1, \dots, C_K\}$$.
 
@@ -242,15 +242,15 @@ La métrique riemannienne $$\delta_G$$ a plusieurs propriétés intéressantes g
 
 Les propriétés d'invariance de la distance Riemannienne confèrent à la moyenne géométrique $$G$$ l'invariance de [congruence](../Memo_Matrices/#relations){:target="_blank"}, c'est-à-dire :
 
-$$ G\left( XC_1X^{\mathsf{T}}, \dots, XC_kX^{\mathsf{T}} \right) = XG\left( C_1, \dots, C_k \right)X^{\mathsf{T}} $$
+$$ G\left( XC_1X^{\mathsf{T}}, \dots, XC_kX^{\mathsf{T}} \right) = XG\left( C_1, \dots, C_k \right)X^{\mathsf{T}} $${: .Formule}
 
 Pour tout X inversible, elle a également la dualité de soi (self-duality) c'est-à-dire :
 
-$$ G\left( C_1^{-1}, \dots, C_k^{-1} \right) = \left(G\left( C_1, \dots, C_k \right)\right)^{-1} $$
+$$ G\left( C_1^{-1}, \dots, C_k^{-1} \right) = \left(G\left( C_1, \dots, C_k \right)\right)^{-1} $${: .Formule}
 
 La moyenne arithmétique possède l'invariance de congruence mais pas la dualité de soi.  
 Une autre propriété importante est l'**identité du déterminant** : le déterminant de la moyenne géométrique $$ G\left( C_1, \dots, C_k \right) $$ est égal à la moyenne géométrique des déterminants de $$ C_1, \dots, C_k $$. Cela contraste avec la moyenne arithmétique, où le déterminant de $$1/2\left(C_1 + C_2\right)$$ peut être plus grand que le déterminant de $$C_1$$ et de $$C_2$$.
 
 Lorsque $$K>2$$, aucune expression sous forme fermée de la moyenne géométrique n'est connue. Une caractérisation utile de la moyenne géométrique est la solution unique de l'équation matricielle non linéaire :
 
-$$ \frac{1}{K} \sum_{k=1}^K{\operatorname{Log}{\left(G^{-1/2} C_k G^{-1/2}\right)}} = 0 $$
+$$ \frac{1}{K} \sum_{k=1}^K{\operatorname{Log}{\left(G^{-1/2} C_k G^{-1/2}\right)}} = 0 $${: .Formule}

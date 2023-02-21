@@ -25,7 +25,7 @@ $$\times$$ correspond à multiplier sauf lorsque l'un a deux vecteurs, il s'agit
 ### Définition
 La norme euclidienne d'un vecteur $$\overrightarrow{AB}$$ est la distance qui sépare $$A$$ de $$B$$ c'est donc un nombre. En général, elle est notée $$\left\lVert \overrightarrow{AB} \right\rVert$$. Elle est égale à la racine de la somme des coordonnées au carrées ou au produit scalaire du vecteur avec lui-même.
 
-$$\left\lVert \vec{v} \right\rVert = \sqrt{x^2+y^2+z^2} = \sqrt{\vec{v} \cdot \vec{v}}$$
+$$\left\lVert \vec{v} \right\rVert = \sqrt{x^2+y^2+z^2} = \sqrt{\vec{v} \cdot \vec{v}}$${: .Formule}
 
 ### Propriétés
 
@@ -61,7 +61,7 @@ D'un point de vue géométrique, le produit vectoriel de deux vecteurs $$\vec{u}
 * La base $$(\vec{u},\vec{v},\vec{w})$$ est de sens direct.
 * $$\left\lVert \vec{w} \right\rVert = \left\lVert \vec{u} \right\rVert \times \left\lVert \vec{v} \right\rVert \times \left\lvert \sin{\left( \widehat{\vec{u}, \vec{v}} \right)} \right\rvert $$.
 
-$$ \vec{u} \times \vec{v} = \vec{u} \wedge \vec{v} = \begin{bmatrix} u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3 \\ u_1v_2 - u_2v_1 \end{bmatrix} $$
+$$ \vec{u} \times \vec{v} = \vec{u} \wedge \vec{v} = \begin{bmatrix} u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3 \\ u_1v_2 - u_2v_1 \end{bmatrix} $${: .Formule}
 
 ### Propriétés
 

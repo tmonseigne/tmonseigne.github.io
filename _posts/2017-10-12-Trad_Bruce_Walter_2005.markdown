@@ -43,7 +43,7 @@ Les directions peuvent également être représentées comme deux angles, $$\the
 Nous incluons généralement ces angles avec la direction qu'ils décrivent.
 Nous pouvons convertir les coordonnées polaires sphériques et les représentations vectorielles unitaires 3D en utilisant :
 
-$$\left( \theta ,\phi \right) \Leftrightarrow \left[ \sin \theta \cos \phi, \sin \theta \sin \phi,\cos \theta \right] \label{eq:1}\tag{1}$$
+$$\left( \theta ,\phi \right) \Leftrightarrow \left[ \sin \theta \cos \phi, \sin \theta \sin \phi,\cos \theta \right] \label{eq:1}\tag{1}$${: .Formule}
 
 <figure id="Fig1">
 	<a href="/assets/img/Articles/Walter05/fig1.png" data-lightbox="Walter05" data-title="Figure 1"><img src="/assets/img/Articles/Walter05/fig1.png" alt="Figure 1" style="max-width:25%;"/></a>
@@ -64,7 +64,7 @@ Pour les BRDF anisotropes, les axes $$\mathbf{x}$$ et $$\mathbf{y}$$ doivent cor
 
 La BRDF de Ward utilise la demi-direction $$\mathbf{h}$$ définie à mi-chemin entre les directions incidentes et de sortie. Il peut être calculé en ajoutant $$\mathbf{i}$$ et $$\mathbf{o}$$ en tant que vecteurs 3D, puis en renormalisant:
 
-$$\mathbf{h}=\frac{\mathbf{i} + \mathbf{o}}{\left\lVert \mathbf{i} + \mathbf{o} \right\rVert} \label{eq:2}\tag{2}$$
+$$\mathbf{h}=\frac{\mathbf{i} + \mathbf{o}}{\left\lVert \mathbf{i} + \mathbf{o} \right\rVert} \label{eq:2}\tag{2}$${: .Formule}
 
 Le demi-angle est motivé par les microfacettes de la BRDF et produit des reflets plus réalistes que des alternatives telles que Phong (voir, par exemple, `[Fisher 1994, Ngan et al., 2004]`).
 
@@ -85,7 +85,7 @@ Le premier est un terme diffus, $$\rho_d / \pi$$.
 Les composants diffus sont relativement simples et déjà bien compris, donc nous ignorerons le composant diffus pour le reste de cet article.
 Le second composant est un lobe de brillance anisotrope gaussien défini par trois paramètres, $$\rho_s$$, $$\alpha_x$$ et $$\alpha_y$$, comme suit :
 
-$$ f_r(\mathbf{i}, \mathbf{o}) = \frac{\rho_s}{4 \pi \alpha_x \alpha_y \sqrt{\cos\theta_\mathbf{i} \times \cos\theta_\mathbf{o}}} \times e^{-\tan^2{\theta_\mathbf{h}} \left( \frac{\cos^2\phi_\mathbf{h}}{\alpha_x^2} + \frac{\sin^2\phi_\mathbf{h}}{\alpha_y^2} \right)} \label{eq:3}\tag{3}$$
+$$ f_r(\mathbf{i}, \mathbf{o}) = \frac{\rho_s}{4 \pi \alpha_x \alpha_y \sqrt{\cos\theta_\mathbf{i} \times \cos\theta_\mathbf{o}}} \times e^{-\tan^2{\theta_\mathbf{h}} \left( \frac{\cos^2\phi_\mathbf{h}}{\alpha_x^2} + \frac{\sin^2\phi_\mathbf{h}}{\alpha_y^2} \right)} \label{eq:3}\tag{3}$${: .Formule}
 
 où $$\rho_s$$ contrôle la grandeur du lobe, et $$\alpha_x$$ et $$\alpha_y$$ contrôlent la largeur du lobe dans les deux principales directions d'anisotropie.
 Si $$\alpha_x = \alpha_y$$ alors le lobe est isotrope (c'est-à-dire invariant sous les rotations autour de la normale de la surface).
@@ -95,12 +95,12 @@ L'équation vectorielle suivante est à la fois exacte et moins chère à calcul
 
 [^1]: Cette forme vectorielle a été trouvée indépendamment par plusieurs personnes dont moi-même. Greg Ward attribue Cristophe Schlick comme étant le premier. Des formulations équivalentes peuvent également être trouvées dans `[Ward 2004]` et des versions récentes de `[Larson et Shakespeare 2004]`.
 
-$$ f_r(\mathbf{i}, \mathbf{o}) = \frac{\rho_s}{4 \pi \alpha_x \alpha_y \sqrt{(\mathbf{i} \cdot \mathbf{n}) \times (\mathbf{o} \cdot \mathbf{n})}} \times e^{-\frac{\left(\frac{\mathbf{h} \cdot \mathbf{x}}{\alpha_x}\right)^2 + \left(\frac{\mathbf{h} \cdot \mathbf{y}}{\alpha_y}\right)^2}{\left(\mathbf{h} \cdot \mathbf{n}\right)^2}} \label{eq:4}\tag{4}$$
+$$ f_r(\mathbf{i}, \mathbf{o}) = \frac{\rho_s}{4 \pi \alpha_x \alpha_y \sqrt{(\mathbf{i} \cdot \mathbf{n}) \times (\mathbf{o} \cdot \mathbf{n})}} \times e^{-\frac{\left(\frac{\mathbf{h} \cdot \mathbf{x}}{\alpha_x}\right)^2 + \left(\frac{\mathbf{h} \cdot \mathbf{y}}{\alpha_y}\right)^2}{\left(\mathbf{h} \cdot \mathbf{n}\right)^2}} \label{eq:4}\tag{4}$${: .Formule}
 
-Puisque \mathbf{h} apparaît a des puissances égales dans le numérateur et le dénominateur de l'exposant, un demi-vecteur non normalisé peut être utilisé lors de l'évaluation de cette équation.
+Puisque $$\mathbf{h}$$ apparaît a des puissances égales dans le numérateur et le dénominateur de l'exposant, un demi-vecteur non normalisé peut être utilisé lors de l'évaluation de cette équation.
 Il est trivial de montrer que les équations $$\ref{eq:3}$$ et $$\ref{eq:4}$$ sont équivalentes en exprimant h comme un vecteur d'unité 3D comme indiqué ci-dessous et en développant les produits scalaires.
 
-$$\mathbf{h} = \left[ \sin \theta_\mathbf{h} \cos \phi_\mathbf{h}, \sin \theta_\mathbf{h} \sin \phi_\mathbf{h},\cos \theta_\mathbf{h} \right] \label{eq:5}\tag{5}$$
+$$\mathbf{h} = \left[ \sin \theta_\mathbf{h} \cos \phi_\mathbf{h}, \sin \theta_\mathbf{h} \sin \phi_\mathbf{h},\cos \theta_\mathbf{h} \right] \label{eq:5}\tag{5}$${: .Formule}
 
 ### Échantillonnage
 
@@ -109,27 +109,27 @@ Lors de l'échantillonnage, nous considérons que le vecteur incident i est donn
 Ward a fourni un échantillonnage pour sa BRDF `[Ward 1992, Equation 7]`, mais a accidentellement omis un arctangent dans ses équations[^2].
 Étant donné deux variables aléatoires uniformes u et v dans l'intervalle $$ 0 < u, v < 1 $$, les équations d'échantillonnage correctes sont :
 
-$$\theta_\mathbf{h} = \arctan\left(\sqrt{\frac{-log(u)}{\frac{\cos^2(\phi_\mathbf{h})}{\alpha_x^2}+\frac{\sin^2(\phi_\mathbf{h})}{\alpha_y^2}}}\right) \label{eq:6}\tag{6}$$
+$$\theta_\mathbf{h} = \arctan\left(\sqrt{\frac{-log(u)}{\frac{\cos^2(\phi_\mathbf{h})}{\alpha_x^2}+\frac{\sin^2(\phi_\mathbf{h})}{\alpha_y^2}}}\right) \label{eq:6}\tag{6}$${: .Formule}
 
-$$\phi_\mathbf{h} = \arctan\left(\frac{\alpha_y}{\alpha_x} \times \tan\left(2 \pi \times v \right)\right) \label{eq:7}\tag{7}$$
+$$\phi_\mathbf{h} = \arctan\left(\frac{\alpha_y}{\alpha_x} \times \tan\left(2 \pi \times v \right)\right) \label{eq:7}\tag{7}$${: .Formule}
 
 Il faut prendre soin de calculer le second arctangent pour garder $$\phi_\mathbf{h}$$ dans le même quadrant que l'angle $$2\pi v$$.
-Ces équations d'échantillonnage calculent la demi-direction $$\mathbf{h}$$ à partir de u et v, qui est ensuite utilisée pour générer la direction $$\mathbf{o}$$ à partir de \mathbf{h} et \mathbf{i} en utilisant :
+Ces équations d'échantillonnage calculent la demi-direction $$\mathbf{h}$$ à partir de u et v, qui est ensuite utilisée pour générer la direction $$\mathbf{o}$$ à partir de $$\mathbf{h}$$ et $$\mathbf{i}$$ en utilisant :
 
-$$ \mathbf{o} = 2 \left(\mathbf{i}\cdot\mathbf{h}\right) \mathbf{h}-\mathbf{i} \label{eq:8}\tag{8}$$
+$$ \mathbf{o} = 2 \left(\mathbf{i}\cdot\mathbf{h}\right) \mathbf{h}-\mathbf{i} \label{eq:8}\tag{8}$${: .Formule}
 
 Si la distribution générée des directions de sortie $$\mathbf{o}$$ correspond parfaitement à la BRDF, alors tous les échantillons peuvent avoir le même poids.
 Cependant, c'est rarement le cas pour les BRDF non triviales.
 Afin de calculer les poids d'échantillonnage corrects, nous devons connaître la fonction de densité de probabilité réelle po pour les directions générées o.
 La fonction de probabilité correcte de l'échantillonnage de Ward est:
 
-$$ p_r(\mathbf{o}) = \frac{\rho_s}{4 \pi \alpha_x \alpha_y \left(\mathbf{h} \cdot \mathbf{i}\right) \cos^3\theta_\mathbf{h}} \times e^{-\tan^2{\theta_\mathbf{h}} \left( \frac{\cos^2\phi_\mathbf{h}}{\alpha_x^2} + \frac{\sin^2\phi_\mathbf{h}}{\alpha_y^2} \right)} \label{eq:9}\tag{9}$$
+$$ p_r(\mathbf{o}) = \frac{\rho_s}{4 \pi \alpha_x \alpha_y \left(\mathbf{h} \cdot \mathbf{i}\right) \cos^3\theta_\mathbf{h}} \times e^{-\tan^2{\theta_\mathbf{h}} \left( \frac{\cos^2\phi_\mathbf{h}}{\alpha_x^2} + \frac{\sin^2\phi_\mathbf{h}}{\alpha_y^2} \right)} \label{eq:9}\tag{9}$${: .Formule}
 
 Cette probabilité est, par conception, assez proche de la BRDF de Ward (voir équation $$\ref{eq:3}$$), mais ne correspond pas exactement.
 La section suivante décrira comment trouver les fonctions de probabilité d'échantillonnage et comment dériver l'équation $$\ref{eq:9}$$.
 La fonction de pondération correcte $$w(\mathbf{o})$$ qui doit être appliquée aux échantillons dans les algorithmes de Monte Carlo (par exemple, path tracing) est donnée par:
 
-$$ w(\mathbf{o}) = \frac{f_r(\mathbf{i}, \mathbf{o}) \times \cos\theta_\mathbf{o}}{p_o(\mathbf{o})} = \rho_s \left(\mathbf{h}\cdot\mathbf{i}\right) \left(\mathbf{h}\cdot\mathbf{n}\right)^3 \sqrt{\frac{\left(\mathbf{o}\cdot\mathbf{n}\right)}{\left(\mathbf{i}\cdot\mathbf{n}\right)}} \label{eq:10}\tag{10}$$
+$$ w(\mathbf{o}) = \frac{f_r(\mathbf{i}, \mathbf{o}) \times \cos\theta_\mathbf{o}}{p_o(\mathbf{o})} = \rho_s \left(\mathbf{h}\cdot\mathbf{i}\right) \left(\mathbf{h}\cdot\mathbf{n}\right)^3 \sqrt{\frac{\left(\mathbf{o}\cdot\mathbf{n}\right)}{\left(\mathbf{i}\cdot\mathbf{n}\right)}} \label{eq:10}\tag{10}$${: .Formule}
 
 Les travaux antérieurs ont généralement supposé que les échantillons de la BRDF de Ward pouvaient être pondérés de façon égale (c'est-à-dire $$w(\mathbf{o})\approx \rho_s$$).
 Ceci est souvent presque vrai, mais peut causer des erreurs significatives pour les lobes larges et pour les angles rasant ou presque comme le montre la [Figure 3](#Fig3).
@@ -165,31 +165,31 @@ Nous voulons calculer la densité de probabilité pt associée à la variable al
 Pour simplifier, nous supposerons que la transformée est inversible sur les régions d'intérêt (c'est-à-dire que nous pouvons aussi écrire $$s_1 = s_1 \left(t_1, t_2\right)$$ et $$s_2 = s_2 \left(t_1, t_2\right)$$).
 La probabilité que la variable aléatoire soit dans une région $$B$$ (que nous écrivons comme $$P(B)$$) est donnée en intégrant sa densité de probabilité sur cette région par rapport à sa mesure associée (par exemple, $$p_t$$ et sa mesure $$dt_1 dt_2$$).
 
-$$ P \left( B \right) = \int_B{p_t\left(t_1, t_2 \right)\, \mathrm{d} t_1\,\mathrm{d} t_2} \label{eq:11}\tag{11}$$
+$$ P \left( B \right) = \int_B{p_t\left(t_1, t_2 \right)\, \mathrm{d} t_1\,\mathrm{d} t_2} \label{eq:11}\tag{11}$${: .Formule}
 
 Une densité de probabilité doit toujours avoir une mesure associée, bien que la mesure associée soit souvent implicite.
 Étant donné une région $$B\subseteq T$$, soit $$A_B \subseteq S$$ l'ensemble de tous les points de $$S$$ qui correspondent aux points de $$B$$.
 Les probabilités de ces deux ensembles doivent être égales (c'est-à-dire $$P(A_B) = P(B)$$) puisqu'elles couvrent les mêmes événements, et ainsi nous avons:
 
-$$ \int_{A_B}{p_s\left(s_1, s_2 \right)\, \mathrm{d} s_1\,\mathrm{d} s_2} = \int_B{p_t\left(t_1, t_2 \right)\, \mathrm{d} t_1\,\mathrm{d} t_2} \label{eq:12}\tag{12}$$
+$$ \int_{A_B}{p_s\left(s_1, s_2 \right)\, \mathrm{d} s_1\,\mathrm{d} s_2} = \int_B{p_t\left(t_1, t_2 \right)\, \mathrm{d} t_1\,\mathrm{d} t_2} \label{eq:12}\tag{12}$${: .Formule}
 
 En appliquant le théorème du changement de variables du calcul à la première intégrale, on obtient :
 
-$$ \int_{A_B}{p_s\left(s_1, s_2 \right)\, \mathrm{d} s_1\,\mathrm{d} s_2} = \int_B{p_s\left(s_1\left(t_1, t_2\right), s_2\left(t_1, t_2\right) \right) \left\lVert \frac{\delta \left[ s_1, s_2 \right]}{\delta \left[ t_1, t_2 \right]} \right\rVert \, \mathrm{d} t_1\,\mathrm{d} t_2} \label{eq:13}\tag{13}$$
+$$ \int_{A_B}{p_s\left(s_1, s_2 \right)\, \mathrm{d} s_1\,\mathrm{d} s_2} = \int_B{p_s\left(s_1\left(t_1, t_2\right), s_2\left(t_1, t_2\right) \right) \left\lVert \frac{\delta \left[ s_1, s_2 \right]}{\delta \left[ t_1, t_2 \right]} \right\rVert \, \mathrm{d} t_1\,\mathrm{d} t_2} \label{eq:13}\tag{13}$${: .Formule}
 
 où la valeur absolue du déterminant du jacobien est définie en termes de dérivées partielles comme :
 
 $$ \left\lVert \frac{\delta \left[ s_1, s_2 \right]}{\delta \left[ t_1, t_2 \right]} \right\rVert
 = \begin{Vmatrix} \frac{\delta s_1}{\delta t_1} & \frac{\delta s_1}{\delta t_2} \\ \frac{\delta s_2}{\delta t_1} & \frac{\delta s_2}{\delta t_2} \\ \end{Vmatrix}
-= \left\lvert{\frac{\delta s_1}{\delta t_1} \frac{\delta s_2}{\delta t_2} - \frac{\delta s_2}{\delta t_1} \frac{\delta s_1}{\delta t_2}} \right\rvert \label{eq:14}\tag{14}$$
+= \left\lvert{\frac{\delta s_1}{\delta t_1} \frac{\delta s_2}{\delta t_2} - \frac{\delta s_2}{\delta t_1} \frac{\delta s_1}{\delta t_2}} \right\rvert \label{eq:14}\tag{14}$${: .Formule}
 
 Puisque ces équations sont valables pour tout ensemble $$B$$, nous pouvons les utiliser pour résoudre la densité de probabilité $$p_t$$ comme :
 
-$$ p_t\left(t_1, t_2\right) = p_s\left(s_1\left(t_1, t_2\right), s_2\left(t_1, t_2\right) \right) \left\lVert \frac{\delta \left[ s_1, s_2 \right]}{\delta \left[ t_1, t_2 \right]} \right\rVert \label{eq:15}\tag{15}$$
+$$ p_t\left(t_1, t_2\right) = p_s\left(s_1\left(t_1, t_2\right), s_2\left(t_1, t_2\right) \right) \left\lVert \frac{\delta \left[ s_1, s_2 \right]}{\delta \left[ t_1, t_2 \right]} \right\rVert \label{eq:15}\tag{15}$${: .Formule}
 
 ### Application à $$p_\mathbf{h}$$ et $$p_\mathbf{o}$$
 
-Nous voulons spécialiser cette théorie générale pour traiter le cas spécifique de trouver des fonctions de densité de probabilité pour des méthodes d'échantillonnage basées sur la demi-direction \mathbf{h} (comme la BRDF de Ward).
+Nous voulons spécialiser cette théorie générale pour traiter le cas spécifique de trouver des fonctions de densité de probabilité pour des méthodes d'échantillonnage basées sur la demi-direction $$\mathbf{h}$$ (comme la BRDF de Ward).
 Ces méthodes d'échantillonnage prennent deux nombres aléatoires uniformes $$u$$ et $$v$$, les transforment en une demi-direction $$\mathbf{h}$$, puis utilisent $$\mathbf{h}$$ pour générer le vecteur $$\mathbf{o}$$.
 Nous allons d'abord discuter de la dérivation de la densité de probabilité $$p_h$$ pour $$\mathbf{h}$$, puis relier cela à la densité de probabilité $$p_o$$ pour le vecteur de sortie $$\mathbf{o}$$.
 
@@ -200,7 +200,7 @@ $$ \begin{split}
 p_h\left(\mathbf{h}\right)
 & = p_{uv}\left( u\left( \theta_h,\phi_h \right), v\left( \theta_h,\phi_h \right) \right) \left\lVert \frac{\delta \left[ u, v \right]}{\delta \left[ \theta_h,\phi_h \right]} \right\rVert \frac{1}{\sin{\theta_h}} \\
  & = \left\lvert{\frac{\delta u}{\delta \theta_h} \frac{\delta v}{\delta \phi_h} - \frac{\delta v}{\delta \theta_h} \frac{\delta u}{\delta \phi_h}} \right\rvert \frac{1}{\sin{\theta_h}}
-\end{split} \label{eq:16}\tag{16}$$
+\end{split} \label{eq:16}\tag{16}$${: .Formule}
 
 où nous avons utilisé le fait que $$p_{uv}\left(u, v\right) = 1$$ puisque $$u$$ et $$v$$ sont uniformément répartis dans le carré unité.
 
@@ -214,7 +214,7 @@ p_o\left(\mathbf{o}\right)
  & = p_h\left(\mathbf{h}\right) \left\lVert \frac{\delta \left[ \theta_h^*,\phi_h^* \right]}{\delta \left[ \theta_o^*,\phi_o^* \right]} \right\rVert \frac{\sin{\theta_h^*}}{\sin{\theta_o^*}} \\
  & = p_h\left(\mathbf{h}\right) \left\lvert{\frac{1}{2} - 0 }\right\rvert \frac{\sin{\theta_h^*}}{\sin{2\theta_o^*}}\\
  & = \frac{p_h\left(\mathbf{h}\right)}{4\cos{\theta_h^*}} = \frac{p_h\left(\mathbf{h}\right)}{4\left( \mathbf{h} \cdot \mathbf{i} \right)}
-\end{split} \label{eq:17}\tag{17}$$
+\end{split} \label{eq:17}\tag{17}$${: .Formule}
 
 Des résultats similaires pour la demi-direction vers la direction de sortie transformée peuvent être trouvés dans `[Torrance et Sparrow 1967]` et `[Ashikhmin et Shirley 2000]`.
 
@@ -236,27 +236,27 @@ Dans ce cas, la BRDF est simplifié à :
 
 $$
 f^{iso}_r(\mathbf{i}, \mathbf{o}) = \frac{\rho_s}{4 \pi \alpha^2 \sqrt{\cos\theta_\mathbf{i} \times \cos\theta_\mathbf{o}}} \times e^{-\frac{\tan^2{\theta_\mathbf{h}}}{\alpha^2}}
-\label{eq:18}\tag{18}$$
+\label{eq:18}\tag{18}$${: .Formule}
 
 et les équations d'échantillonnage isotropes sont simplifiés à :
 
 $$
 \theta_\mathbf{h} = \arctan\left(\alpha\sqrt{-log(u)}\right)
-\label{eq:19}\tag{19}$$
+\label{eq:19}\tag{19}$${: .Formule}
 
 $$
 \phi_\mathbf{h} = 2 \pi \times v
-\label{eq:20}\tag{20}$$
+\label{eq:20}\tag{20}$${: .Formule}
 
 Nous pouvons inverser ces équations d'échantillonnage isotropes pour obtenir :
 
 $$
 u = e^{-\frac{\tan^2{\theta_\mathbf{h}}}{\alpha^2}}
-\label{eq:21}\tag{21}$$
+\label{eq:21}\tag{21}$${: .Formule}
 
 $$
 v = \frac{\phi_\mathbf{h}}{2 \pi}
-\label{eq:22}\tag{22}$$
+\label{eq:22}\tag{22}$${: .Formule}
 
 Ensuite, nous pouvons appliquer l'équation $$\ref{eq:16}$$ et calculer les dérivées partielles de $$u$$ et $$v$$ par rapport à $$\theta_h$$ et $$\phi_h$$ pour obtenir :
 
@@ -270,14 +270,14 @@ p^{iso}_h\left(\mathbf{h}\right)
 	 - \left( 0 \right)\left( 0 \right)
 	 }\right\rvert \frac{1}{\sin{\theta_h}} \\
  & = \frac{1}{\pi\alpha^2\cos^3_{\theta_h}} \times e^{-\frac{\tan^2{\theta_\mathbf{h}}}{\alpha^2}}
-\end{split}\label{eq:23}\tag{23}$$
+\end{split}\label{eq:23}\tag{23}$${: .Formule}
 
 où nous avons supprimé l'opération de valeur absolue car elle est toujours positive dans l'interval valide de $$\theta_h$$, entre zéro et $$\pi / 2$$.
 Enfin, nous utilisons l'équation $$\ref{eq:17}$$, nous obtenons la densité de probabilité pour la direction $$\mathbf{o}$$ échantillonnée dans le cas isotrope comme :
 
 $$
 p^{iso}_h\left(\mathbf{o}\right) = \frac{1}{4\pi\alpha^2\left(\mathbf{h}\cdot\mathbf{i}\right)\cos^3_{\theta_h}} \times e^{-\frac{\tan^2{\theta_\mathbf{h}}}{\alpha^2}}
-\label{eq:24}\tag{24}$$
+\label{eq:24}\tag{24}$${: .Formule}
 
 La dérivation de l'équation $$\ref{eq:9}$$ pour le cas anisotrope est effectuée de manière similaire avec vérification laissée comme un exercice pour le lecteur.
 
@@ -316,13 +316,13 @@ Si nous utilisons un système de coordonnées où la normale de surface $$\mathb
 
 $$
 \cos{\theta_o} = \left( \mathbf{o} \cdot \mathbf{z} \right) = \frac{1}{\sqrt{v^2_x + v^2_y + v^2_z}}
-\label{eq:25}\tag{25}$$
+\label{eq:25}\tag{25}$${: .Formule}
 
 La dérivée de $$\cos\theta_o$$ par rapport à $$v_z$$ est toujours positive, donc on peut remplacer $$v_z$$ par sa valeur maximale sur le volume englobant $$\mathcal{B}$$ pour obtenir :
 
 $$
 \cos{\theta_o} \leq \frac{\max{\left(v_z\right)}}{\sqrt{v^2_x + v^2_y + \left[ \max{\left(v_z\right)} \right]^2}}
-\label{eq:26}\tag{26}$$
+\label{eq:26}\tag{26}$${: .Formule}
 
 Maintenant que le signe du numérateur est fixe, nous pouvons sélectionner $$v_x$$ et $$v_y$$ pour minimiser ou maximiser le dénominateur de façon appropriée :
 
@@ -331,7 +331,7 @@ $$
 \frac{\max{\left(v_z\right)}}{\sqrt{\min{\left(v^2_x\right)} + \min{\left(v^2_y\right)} + \left[ \max{\left(v_z\right)} \right]^2}} & \text{if} \max{\left(v_z\right)} \geq 0\\
 \frac{\max{\left(v_z\right)}}{\sqrt{\max{\left(v^2_x\right)} + \max{\left(v^2_y\right)} + \left[ \max{\left(v_z\right)} \right]^2}} & \text{otherwise}
 \end{cases}
-\label{eq:27}\tag{27}$$
+\label{eq:27}\tag{27}$${: .Formule}
 
 Un exemple est montré dans la [Figure 6](#Fig6). Notez que nous choisissons la valeur maximum de $$v_z$$ mais pour $$v_x$$ et $$v_y$$ nous choisissons les valeurs qui maximisent ou minimisent leurs valeurs au carré. Ainsi, si $$v_x$$ peut varier de $$-2$$ à $$1$$, alors $$\max{\left(v_x\right)} = 1$$, mais $$\max{\left(v^2_x\right)} = 4$$ et $$\min{\left(v^2_x\right)} = 0$$.
 
@@ -354,7 +354,7 @@ $$  \begin{split}
  & = \left[ \sin \theta_\mathbf{h}^* \cos \phi_\mathbf{h}^*, \sin \theta_\mathbf{h}^* \sin \phi_\mathbf{h}^*,\cos \theta_\mathbf{h}^* \right] \cdot \left[ \sin \theta_\mathbf{n}^*, 0, \cos \theta_\mathbf{n}^* \right] \\
  & = \sin \theta_\mathbf{n}^*\sin \theta_\mathbf{h}^*\cos \phi_\mathbf{h}^* + \cos \theta_\mathbf{n}^*\cos \theta_\mathbf{h}^*
 \end{split}
-\label{eq:28}\tag{28}$$
+\label{eq:28}\tag{28}$${: .Formule}
 
 Puisque $$\theta_n^*$$ est fixe, il suffit de sélectionner les valeurs appropriées pour $$\theta_h^*$$ et $$\phi_h^*$$ qui maximisent cette expression.
 
@@ -363,7 +363,7 @@ En utilisant le repère de la [Figure 4](#Fig4) pour exprimer les points $$\vec{
 
 $$
 \cos \phi_\mathbf{h}^* = \cos \phi_\mathbf{o}^*= \frac{v_y^*}{\sqrt{\left( v_x^* \right)^2+\left( v_y^* \right)^2}}
-\label{eq:29}\tag{29}$$
+\label{eq:29}\tag{29}$${: .Formule}
 
 et nous pouvons calculer une borne sur le maximum de $$\cos\phi_h^*$$ de la même manière que nous l'avons fait pour l'équation $$\ref{eq:27}$$.
 
@@ -373,18 +373,18 @@ Ensuite, nous pouvons utiliser la formule du demi-angle de la trigonométrie :
 
 $$
 \cos \theta_\mathbf{h}^* = \cos {\frac{\theta_\mathbf{o}^*}{2}} = \sqrt{\frac{1+\cos\theta_\mathbf{o}^*}{2}}
-\label{eq:30}\tag{30}$$
+\label{eq:30}\tag{30}$${: .Formule}
 
 pour transformer cela en un intervalle limité au $$\cos\theta_h^*$$.
 Pour sélectionner la valeur appropriée à partir de cet intervalle, nous devons connaître la valeur qui maximiserait $$\left(\mathbf{h} \cdot \mathbf{n}\right)$$.
 Nous pouvons résoudre la valeur de maximisation de $$\cos\theta_h^*$$ en prenant l'équation pour $$\left(\mathbf{h} \cdot \mathbf{n}\right)$$, en remplaçant $$\cos\phi_h^*$$ par sa borne supérieure, puis en prenant la dérivée par rapport à $$\theta_h^*$$ et en la définissant égale à zéro.
 La valeur de maximisation de $$\cos\theta_h^*$$ est donc donnée par :
 
-$$ \frac{\delta\left( \mathbf{h} \cdot \mathbf{n} \right)}{\delta\theta_\mathbf{h}^*} = 0 $$
+$$ \frac{\delta\left( \mathbf{h} \cdot \mathbf{n} \right)}{\delta\theta_\mathbf{h}^*} = 0 $${: .Formule}
 
-$$ \sin \theta_\mathbf{n}^*\sin \theta_\mathbf{h}^*\max{\left(\cos \phi_\mathbf{h}^*\right)} - \cos \theta_\mathbf{n}^*\sin \theta_\mathbf{h}^* = 0 $$
+$$ \sin \theta_\mathbf{n}^*\sin \theta_\mathbf{h}^*\max{\left(\cos \phi_\mathbf{h}^*\right)} - \cos \theta_\mathbf{n}^*\sin \theta_\mathbf{h}^* = 0 $${: .Formule}
 
-$$ \tan\theta_h^* = \frac{\sin\theta_n^*\max{\left(\cos \phi_\mathbf{h}^*\right)}}{ \cos \theta_\mathbf{n}^*} $$
+$$ \tan\theta_h^* = \frac{\sin\theta_n^*\max{\left(\cos \phi_\mathbf{h}^*\right)}}{ \cos \theta_\mathbf{n}^*} $${: .Formule}
 
 $$
 \cos{\theta_h^*} = \left\{
@@ -393,7 +393,7 @@ $$
 1 & \text{otherwise}
 \end{array}
 \right.
-\label{eq:31}\tag{31}$$
+\label{eq:31}\tag{31}$${: .Formule}
 
 où les deux cas sont nécessaires parce que lorsque $$\max\left(\cos\phi_h^*\right)$$ est négatif, il en est de même pour l'angle de maximisation, mais les valeurs négatives pour $$\theta_h^*$$ ne sont pas autorisées et doivent être bloquées à zéro.
 Nous avons également utilisé l'identité $$ \cos\theta_h^* = \sqrt{1 / \left( 1 + \tan\theta_h^* \right)} $$ pour $$ 0 \leq \theta_h^* \leq \pi / 2 $$.
@@ -408,13 +408,13 @@ Ce que nous voulons finalement, c'est une limitation sur :
 
 $$
 f^{iso}_r\left(\mathbf{i}, \mathbf{o}\right)\cos\theta_o = \frac{\rho_s}{4 \pi \alpha^2} \times \sqrt{\frac{\cos\theta_o}{\cos\theta_i}} \times e^{-\frac{\tan^2{\theta_\mathbf{h}}}{\alpha^2}}
-\label{eq:32}\tag{32}$$
+\label{eq:32}\tag{32}$${: .Formule}
 
 Nous pouvons mettre une borne supérieure sur $$\cos\theta_o$$ en utilisant l'équation $$\ref{eq:27}$$ et nous avons une borne supérieure sur $$ \left(\mathbf{h} \cdot \mathbf{n}\right) $$ que nous pouvons convertir en borne inférieure sur $$ \tan^2{\theta_\mathbf{h}} $$ en utilisant l'identité:
 
 $$
 \tan^2{\theta_\mathbf{h}} = \frac{1-\left(\mathbf{h} \cdot \mathbf{n}\right)^2}{\left(\mathbf{h} \cdot \mathbf{n}\right)^2}
-\label{eq:33}\tag{33}$$
+\label{eq:33}\tag{33}$${: .Formule}
 
 étant donné que $$ 0 \leq \theta_h \leq \pi / 2 $$.
 En les assemblant, on obtient la limite désirée pour la BRDF de Ward isotrope.

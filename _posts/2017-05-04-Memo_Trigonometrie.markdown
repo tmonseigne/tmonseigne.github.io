@@ -18,7 +18,7 @@ author: Thibaut Monseigne # Add name author (optional)
 Une définition de la trigonométrie se base sur les triangles rectangles.
 Dans ce cas, on a :
 
-$$\sin\alpha = \frac{a}{c} \quad\quad\quad \cos\alpha = \frac{b}{c} \quad\quad\quad \tan\alpha = \frac{a}{b}$$
+$$\sin\alpha = \frac{a}{c} \quad\quad\quad \cos\alpha = \frac{b}{c} \quad\quad\quad \tan\alpha = \frac{a}{b}$${: .Formule}
 
 |Pythagore ∶ &nbsp;&nbsp;&nbsp;|$$a^2+b^2 = c^2$$|
 |Al-Kashi ∶ &nbsp;&nbsp;&nbsp;|$$a = \sqrt{b^2+c^2-2\times b\times c\times \cos\alpha}$$|
@@ -50,13 +50,13 @@ Quel que soit l’angle $$\alpha$$, on a (d’après le théorème de Pythagore)
 
 ### Identités trigonométrique
 
-$$\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \quad\quad\quad \cos^2⁡\alpha + \sin^2\alpha = 1 \quad\quad\quad \tan^2⁡\alpha + 1 = \frac{1}{\cos^2\alpha}$$
+$$\tan\alpha = \frac{\sin\alpha}{\cos\alpha} \quad\quad\quad \cos^2⁡\alpha + \sin^2\alpha = 1 \quad\quad\quad \tan^2⁡\alpha + 1 = \frac{1}{\cos^2\alpha}$${: .Formule}
 
 ### Relation entre les fonctions trigonométriques
 
 $$\cos\alpha = \sqrt{1-\sin^2\alpha} = \frac{1}{\sqrt{1+\tan^2\alpha}}\\
 \sin\alpha = \sqrt{1-\cos^2\alpha} = \frac{\tan\alpha}{\sqrt{1+\tan^2\alpha}}\\
-\tan\alpha = \frac{\sqrt{1-\cos^2\alpha}}{\cos\alpha} = \frac{\sin\alpha}{\sqrt{1-\sin^2\alpha}}\\$$
+\tan\alpha = \frac{\sqrt{1-\cos^2\alpha}}{\cos\alpha} = \frac{\sin\alpha}{\sqrt{1-\sin^2\alpha}}$${: .Formule}
 
 ## Cercle Trigonométrique
 
