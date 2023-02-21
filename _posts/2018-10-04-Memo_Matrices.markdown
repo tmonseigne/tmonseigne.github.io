@@ -47,7 +47,7 @@ $$\begin{align}
 A=\begin{pmatrix}1&3&5\\2&4&6\end{pmatrix} &\quad\Rightarrow\quad A^{\mathsf{T}}=\begin{pmatrix}1&2\\3&4\\5&6\end{pmatrix}\\
 A=\begin{pmatrix}3+i & 5\\2-2i & i\end{pmatrix} &\quad\Rightarrow\quad \bar{A}=\begin{pmatrix}3-i & 5\\2 + 2i & -i\end{pmatrix}\\
 A=\begin{pmatrix}3+i & 5\\2-2i & i\end{pmatrix} &\quad\Rightarrow\quad A^*= \bar{A}^{\mathsf{T}} = \overline{A^{\mathsf{T}}} = \begin{pmatrix}3-i & 2 + 2i\\5& -i\end{pmatrix}
-\end{align}$$
+\end{align}$${: .Formule}
 
 ### Relations
 
@@ -69,7 +69,7 @@ Elle vérifie l'identité : $$\mathrm{Tr}(AB) = \mathrm{Tr}(BA)$$, et est en con
 
 Étant donnée une matrice carrée : $$ A =(a_{ij})_{1 \leq i, j \leq n} $$
 
-$$\mathrm{Tr}(A)=\sum _{i=1}^{n}a_{ii}$$
+$$\mathrm{Tr}(A)=\sum _{i=1}^{n}a_{ii}$${: .Formule}
 
 Pour toutes matrices carrées $$A$$ et $$B$$ (de même ordre) et pour tout scalaire $$\alpha$$, les propriétés suivantes sont vérifiées :
 
@@ -78,11 +78,11 @@ $$\begin{matrix}\mathrm{Tr}(A+B) &=& \mathrm{Tr}(A) + \mathrm{Tr}(B)\\
 \mathrm{Tr}(A^{\mathsf{T}}) &=& \mathrm{Tr}(A)\\
 \mathrm{Tr}(AB) &=& \mathrm{Tr}(BA)\\
 \mathrm{Tr}(P^{-1}AP) &=& \mathrm{Tr}(A)
-\end{matrix}$$
+\end{matrix}$${: .Formule}
 
 **Exemple** :
 
-$$A=\begin{pmatrix}1&3\\2&4\end{pmatrix} \quad\Rightarrow\quad \mathrm{Tr}(A)=5$$
+$$A=\begin{pmatrix}1&3\\2&4\end{pmatrix} \quad\Rightarrow\quad \mathrm{Tr}(A)=5$${: .Formule}
 
 ### Matrice de Covariance
 
@@ -96,11 +96,11 @@ $$C_{\vec{X}} =
 \sigma_{x_2 x_1} & \ddots & \cdots & \vdots \\
 \vdots & \vdots & \ddots & \vdots \\
 \sigma_{x_p x_1} & \cdots & \cdots & \sigma_{x_p}^2
-\end{pmatrix}$$
+\end{pmatrix}$${: .Formule}
 
 **Calcul de la covariance** :
 
-$$ \operatorname{Cov}\left(X,Y\right)=\operatorname{E}\left[\left(X-\operatorname{E}\left[X\right]\right)\left(Y-\operatorname{E}\left[Y\right]\right)\right] = \operatorname{E}\left[XY\right]-\operatorname{E}\left[X\right]\operatorname{E}\left[Y\right]$$
+$$ \operatorname{Cov}\left(X,Y\right)=\operatorname{E}\left[\left(X-\operatorname{E}\left[X\right]\right)\left(Y-\operatorname{E}\left[Y\right]\right)\right] = \operatorname{E}\left[XY\right]-\operatorname{E}\left[X\right]\operatorname{E}\left[Y\right]$${: .Formule}
 
 **Propriétés** :
 
@@ -124,7 +124,7 @@ Soit $$M$$ une matrice symétrique réelle d'ordre $$n$$. Elle est dite définie
 
 **Exemple :**
 
-$$A = \begin{pmatrix}1 & 1 & 1 & 1\\ 1 & 5 & 5 & 5\\ 1 & 5 & 14 & 14 \\ 1 & 5 & 14 & 15 \end{pmatrix}$$
+$$A = \begin{pmatrix}1 & 1 & 1 & 1\\ 1 & 5 & 5 & 5\\ 1 & 5 & 14 & 14 \\ 1 & 5 & 14 & 15 \end{pmatrix}$${: .Formule}
 
 ## Déterminant
 
@@ -134,59 +134,57 @@ Le calcul du déterminant d'une matrice est nécessaire pour calculer l'inverse 
 
 Le déterminant de la matrice carrée $$A=\begin{pmatrix}a_{1,1}&\cdots &a_{1,n}\\\vdots &\ddots &\vdots \\a_{n,1}&\cdots &a_{n,n}\end{pmatrix}$$ par la formule de Leibniz :
 
-$$ \det(A) = \begin{vmatrix} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots\\ a_{n,1} & \cdots & a_{n,n} \end{vmatrix}=\sum_{\sigma \in \mathfrak{S}_{n}} \varepsilon(\sigma) \prod_{i=1}^{n} a_{\sigma(i),i}$$
+$$ \det(A) = \begin{vmatrix} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots\\ a_{n,1} & \cdots & a_{n,n} \end{vmatrix}=\sum_{\sigma \in \mathfrak{S}_{n}} \varepsilon(\sigma) \prod_{i=1}^{n} a_{\sigma(i),i}$${: .Formule}
 
 où $$\mathfrak {S}_{n}$$ désigne l'ensemble des permutations de $${ 1 , \cdots , n }$$ et $$\varepsilon(\sigma)$$ la signature de la permutation $$\sigma$$.  
 Il s'agit d'effectuer tous les produits possibles en prenant un élément par ligne et par colonne dans la matrice, de les multiplier tantôt par -1 pour chaque élément de gauche sous un élément de droite, et de faire la somme des n! termes ainsi obtenus.
 
 **Exemple :**
 
-$$A = \begin{pmatrix}-2 & 2 & -3\\ -1 & 1 & 3\\ 2 & 0 & -1 \end{pmatrix}$$
+$$A = \begin{pmatrix}-2 & 2 & -3\\ -1 & 1 & 3\\ 2 & 0 & -1 \end{pmatrix}$${: .Formule}
 
 $$\begin{matrix}\det(A) & = &(-2)\cdot 1 \cdot (-1) & + & (-3)\cdot 0 \cdot (-1) & + & 2\cdot 3 \cdot 2 & - & (-3) \cdot 1 \cdot 2 & - & (-2) \cdot 3 \cdot 0 & - & 2 \cdot (-1) \cdot (-1)\\
 & = & 2 & + & 0 & + & 12 & - & (-6) & - & 0 & - & 2\\
-& = & 18 \end{matrix}$$
+& = & 18 \end{matrix}$${: .Formule}
 
 ### Méthode de Laplace
 
 On peut aussi calculer le déterminant d'une matrice de taille $$n$$ à l'aide de $$n$$ déterminants de matrices de taille $$n - 1$$ obtenues en enlevant à la matrice de départ une ligne et une colonne. Si $$A$$ est la matrice, pour tout $$i$$ et $$j$$, on note $$A_{i,j}$$ la matrice obtenue en enlevant à A sa $$i$$-ème ligne et sa $$j$$-ième colonne.
 
-$$A_{i,j}=\begin{pmatrix}a_{1,1} & \dots & a_{1,j-1} & a_{1,j+1}& \dots & a_{1,n} \\\vdots & \ddots & \vdots & \vdots& \ddots &\vdots\\ a_{i-1,1} & \dots & a_{i-1,j-1}& a_{i-1,j+1}& \dots & a_{i-1,n} \\ a_{i+1,1} & \dots & a_{i+1,j-1}& a_{i+1,j+1}& \dots & a_{i+1,n} \\ \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\ a_{n,1} & \dots & a_{n,j-1}& a_{n,j+1}& \dots & a_{n,n}\end{pmatrix}$$
+$$A_{i,j}=\begin{pmatrix}a_{1,1} & \dots & a_{1,j-1} & a_{1,j+1}& \dots & a_{1,n} \\\vdots & \ddots & \vdots & \vdots& \ddots &\vdots\\ a_{i-1,1} & \dots & a_{i-1,j-1}& a_{i-1,j+1}& \dots & a_{i-1,n} \\ a_{i+1,1} & \dots & a_{i+1,j-1}& a_{i+1,j+1}& \dots & a_{i+1,n} \\ \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\ a_{n,1} & \dots & a_{n,j-1}& a_{n,j+1}& \dots & a_{n,n}\end{pmatrix}$${: .Formule}
 
 On peut alors développer le calcul du déterminant de A suivant une ligne ou une colonne.
 
 Développement suivant la ligne $$i$$ :
 
-$$\det(A)=\sum_{j=1}^{n} a_{i;j} (-1)^{i+j}\det(A_{i,j})$$
+$$\det(A)=\sum_{j=1}^{n} a_{i;j} (-1)^{i+j}\det(A_{i,j})$${: .Formule}
 
 **Exemple :**
 
 $$\begin{matrix}\det(A) = \begin{vmatrix}-2 & 2 & -3\\ -1 & 1 & 3\\ 2 & 0 & -1 \end{vmatrix} & = & 2 \times (-1)^{1+2}\times \begin{vmatrix}-1 & 3\\ 2 & -1\end{vmatrix} & + & 1 \times (-1)^{2+2}\times \begin{vmatrix}-2 & -3\\ 2 & -1\end{vmatrix}\\
 & = & (-2)\times((-1)\times(-1)-2 \times 3) & + & 1\times((-2)\times(-1)-2\times(-3)) \\
 & = & (-2)\times(-5) & + & 8\\
-& = & 18 \end{matrix}$$
+& = & 18 \end{matrix}$${: .Formule}
 
 **Remarque :** $$ \det(A) = \det(A^{\mathsf{T}}) $$
 
 ### Déterminant d'une matrice de dimension 2
 
-$$\begin{vmatrix} a & b\\c & d \end{vmatrix} = a \times d - b \times c$$
+$$\begin{vmatrix} a & b\\c & d \end{vmatrix} = a \times d - b \times c$${: .Formule}
 
 ### Déterminant d'une matrice de dimension 3
 
-$$
-\begin{matrix}
+$$\begin{matrix}
 |A| = \begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} & = & a \times \begin{vmatrix}\Box &\Box &\Box \\\Box &e&f\\\Box &h&i\end{vmatrix} & - & b \times \begin{vmatrix}\Box &\Box &\Box \\d&\Box &f\\g&\Box &i\end{vmatrix} & + & c \times \begin{vmatrix}\Box &\Box &\Box \\d&e&\Box \\g&h&\Box \end{vmatrix} \\
 & = & a \times \begin{vmatrix}e&f\\h&i\end{vmatrix} & - & b \times \begin{vmatrix}d&f\\g&i\end{vmatrix} & + & c \times \begin{vmatrix}d&e\\g&h\end{vmatrix}\\
 & = & a \times (e \times i - f \times h) & + & b \times (f \times g - d \times i) & + & c \times (d \times h - e \times g)
-\end{matrix}
-$$
+\end{matrix}$${: .Formule}
 
 ### Déterminant de Gram
 
 Soit $$\mathcal{E}$$, un espace préhilbertien réel. Si $$x_1, \dots, x_n$$ sont $$n$$ vecteurs de $$\mathcal{E}$$, la matrice de Gram associée est la matrice symétrique de terme général $$\left(x_i \mid x_j\right)$$ (le produit scalaire des vecteurs $$x_i$$ et $$x_j$$). Le déterminant de Gram est le déterminant de cette matrice, soit :
 
-$$G\left(x_1, \dots ,x_n\right) = {\begin{vmatrix}\left(x_1|x_1\right) & \left(x_1|x_2\right) & \dots & \left(x_1|x_n\right)\\ \left(x_2|x_1\right) & \left(x_2|x_2\right) & \dots & \left(x_2|x_n\right)\\\vdots & \vdots & \ddots & \vdots \\ \left(x_n|x_1\right) & \left(x_n|x_2\right) & \dots & \left(x_n|x_n\right)\end{vmatrix}}$$
+$$G\left(x_1, \dots ,x_n\right) = {\begin{vmatrix}\left(x_1|x_1\right) & \left(x_1|x_2\right) & \dots & \left(x_1|x_n\right)\\ \left(x_2|x_1\right) & \left(x_2|x_2\right) & \dots & \left(x_2|x_n\right)\\\vdots & \vdots & \ddots & \vdots \\ \left(x_n|x_1\right) & \left(x_n|x_2\right) & \dots & \left(x_n|x_n\right)\end{vmatrix}}$${: .Formule}
 
 ## Norme Matricielle
 
@@ -194,17 +192,17 @@ $$G\left(x_1, \dots ,x_n\right) = {\begin{vmatrix}\left(x_1|x_1\right) & \left(x
 
 La norme de Frobenius sur $$\mathrm{M}_{m,n}(K)$$ est celle qui dérive du produit scalaire ou hermitien standard sur cet espace, à savoir
 
-$$ (A, B) \in \mathrm{M}_{m,n}(K)^{2} \mapsto \langle A, B \rangle =\operatorname{tr} (A^{*}B)=\operatorname{tr} (BA^*) $$
+$$ (A, B) \in \mathrm{M}_{m,n}(K)^{2} \mapsto \langle A, B \rangle =\operatorname{tr} (A^{*}B)=\operatorname{tr} (BA^*) $${: .Formule}
 
 où $$ A^* $$ désigne la matrice adjointe de $$A$$ et $$\operatorname{tr}$$ la trace. La norme de Frobenius est souvent notée :
 
-$$\left\lVert A \right\rVert_{F}:=(\operatorname{tr} A^{*}A)^{1/2}=(\operatorname{tr} AA^{*})^{1/2} = {\sqrt{\sum_{1\leq i\leq m \atop 1\leq j\leq n}\left|A_{ij}\right|^{2}}}$$
+$$\left\lVert A \right\rVert_{F}:=(\operatorname{tr} A^{*}A)^{1/2}=(\operatorname{tr} AA^{*})^{1/2} = {\sqrt{\sum_{1\leq i\leq m \atop 1\leq j\leq n}\left|A_{ij}\right|^{2}}}$${: .Formule}
 
 C'est la norme euclidienne ou hermitienne standard de la matrice considérée comme une collection de $$mn$$ scalaires.
 
 Si $$K=\mathbb{R}$$, le point de vue précédent permet d'en déduire le sous-différentiel de la norme de Frobenius, qui s'écrit en $$A \in \mathrm{M}_{m,n}(\mathbb{R})$$ :
 
-$$ \partial \left(\left\lVert \cdot \right\rVert_{F}\right)(A) = \{ B \in \mathrm{M}_{m,n}(K) \mid \left\lVert B \right\rVert_{F} \leq 1,~ \langle B,A \rangle =\left| A \right|_{F} \} $$
+$$ \partial \left(\left\lVert \cdot \right\rVert_{F}\right)(A) = \{ B \in \mathrm{M}_{m,n}(K) \mid \left\lVert B \right\rVert_{F} \leq 1,~ \langle B,A \rangle =\left| A \right|_{F} \} $${: .Formule}
 
 En réalité, $$\left\lVert \cdot \right\rVert_{F}$$ est différentiable sauf en zéro où $$ \partial (\left\lVert \cdot \right\rVert_{F})(A) $$ est la boule unité pour la norme de Frobenius.
 
@@ -214,11 +212,11 @@ La norme de Frobenius n'est pas une norme subordonnée, parce que  $$\left\lVert
 
 Si $$A$$ est une matrice de distance euclidienne et les points $$x_1, x_2,\dots, x_n$$ sont définis sur un espace à $$m$$ dimensions, les éléments de $$A$$ sont donnés par :
 
-$${\begin{aligned} A & = (a_{ij});\\ a_{ij} & = d_{ij}^{2}\; = \; \lVert x_i-x_j \rVert_2^2\end{aligned}}$$
+$${\begin{aligned} A & = (a_{ij});\\ a_{ij} & = d_{ij}^{2}\; = \; \lVert x_i-x_j \rVert_2^2\end{aligned}}$${: .Formule}
 
 où $$\left\lVert \cdot \right\rVert_2$$ désigne la norme 2 sur $$\mathbb{R}^m$$.
 
-$$ A = \begin{pmatrix}0 & d_{12}^{2} & \dots & d_{1n}^{2}\\ d_{21}^{2} & 0 & \dots & d_{2n}^{2}\\ \vdots & \vdots & \ddots & \vdots & \\d_{n1}^{2} & d_{n2}^{2} & \dots & 0 \end{pmatrix} $$
+$$ A = \begin{pmatrix}0 & d_{12}^{2} & \dots & d_{1n}^{2}\\ d_{21}^{2} & 0 & \dots & d_{2n}^{2}\\ \vdots & \vdots & \ddots & \vdots & \\d_{n1}^{2} & d_{n2}^{2} & \dots & 0 \end{pmatrix} $${: .Formule}
 
 ## Puissance, Exponentiel et Logarithme d'une matrice
 
@@ -234,11 +232,11 @@ Pour toute matrice $$M$$, son exponentielle est donnée par: $$\exp(M) = \mathrm
 
 Si D est une matrice diagonale, c'est-à-dire :
 
-$$ D={\begin{pmatrix}d_{1}&0&\ldots &0\\0&d_{2}&\ldots &0\\\vdots &\vdots &\ddots &\vdots \\0&0&\ldots &d_{n}\end{pmatrix}} $$
+$$ D={\begin{pmatrix}d_{1}&0&\ldots &0\\0&d_{2}&\ldots &0\\\vdots &\vdots &\ddots &\vdots \\0&0&\ldots &d_{n}\end{pmatrix}} $${: .Formule}
 
 alors son exponentielle est obtenue en calculant l'exponentielle de chacun des termes de la diagonale principale :
 
-$$ \mathrm{e}^{D}={\begin{pmatrix}\mathrm{e}^{d_1} & 0 & \ldots & 0\\0 & \mathrm{e}^{d_2} & \ldots & 0\\\vdots & \vdots & \ddots & \vdots \\0 & 0 & \ldots & \mathrm{e}^{d_n}\end{pmatrix}} $$
+$$ \mathrm{e}^{D}={\begin{pmatrix}\mathrm{e}^{d_1} & 0 & \ldots & 0\\0 & \mathrm{e}^{d_2} & \ldots & 0\\\vdots & \vdots & \ddots & \vdots \\0 & 0 & \ldots & \mathrm{e}^{d_n}\end{pmatrix}} $${: .Formule}
 
 Si A est une matrice diagonalisable, c'est-à-dire : $$ A=PDP^{-1} $$
 
@@ -250,12 +248,10 @@ De plus, les valeurs propres de $$\mathrm{e}^{A}$$ sont les exponentielles de ce
 
 ## Identités remarquables
 
-$$
-\begin{matrix}
+$$\begin{matrix}
   \left( A^{\mathsf{T}} \right)^{-1} = \left( A^{-1} \right)^{\mathsf{T}} \quad & \quad \left( AB \right)^{-1} = B^{-1} A^{-1} \quad & \quad \left( ABC \dots \right)^{-1} = \dots C^{-1} B^{-1} A^{-1}\\
   \left( A + B \right)^{\mathsf{T}} = A^{\mathsf{T}} + B^{\mathsf{T}} \quad & \quad \left( AB \right)^{\mathsf{T}} = B^{\mathsf{T}} A^{\mathsf{T}} \quad & \quad \left( ABC \dots \right)^{\mathsf{T}} = \dots C^{\mathsf{T}} B^{\mathsf{T}} A^{\mathsf{T}} \\
    \left( A + B \right)^{H} = A^{H} + B^{H} \quad & \quad \left( AB \right)^{H} = B^{H} A^{H} \quad & \quad \left( ABC \dots \right)^{H} = \dots C^{H} B^{H} A^{H}\\
-\end{matrix}
-$$
+\end{matrix}$${: .Formule}
 
-$$ A^{-1} B = A^{-1/2} B A^{-1/2} $$
+$$ A^{-1} B = A^{-1/2} B A^{-1/2} $${: .Formule}
