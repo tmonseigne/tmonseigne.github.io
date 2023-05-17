@@ -135,7 +135,7 @@ $${: .Formule}
 
 **Utilisations** : La régression par système linéaire est souvent utilisée dans des applications telles que l'économie, la finance et les sciences sociales.
 
-**Avantages** : 
+**Avantages** :
 
 * Facile à interpréter et à comprendre.
 * Très rapide à entraîner pour des ensembles de données de petite à moyenne taille.
