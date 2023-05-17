@@ -16,6 +16,32 @@ author: Thibaut Monseigne # Add name author (optional)
 
 ## Transformée de fourier
 
+**Définition** : Blabla
+
+**Utilisations** : Blabla
+
+**Exemple python** : [Fichier Python](../_includes/code/signal_processing/FFT.py)
+
+```python
+{% include code/signal_processing/FFT.py %}
+```
+
 ## Ondelette
 
+**Utilisations** : Blabla
+
+**Exemple python** : [Fichier Python](../_includes/code/signal_processing/Wavelet.py)
+
+```python
+{% include code/signal_processing/Wavelet.py %}
+```
+
 ## Cepstre de Fréquence Mel
+
+**Utilisations** : Blabla
+
+**Exemple python** : [Fichier Python](../_includes/code/signal_processing/MFCC.py)
+
+```python
+{% include code/signal_processing/MFCC.py %}
+```
