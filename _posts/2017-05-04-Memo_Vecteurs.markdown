@@ -22,7 +22,9 @@ author: Thibaut Monseigne # Add name author (optional)
 $$\times$$ correspond à multiplier sauf lorsque l'un a deux vecteurs, il s'agit du produit croisés, on utilisera $$*$$ à la place.
 
 ## Norme Euclidienne
+
 ### Définition
+
 La norme euclidienne d'un vecteur $$\overrightarrow{AB}$$ est la distance qui sépare $$A$$ de $$B$$ c'est donc un nombre. En général, elle est notée $$\left\lVert \overrightarrow{AB} \right\rVert$$. Elle est égale à la racine de la somme des coordonnées au carrées ou au produit scalaire du vecteur avec lui-même.
 
 $$\left\lVert \vec{v} \right\rVert = \sqrt{x^2+y^2+z^2} = \sqrt{\vec{v} \cdot \vec{v}}$${: .Formule}

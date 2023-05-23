@@ -63,26 +63,26 @@ $$\cos\alpha = \sqrt{1-\sin^2\alpha} = \frac{1}{\sqrt{1+\tan^2\alpha}}\\
 <a href = "/assets/img/Memo/Cercle_Trigo.png" data-lightbox = "Memo" data-title = "Cercle Trigonométrique"><img src = "/assets/img/Memo/Cercle_Trigo.png" alt = "Cercle Trigonométrique" style = "max-width:50%;"/></a>
 
 <form><table style="width:100%; border-collapse:collapse;" border="1">
-	<tr align="center">
-		<th width="7%" align="left">Radian</th>
-		<td>$$0$$</td> <td>$$\frac{\pi}{6}$$</td> <td>$$\frac{\pi}{4}$$</td> <td>$$\frac{\pi}{3}$$</td> <td>$$\frac{\pi}{2}$$</td> <td>$$\frac{2\pi}{3}$$</td> <td>$$\frac{3\pi}{4}$$</td> <td>$$\frac{5\pi}{6}$$</td> <td>$$\pi$$</td> <td>$$\frac{7\pi}{6}$$</td> <td>$$\frac{5\pi}{4}$$</td> <td>$$\frac{4\pi}{3}$$</td> <td>$$\frac{3\pi}{2}$$</td> <td>$$\frac{5\pi}{3}$$</td> <td>$$\frac{7\pi}{4}$$</td> <td>$$\frac{11\pi}{6}$$</td> <td>$$2\pi$$</td>
-	</tr>
-	<tr align="center" bgcolor="#D3D3D3">
-		<th width="7%" align="left">Degré</th>
-		<td>$$\ 0\ $$</td> <td>$$30$$</td> <td>$$45$$</td> <td>$$60$$</td> <td>$$90$$</td> <td>$$120$$</td> <td>$$135$$</td> <td>$$150$$</td> <td>$$180$$</td> <td>$$210$$</td> <td>$$225$$</td> <td>$$240$$</td> <td>$$270$$</td> <td>$$300$$</td> <td>$$315$$</td> <td>$$330$$</td> <td>$$360$$</td>
-	</tr>
-	<tr align="center" bgcolor="#FFD3FF">
-		<th width="7%" align="left">$$\sin$$</th>
-		<td>$$0$$</td> <td>$$\frac{1}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$1$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{1}{2}$$</td> <td>$$0$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-1$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$0$$</td>
-	</tr>
-	<tr align="center" bgcolor="#D3FFFF">
-		<th width="7%" align="left">$$\cos$$</th>
-		<td>$$1$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{1}{2}$$</td> <td>$$0$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-1$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$0$$</td> <td>$$\frac{1}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$1$$</td>
-	</tr>
-	<tr align="center" bgcolor="#FFFFD3">
-		<th width="7%" align="left">$$\tan$$</th>
-		<td>$$0$$</td> <td>$$\frac{1}{\sqrt{3}}$$</td> <td>$$1$$</td> <td>$$\sqrt{3}$$</td> <td>$$-$$</td> <td>$$-\sqrt{3}$$</td> <td>$$-1$$</td> <td>$$-\frac{1}{\sqrt{3}}$$</td> <td>$$0$$</td> <td>$$\frac{1}{\sqrt{3}}$$</td> <td>$$1$$</td> <td>$$\sqrt{3}$$</td> <td>$$-$$</td> <td>$$-\sqrt{3}$$</td> <td>$$-1$$</td> <td>$$-\frac{1}{\sqrt{3}}$$</td> <td>$$0$$</td>
-	</tr>
+ <tr align="center">
+  <th width="7%" align="left">Radian</th>
+  <td>$$0$$</td> <td>$$\frac{\pi}{6}$$</td> <td>$$\frac{\pi}{4}$$</td> <td>$$\frac{\pi}{3}$$</td> <td>$$\frac{\pi}{2}$$</td> <td>$$\frac{2\pi}{3}$$</td> <td>$$\frac{3\pi}{4}$$</td> <td>$$\frac{5\pi}{6}$$</td> <td>$$\pi$$</td> <td>$$\frac{7\pi}{6}$$</td> <td>$$\frac{5\pi}{4}$$</td> <td>$$\frac{4\pi}{3}$$</td> <td>$$\frac{3\pi}{2}$$</td> <td>$$\frac{5\pi}{3}$$</td> <td>$$\frac{7\pi}{4}$$</td> <td>$$\frac{11\pi}{6}$$</td> <td>$$2\pi$$</td>
+ </tr>
+ <tr align="center" bgcolor="#D3D3D3">
+  <th width="7%" align="left">Degré</th>
+  <td>$$\ 0\ $$</td> <td>$$30$$</td> <td>$$45$$</td> <td>$$60$$</td> <td>$$90$$</td> <td>$$120$$</td> <td>$$135$$</td> <td>$$150$$</td> <td>$$180$$</td> <td>$$210$$</td> <td>$$225$$</td> <td>$$240$$</td> <td>$$270$$</td> <td>$$300$$</td> <td>$$315$$</td> <td>$$330$$</td> <td>$$360$$</td>
+ </tr>
+ <tr align="center" bgcolor="#FFD3FF">
+  <th width="7%" align="left">$$\sin$$</th>
+  <td>$$0$$</td> <td>$$\frac{1}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$1$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{1}{2}$$</td> <td>$$0$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-1$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$0$$</td>
+ </tr>
+ <tr align="center" bgcolor="#D3FFFF">
+  <th width="7%" align="left">$$\cos$$</th>
+  <td>$$1$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{1}{2}$$</td> <td>$$0$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-1$$</td> <td>$$-\frac{\sqrt{3}}{2}$$</td> <td>$$-\frac{\sqrt{2}}{2}$$</td> <td>$$-\frac{1}{2}$$</td> <td>$$0$$</td> <td>$$\frac{1}{2}$$</td> <td>$$\frac{\sqrt{2}}{2}$$</td> <td>$$\frac{\sqrt{3}}{2}$$</td> <td>$$1$$</td>
+ </tr>
+ <tr align="center" bgcolor="#FFFFD3">
+  <th width="7%" align="left">$$\tan$$</th>
+  <td>$$0$$</td> <td>$$\frac{1}{\sqrt{3}}$$</td> <td>$$1$$</td> <td>$$\sqrt{3}$$</td> <td>$$-$$</td> <td>$$-\sqrt{3}$$</td> <td>$$-1$$</td> <td>$$-\frac{1}{\sqrt{3}}$$</td> <td>$$0$$</td> <td>$$\frac{1}{\sqrt{3}}$$</td> <td>$$1$$</td> <td>$$\sqrt{3}$$</td> <td>$$-$$</td> <td>$$-\sqrt{3}$$</td> <td>$$-1$$</td> <td>$$-\frac{1}{\sqrt{3}}$$</td> <td>$$0$$</td>
+ </tr>
 </table></form>
 
 ### Propriétés liées au cercle Trigonométrique

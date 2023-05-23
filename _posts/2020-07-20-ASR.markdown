@@ -69,14 +69,14 @@ Un filtre IIR peut être utilisé pour façonner le spectre du signal lors du ca
 Le filtre par défaut est moins sensible aux fréquences alpha et bêta et plus sensible aux fréquences delta (clignement) et gamma (muscle). On associe donc un coefficient en fonction de la fréquence. Par Défaut :
 
 <form><table style="width:100%" border="1">
-	<tr align="center">
-		<th width="15%" align="left">Fréquence</th>
-		<td>0</td><td>4</td><td>6</td><td>26</td><td>32</td><td>80</td><td>160</td><td>Sampling</td>
-	</tr>
-	<tr align="center">
-		<th width="15%" align="left">Amplitude</th>
-		<td>3</td><td>0.75</td><td>0.33</td><td>0.33</td><td>1</td><td>1</td><td>3</td><td>3</td>
-	</tr>
+ <tr align="center">
+  <th width="15%" align="left">Fréquence</th>
+  <td>0</td><td>4</td><td>6</td><td>26</td><td>32</td><td>80</td><td>160</td><td>Sampling</td>
+ </tr>
+ <tr align="center">
+  <th width="15%" align="left">Amplitude</th>
+  <td>3</td><td>0.75</td><td>0.33</td><td>0.33</td><td>1</td><td>1</td><td>3</td><td>3</td>
+ </tr>
 </table></form>
 
 **Remarque :** Ces paramètres ont été définis de manière empirique.

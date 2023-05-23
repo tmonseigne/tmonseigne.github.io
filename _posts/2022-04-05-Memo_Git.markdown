@@ -74,22 +74,22 @@ Pour des projets plus imposants qu'un simple test, analyse de datas :
 ### Github : Premier Dépôt
 
 <figure id="Fig1">
-	<a href = "/assets/img/Git/Github_Main.png" data-lightbox = "Memo" data-title = "Page principale Github"><img src = "/assets/img/Git/Github_Main.png" alt = "Page principale Github" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Page principale Github</figcaption>
+ <a href = "/assets/img/Git/Github_Main.png" data-lightbox = "Memo" data-title = "Page principale Github"><img src = "/assets/img/Git/Github_Main.png" alt = "Page principale Github" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Page principale Github</figcaption>
 </figure>
 
 La page principale de Github vous montre vos derniers projets et un bouton pour créer un nouveau dépôt.
 
 <figure id="Fig2">
-	<a href = "/assets/img/Git/Github_New.png" data-lightbox = "Memo" data-title = "Page création de dépôt"><img src = "/assets/img/Git/Github_New.png" alt = "Page création de dépôt" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Page création de dépôt</figcaption>
+ <a href = "/assets/img/Git/Github_New.png" data-lightbox = "Memo" data-title = "Page création de dépôt"><img src = "/assets/img/Git/Github_New.png" alt = "Page création de dépôt" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Page création de dépôt</figcaption>
 </figure>
 
 Lors de la création d'un dépôt, vous devez indiquer un nom. Tout le reste est falcutatif, mais recommandé, un premier commit sera automatiquement créé avec le readme, la licence et le gitignore par défaut que vous aurez sélectionné.
 
 <figure id="Fig3">
-	<a href = "/assets/img/Git/Github_Basic.png" data-lightbox = "Memo" data-title = "Page dépôt exemple"><img src = "/assets/img/Git/Github_Basic.png" alt = "Page dépôt exemple" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Page dépôt exemple</figcaption>
+ <a href = "/assets/img/Git/Github_Basic.png" data-lightbox = "Memo" data-title = "Page dépôt exemple"><img src = "/assets/img/Git/Github_Basic.png" alt = "Page dépôt exemple" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Page dépôt exemple</figcaption>
 </figure>
 
 Voici un dépôt basique créé sans aucune modification ([lien](https://github.com/tmonseigne/Basic-Repo)).
@@ -97,15 +97,15 @@ Voici un dépôt basique créé sans aucune modification ([lien](https://github.
 ### Gitkraken : Interface graphique pour Git
 
 <figure id="Fig4">
-	<a href = "/assets/img/Git/GitKraken_Start.png" data-lightbox = "Memo" data-title = "Gitkraken recherche dépôt"><img src = "/assets/img/Git/GitKraken_Start.png" alt = "Gitkraken recherche dépôt" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Gitkraken recherche dépôt</figcaption>
+ <a href = "/assets/img/Git/GitKraken_Start.png" data-lightbox = "Memo" data-title = "Gitkraken recherche dépôt"><img src = "/assets/img/Git/GitKraken_Start.png" alt = "Gitkraken recherche dépôt" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Gitkraken recherche dépôt</figcaption>
 </figure>
 
 GitKraken permet de se passer de lignes de commande. Selon moi, c'est l'outil le plus performant et facile d'utilisation pour cette tache. En revanche, il est limité (pas de dépôts et de services privés comme un Gitlab personnel) si vous ne possédez pas de compte Github éducation. Visual studio Code avec GitLens (fait par les mêmes personnes que GitKraken) et Gitgraph permet de s'en passer, mais est beaucoup moins intuitif et ne possède pas toutes les fonctionnalités de son grand frère.
 
 <figure id="Fig5">
-	<a href = "/assets/img/Git/GitKraken_Basic.png" data-lightbox = "Memo" data-title = "Gitkraken Dépôt exemple avec des modifs"><img src = "/assets/img/Git/GitKraken_Basic.png" alt = "Gitkraken Dépôt exemple avec des modifs" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Gitkraken Dépôt exemple avec des modifs</figcaption>
+ <a href = "/assets/img/Git/GitKraken_Basic.png" data-lightbox = "Memo" data-title = "Gitkraken Dépôt exemple avec des modifs"><img src = "/assets/img/Git/GitKraken_Basic.png" alt = "Gitkraken Dépôt exemple avec des modifs" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Gitkraken Dépôt exemple avec des modifs</figcaption>
 </figure>
 
 Une fois un dépôt ouvert, vous voyez un graphique représentant vos commits ainsi que les différentes branches de votre dépôt. Vous pouvez également voir l'état actuel de votre dépôt sur votre ordinateur.  
@@ -117,8 +117,8 @@ Dans cet exemple, vous voyez les 4 types d'icônes pour visualiser l'état du d�
 * 📝 Pour les déplacements ou renommages de fichiers.
 
 <figure id="Fig6">
-	<a href = "/assets/img/Git/GitKraken_Change.png" data-lightbox = "Memo" data-title = "Gitkraken exemple de fichier modifié"><img src = "/assets/img/Git/GitKraken_Change.png" alt = "Gitkraken exemple de fichier modifié" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Gitkraken exemple de fichier modifié</figcaption>
+ <a href = "/assets/img/Git/GitKraken_Change.png" data-lightbox = "Memo" data-title = "Gitkraken exemple de fichier modifié"><img src = "/assets/img/Git/GitKraken_Change.png" alt = "Gitkraken exemple de fichier modifié" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Gitkraken exemple de fichier modifié</figcaption>
 </figure>
 
 Lors de la sélection d'un fichier modifié, vous pourrez voir les ajouts et suppressions directement et valider ou annuler chaque ligne indépendamment.
@@ -164,11 +164,11 @@ Exemple de Badge Custom :  ![Custom Badge](https://img.shields.io/badge/Custom-B
 Voici des captures pour un Dépôt template ([lien](https://github.com/tmonseigne/cpp-crossplatform-ci-template)).
 
 <figure id="Fig7">
-	<a href = "/assets/img/Git/Github_Template.png" data-lightbox = "Memo" data-title = "Github Dépôt Template"><img src = "/assets/img/Git/Github_Template.png" alt = "Github Dépôt Template" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Github Dépôt Template</figcaption>
+ <a href = "/assets/img/Git/Github_Template.png" data-lightbox = "Memo" data-title = "Github Dépôt Template"><img src = "/assets/img/Git/Github_Template.png" alt = "Github Dépôt Template" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Github Dépôt Template</figcaption>
 </figure>
 
 <figure id="Fig8">
-	<a href = "/assets/img/Git/GitKraken_Template.png" data-lightbox = "Memo" data-title = "Gitkraken Dépôt Template"><img src = "/assets/img/Git/GitKraken_Template.png" alt = "Gitkraken Dépôt Template" style = "max-width:75%;"/></a>
-	<figcaption style = "text-align:center">Gitkraken Dépôt Template</figcaption>
+ <a href = "/assets/img/Git/GitKraken_Template.png" data-lightbox = "Memo" data-title = "Gitkraken Dépôt Template"><img src = "/assets/img/Git/GitKraken_Template.png" alt = "Gitkraken Dépôt Template" style = "max-width:75%;"/></a>
+ <figcaption style = "text-align:center">Gitkraken Dépôt Template</figcaption>
 </figure>
