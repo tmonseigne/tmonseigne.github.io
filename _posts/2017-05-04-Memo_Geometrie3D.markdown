@@ -32,10 +32,12 @@ $$\times$$ correspond à multiplier sauf lorsque l'un a deux vecteurs, il s'agit
 [Mémo Espace vectoriel](../Memo_Vecteurs/){:target="_blank"}
 
 ## Intersection
+
 Pour calculer une intersection à partir d’équation, il suffit de trouver un point commun à ces équations.  
 L’ensemble des points d’un rayon $$\mathcal{R}$$ obéi à la fonction affine $$\mathcal{R}(t) = \mathcal{R_D}\times t + \mathcal{R_O}$$ où $$t$$ pourrait être symbolisé comme le temps passé sur le rayon (demi-droite, car t ne doit pas être inférieur à 0).
 
 ### Rayon (demi-droite) / Sphère
+
 Voici l’équation de l’ensemble des points $$\mathcal{p}$$ d’une sphère de centre $$\mathcal{S_C}$$ et de rayon $$\mathcal{S_r}$$ : $${\lVert \mathcal{p}-\mathcal{S_C}\rVert}^2-\mathcal{S_r}^2 = 0$$  
 On substitue $$\mathcal{p}$$ par $$\mathcal{R}(t)$$ :
 
@@ -107,7 +109,7 @@ Pour effectuer une transformation dans l’espace, il suffit de faire le produit
 
 ### Rappel Matrice Identité et enchainement
 
-La matrice Identité est une matrice qui multiplié à un point donne le même point. 
+La matrice Identité est une matrice qui multiplié à un point donne le même point.
 
 $$\mathcal{M}_{Id}\begin{pmatrix}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{pmatrix}$${: .Formule}
 
@@ -121,7 +123,7 @@ $$\mathcal{M}_\vec{T}\begin{pmatrix}1&0&0&x_T\\0&1&0&y_T\\0&0&1&z_T\\0&0&0&1\end
 
 ### Homothétie
 
-Pour multiplier la distance à l’origine d’un point $$\mathcal{P}$$ par le facteur $$H$$, la matrice d’homothétie sera : 
+Pour multiplier la distance à l’origine d’un point $$\mathcal{P}$$ par le facteur $$H$$, la matrice d’homothétie sera :
 
 $$\mathcal{M}_H\begin{pmatrix}x_H&0&0&0\\0&y_H&0&0\\0&0&z_H&0\\0&0&0&1\end{pmatrix}$${: .Formule}
 
@@ -140,21 +142,21 @@ Le repère global est le repère de l’espace, il est commun à tous les objets
 Si on veut effectuer une rotation et une translation, on peut multiplier les deux matrices de transformations. Mais l’ordre est important si on fait une rotation puis une translation ne donne pas le même résultat qu’une translation puis une rotation.
 
 <form><center><table width="70%">
-	<tr align="center">
-		<td width="30%"><a href = "/assets/img/Memo/Geo3D_T_R.png" data-lightbox = "Memo" data-title = "Translation &rArr; Rotation"><img src = "/assets/img/Memo/Geo3D_T_R.png" alt = "Translation &rArr; Rotation" style = "max-width:100%;"/></a></td><td width="10%"></td><td width="30%"><a href = "/assets/img/Memo/Geo3D_R_T.png" data-lightbox = "Memo" data-title = "Rotation &rArr; Translation"><img src = "/assets/img/Memo/Geo3D_R_T.png" alt = "Rotation &rArr; Translation" style = "max-width:100%;"/></a></td>
-	</tr>
-	<tr align="center">
-		<td>Translation &rArr; Rotation</td><td></td><td>Rotation &rArr; Translation</td>
-	</tr>
+ <tr align="center">
+  <td width="30%"><a href = "/assets/img/Memo/Geo3D_T_R.png" data-lightbox = "Memo" data-title = "Translation &rArr; Rotation"><img src = "/assets/img/Memo/Geo3D_T_R.png" alt = "Translation &rArr; Rotation" style = "max-width:100%;"/></a></td><td width="10%"></td><td width="30%"><a href = "/assets/img/Memo/Geo3D_R_T.png" data-lightbox = "Memo" data-title = "Rotation &rArr; Translation"><img src = "/assets/img/Memo/Geo3D_R_T.png" alt = "Rotation &rArr; Translation" style = "max-width:100%;"/></a></td>
+ </tr>
+ <tr align="center">
+  <td>Translation &rArr; Rotation</td><td></td><td>Rotation &rArr; Translation</td>
+ </tr>
 </table></center></form>
 
 Mais comment les enchainer et les lire ? Pour les enchaîner c’est simple, il suffit de multiplier les matrices, une multiplication de matrice carré d’ordre n donnera une matrice carré d’ordre n. Donc aucun problème. En réalité tout dépend de comment on réfléchit, Si on travaille dans le repère global, il faut lire les enchainements de transformation de droite à gauche, si on pense en repère local, il faut lire de gauche à droite.
 
 <form><center><table width="70%">
-	<tr align="center">
-		<td width="30%"><a href = "/assets/img/Memo/Geo3D_Global.png" data-lightbox = "Memo" data-title = "Repère Global"><img src = "/assets/img/Memo/Geo3D_Global.png" alt = "Repère Global" style = "max-width:100%;"/></a></td><td width="10%"></td><td width="30%"><a href = "/assets/img/Memo/Geo3D_Local.png" data-lightbox = "Memo" data-title = "Repère Local"><img src = "/assets/img/Memo/Geo3D_Local.png" alt = "Repère Local" style = "max-width:100%;"/></a></td>
-	</tr>
-	<tr align="center">
-		<td>Translation &rArr; Rotation</td><td></td><td>Rotation &rArr; Translation</td>
-	</tr>
+ <tr align="center">
+  <td width="30%"><a href = "/assets/img/Memo/Geo3D_Global.png" data-lightbox = "Memo" data-title = "Repère Global"><img src = "/assets/img/Memo/Geo3D_Global.png" alt = "Repère Global" style = "max-width:100%;"/></a></td><td width="10%"></td><td width="30%"><a href = "/assets/img/Memo/Geo3D_Local.png" data-lightbox = "Memo" data-title = "Repère Local"><img src = "/assets/img/Memo/Geo3D_Local.png" alt = "Repère Local" style = "max-width:100%;"/></a></td>
+ </tr>
+ <tr align="center">
+  <td>Translation &rArr; Rotation</td><td></td><td>Rotation &rArr; Translation</td>
+ </tr>
 </table></center></form>

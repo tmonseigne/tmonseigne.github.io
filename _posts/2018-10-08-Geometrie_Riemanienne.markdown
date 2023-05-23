@@ -41,10 +41,10 @@ Dotée d’une structure différentielle, également appelée atlas (c’est-à-
 Sur chaque point d'une variété différentielle lisse, la notion d'espace tangent peut être définie comme la vitesse des courbes passant par le point. Une variété riemannienne est alors une vraie variété lisse dotée d'un produit interne sur l'espace tangent en chaque point.
 
 <figure id="Fig1">
-	<a href = "/assets/img/GeoRem/Variete_Differentielle.png" data-lightbox = "Memo" data-title = "Variété Différentielle"><img src = "/assets/img/GeoRem/Variete_Differentielle.png" alt = "Variété Différentielle" style = "max-width:50%;"/></a>
-	<figcaption>
-		Sur la variété différentielle <script type="math/tex">\mathcal{M}</script>, l'espace tangent en <script type="math/tex">X_0</script> est l'ensemble des vélocités <script type="math/tex">\dot{\gamma}(0)</script> des courbes <script type="math/tex">\gamma(t)</script> passant par <script type="math/tex">X_0</script> à <script type="math/tex">t = 0</script>. <i>Source : <a href="https://hal.inria.fr/hal-01394253">[2]</a></i>
-	</figcaption>
+ <a href = "/assets/img/GeoRem/Variete_Differentielle.png" data-lightbox = "Memo" data-title = "Variété Différentielle"><img src = "/assets/img/GeoRem/Variete_Differentielle.png" alt = "Variété Différentielle" style = "max-width:50%;"/></a>
+ <figcaption>
+  Sur la variété différentielle <script type="math/tex">\mathcal{M}</script>, l'espace tangent en <script type="math/tex">X_0</script> est l'ensemble des vélocités <script type="math/tex">\dot{\gamma}(0)</script> des courbes <script type="math/tex">\gamma(t)</script> passant par <script type="math/tex">X_0</script> à <script type="math/tex">t = 0</script>. <i>Source : <a href="https://hal.inria.fr/hal-01394253">[2]</a></i>
+ </figcaption>
 </figure>
 
 **Variété Riemannienne** :  
@@ -106,10 +106,10 @@ $$ g = \sqrt[K]{c_1 \cdot c_2 \cdot ~...~ \cdot c_k } = \exp{\left( \frac{1}{K} 
 Cette moyenne est plus adaptée aux variables ayant une distribution asymétrique ou possédant des valeurs aberrantes.
 
 <figure id="Fig2">
-	<a href = "/assets/img/GeoRem/Mean_Difference.png" data-lightbox = "Memo" data-title = "Différence entre moyenne arithmétique et géométrique"><img src = "/assets/img/GeoRem/Mean_Difference.png" alt = "Différence entre moyenne arithmétique et géométrique" style = "max-width:100%;"/></a>
-	<figcaption>
-		Moyennes arithmétiques et géométriques. Isodensités empiriques des distributions du Chi-carré (10 degrés de liberté, rangée du haut) et gaussiennes (rangée du bas), sans (colonne de gauche) et avec des valeurs aberrantes (colonne de droite). <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
-	</figcaption>
+ <a href = "/assets/img/GeoRem/Mean_Difference.png" data-lightbox = "Memo" data-title = "Différence entre moyenne arithmétique et géométrique"><img src = "/assets/img/GeoRem/Mean_Difference.png" alt = "Différence entre moyenne arithmétique et géométrique" style = "max-width:100%;"/></a>
+ <figcaption>
+  Moyennes arithmétiques et géométriques. Isodensités empiriques des distributions du Chi-carré (10 degrés de liberté, rangée du haut) et gaussiennes (rangée du bas), sans (colonne de gauche) et avec des valeurs aberrantes (colonne de droite). <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
+ </figcaption>
 </figure>
 
 ## Géométrie Riemannienne
@@ -147,12 +147,12 @@ Donc tout point est à l'intérieur d'un Cône convexe symétrique. Toute matric
 Lorsque le point touche la frontière du cône, l'inégalité devient une égalité et la matrice n'est plus définie positive.
 
 <figure id="Fig3">
-	<a href = "/assets/img/GeoRem/SPD_Cone.png" data-lightbox = "Memo" data-title = "Cône convexe symétrique des matrices SPD"><img src = "/assets/img/GeoRem/SPD_Cone.png" alt = "Cône convexe symétrique des matrices SPD" style = "max-width:50%;"/></a>
-	<figcaption>
-		Matrices définies positives symétriques, par ex. matrices de covariance, sont contraintes par leur symétrie, la positivité stricte des éléments diagonaux (variance) et les inégalités de Cauchy-Schwarz délimitant la valeur absolue des éléments hors diagonale:
-		<script type="math/tex">\left\lvert\operatorname{Cov}\left(x_i,w_j\right)\right\rvert \leq \sqrt{\operatorname{Var}{\left(x_i\right)}\operatorname{Var}{\left(x_j\right)}},~ \forall i,j \in \{1, \dots N\}</script>.
-		Cette topologie est facilement visualisable dans le cas de matrices 2x2; toute matrice de covariance 2x2 peut être vue comme un point dans l'espace euclidien 3D, avec deux coordonnées données par les deux variances (éléments diagonaux) et la troisième coordonnée donnée par la covariance (l'un ou l'autre des éléments non diagonaux). Par construction, une matrice de covariance doit rester dans les limites du cône. Dès que le point touche la limite du cône, l'inégalité devient égalité et la matrice n'est plus définie positive. <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
-	</figcaption>
+ <a href = "/assets/img/GeoRem/SPD_Cone.png" data-lightbox = "Memo" data-title = "Cône convexe symétrique des matrices SPD"><img src = "/assets/img/GeoRem/SPD_Cone.png" alt = "Cône convexe symétrique des matrices SPD" style = "max-width:50%;"/></a>
+ <figcaption>
+  Matrices définies positives symétriques, par ex. matrices de covariance, sont contraintes par leur symétrie, la positivité stricte des éléments diagonaux (variance) et les inégalités de Cauchy-Schwarz délimitant la valeur absolue des éléments hors diagonale:
+  <script type="math/tex">\left\lvert\operatorname{Cov}\left(x_i,w_j\right)\right\rvert \leq \sqrt{\operatorname{Var}{\left(x_i\right)}\operatorname{Var}{\left(x_j\right)}},~ \forall i,j \in \{1, \dots N\}</script>.
+  Cette topologie est facilement visualisable dans le cas de matrices 2x2; toute matrice de covariance 2x2 peut être vue comme un point dans l'espace euclidien 3D, avec deux coordonnées données par les deux variances (éléments diagonaux) et la troisième coordonnée donnée par la covariance (l'un ou l'autre des éléments non diagonaux). Par construction, une matrice de covariance doit rester dans les limites du cône. Dès que le point touche la limite du cône, l'inégalité devient égalité et la matrice n'est plus définie positive. <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
+ </figcaption>
 </figure>
 
 En termes électrophysiologiques, la réalisation $$C_k$$ se déplace le long des trois coordonnées lorsque l’énergie (variance) de l’une des deux électrodes change ou lorsque la synchronisation de phase et/ou la co-modulation d’amplitude entre le signal capturé au niveau des deux électrodes change. Plus deux points s'éloignent l'un de l'autre le long de ces coordonnées, plus ils occuperont des régions séparées dans le cône.  
@@ -186,13 +186,13 @@ $$\lVert A \rVert_{2,P}^2 = \left\lVert P^{-1}A \right\rVert_2^2 = \left\lVert P
 Lorsque $$P=I$$, la matrice d’identité, cela se réduit à la norme $$\lVert A \rVert_2$$ introduite précédemment.
 
 <figure id="Fig4">
-	<a href = "/assets/img/GeoRem/Variete_SPD1.png" data-lightbox = "Memo" data-title = "Représentation schématique de la variété symétrique à matrice définie positive."><img src = "/assets/img/GeoRem/Variete_SPD1.png" alt = "Représentation schématique de la variété symétrique à matrice définie positive." style = "max-width:100%;"/></a>
-	<figcaption>
-		Représentation schématique de la variété des matrices symétrique définie positive, de la moyenne géométrique <script type="math/tex">G</script> de deux points et de l'espace tangent en <script type="math/tex">G</script>.
-		Considérons deux points (par exemple, deux matrices de covariance) <script type="math/tex">C_1</script> et <script type="math/tex">C_2</script> sur <script type="math/tex">\mathcal{M}</script>. La moyenne géométrique de ces points est le milieu de la géodésique reliant <script type="math/tex">C_1</script> et <script type="math/tex">C_2</script>, c’est-à-dire qu’elle minimise la somme des deux distances au carré <script type="math/tex">\delta^2(C_1,G)+\delta^2(C_2,G)</script>.
-		Construisons maintenant l'espace tangent <script type="math/tex">\mathcal{T}_G\mathcal{M}</script> en <script type="math/tex">G</script>. Il existe un et un seul vecteur tangent <script type="math/tex">\zeta_1</script> (respectivement <script type="math/tex">\zeta_1</script>) correspondant à la géodésique partant de <script type="math/tex">G</script> et arrivant en <script type="math/tex">C_1</script> (respectivement <script type="math/tex">C_2</script>) sur la variété.
-		La carte de l'espace tangent (matrices symétriques <script type="math/tex">S</script>) à la variété (matrices définies positives symétriques <script type="math/tex">S_{++}</script>) est une carte exponentielle. La carte inverse de la variété vers l'espace tangent est une carte logarithmique. <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
-	</figcaption>
+ <a href = "/assets/img/GeoRem/Variete_SPD1.png" data-lightbox = "Memo" data-title = "Représentation schématique de la variété symétrique à matrice définie positive."><img src = "/assets/img/GeoRem/Variete_SPD1.png" alt = "Représentation schématique de la variété symétrique à matrice définie positive." style = "max-width:100%;"/></a>
+ <figcaption>
+  Représentation schématique de la variété des matrices symétrique définie positive, de la moyenne géométrique <script type="math/tex">G</script> de deux points et de l'espace tangent en <script type="math/tex">G</script>.
+  Considérons deux points (par exemple, deux matrices de covariance) <script type="math/tex">C_1</script> et <script type="math/tex">C_2</script> sur <script type="math/tex">\mathcal{M}</script>. La moyenne géométrique de ces points est le milieu de la géodésique reliant <script type="math/tex">C_1</script> et <script type="math/tex">C_2</script>, c’est-à-dire qu’elle minimise la somme des deux distances au carré <script type="math/tex">\delta^2(C_1,G)+\delta^2(C_2,G)</script>.
+  Construisons maintenant l'espace tangent <script type="math/tex">\mathcal{T}_G\mathcal{M}</script> en <script type="math/tex">G</script>. Il existe un et un seul vecteur tangent <script type="math/tex">\zeta_1</script> (respectivement <script type="math/tex">\zeta_1</script>) correspondant à la géodésique partant de <script type="math/tex">G</script> et arrivant en <script type="math/tex">C_1</script> (respectivement <script type="math/tex">C_2</script>) sur la variété.
+  La carte de l'espace tangent (matrices symétriques <script type="math/tex">S</script>) à la variété (matrices définies positives symétriques <script type="math/tex">S_{++}</script>) est une carte exponentielle. La carte inverse de la variété vers l'espace tangent est une carte logarithmique. <i>Source : <a href="https://hal.inria.fr/hal-01570120">[1]</a></i>
+ </figcaption>
 </figure>
 
 #### Calcul de la distance géométrique

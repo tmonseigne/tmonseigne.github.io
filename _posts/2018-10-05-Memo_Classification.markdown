@@ -167,7 +167,7 @@ $${: .Formule}
 
 **Utilisations** : La régression par descente de gradient est souvent utilisée dans des applications telles que l'apprentissage automatique, l'analyse de données et la reconnaissance de la parole.
 
-**Avantages** : 
+**Avantages** :
 
 * Très efficace pour les grands ensembles de données.
 * Peut gérer des relations non linéaires.
@@ -191,7 +191,7 @@ $${: .Formule}
 
 **Utilisations** : Les arbres de décision sont souvent utilisés dans des applications telles que la classification d'images, la reconnaissance de la parole et l'analyse des décisions.
 
-**Avantages** : 
+**Avantages** :
 
 * Facile à comprendre et à interpréter.
 * Peut gérer des données non numériques.
@@ -226,7 +226,7 @@ où $$\hat{y}$$ est la prédiction finale, $$N_{\text{trees}}$$ est le nombre d'
 
 **Utilisations** : Les forêts aléatoires sont souvent utilisées dans des applications telles que la classification d'images, la reconnaissance de la parole et l'analyse des décisions.
 
-**Avantages** : 
+**Avantages** :
 
 * Peut gérer de grands ensembles de données.
 * Peut gérer des données bruyantes.
@@ -250,7 +250,7 @@ où $$\hat{y}$$ est la prédiction finale, $$N_{\text{trees}}$$ est le nombre d'
 
 **Utilisations** : La Méthode des k plus proches voisins sont souvent utilisées pour la classification d'images, la reconnaissance de formes, la classification de documents et la bio-informatique.
 
-**Avantages** : 
+**Avantages** :
 
 * Facile à comprendre et à implémenter.
 * Peut être utilisé pour des problèmes de classification et de régression.
@@ -284,7 +284,7 @@ Cette fonction non linéaire est appelée fonction d'activation. Une alternative
 
 **Utilisations** : Le Perceptron est souvent utilisé dans la classification binaire et la reconnaissance de caractères.
 
-**Avantages** : 
+**Avantages** :
 
 * Simple à comprendre et facile à implémenter.
 * Efficace pour les ensembles de données linéairement séparables.
@@ -307,7 +307,7 @@ Cette fonction non linéaire est appelée fonction d'activation. Une alternative
 **Définition** : Les machines à vecteurs de support (SVM) sont une méthode d'apprentissage supervisé pour la classification et la régression. Les SVM sont particulièrement utiles pour les problèmes de classifications non linéaires, car elles sont capables de séparer les données en utilisant une fonction de décision non linéaire.
 
 La méthode consiste à trouver un hyperplan qui sépare les données en deux classes en maximisant la marge, c'est-à-dire la distance entre l'hyperplan et les points de chaque classe les plus proches. Les SVM ont également la possibilité d'utiliser des noyaux pour projeter les données dans un espace de dimension supérieure, où la séparation linéaire est possible.
- 
+
 Les SVM cherchent à résoudre le problème d'optimisation suivant :
 
 $$\text{minimize}\left(\frac{1}{2}\lVert w\rVert ^2 + C \sum_{i=1}^{n} \max(0, 1 - y_i (w^T x_i + b))\right)$${: .Formule}
@@ -321,13 +321,13 @@ où $$w$$ est le vecteur de poids, $$b$$ est le biais et $$x$$ est le vecteur de
 
 **Utilisations** : Les SVM sont souvent utilisées dans des applications telles que la classification de textes, la reconnaissance d'images et la bio-informatique.
 
-**Avantages** : 
+**Avantages** :
 
 * Efficaces pour les ensembles de données à dimensions élevées.
 * Bonne généralisation et évitent l'overfitting.
 * Utilisent des noyaux pour gérer les données non linéaires.
 
-**Inconvénients** : 
+**Inconvénients** :
 
 * Longue durée d'apprentissage pour de grands ensembles de données.
 * Sensibles aux données bruyantes.
@@ -353,7 +353,7 @@ En résumé, l'analyse discriminante est une méthode de classification qui perm
 
 **Utilisations** : L'Analyse discriminante est souvent utilisée dans la reconnaissance de formes, la classification de documents, la bio-informatique et la surveillance de la qualité.
 
-**Avantages** : 
+**Avantages** :
 
 * Efficace pour les ensembles de données contenant de nombreuses variables.
 * Prends en compte les corrélations entre les variables.
@@ -379,7 +379,7 @@ Le but est de transformer un ensemble de variables corrélées en un ensemble de
 
 **Utilisations** : L'Analyse en composantes principales est souvent utilisée dans la reconnaissance de formes, l'exploration de données, la visualisation de données et la classification de documents.
 
-**Avantages** : 
+**Avantages** :
 
 * Permets de réduire la dimension des données.
 * Préservation de l'information utile dans les données.
@@ -409,7 +409,7 @@ Une fois les vecteurs de corrélation canonique trouvés, on peut projeter les d
 
 **Utilisations** : L'analyse de corrélation canonique est souvent utilisée dans des domaines tels que la psychologie, la biologie et l'ingénierie.
 
-**Avantages** : 
+**Avantages** :
 
 * Permets d'explorer les relations entre deux ensembles de variables.
 * Permets de réduire la dimension des données.
@@ -434,7 +434,7 @@ Plus précisément, un HMM est défini par un ensemble d'états cachés, chacun 
 
 **Utilisations** : Le modèle de Markov caché est souvent utilisé dans des applications telles que la reconnaissance de la parole, la reconnaissance de l'écriture manuscrite et la prédiction de séquences.
 
-**Avantages** : 
+**Avantages** :
 
 * Facilement interprétable.
 * Peut être utilisé pour modéliser des données séquentielles telles que la parole et le texte.
@@ -464,7 +464,7 @@ La MDM est une méthode simple et rapide, mais elle peut être sensible aux vale
 
 **Utilisations** : La distance minimale à la moyenne est souvent utilisée dans des applications telles que la reconnaissance de caractères manuscrits et la classification d'images.
 
-**Avantages** : 
+**Avantages** :
 
 * Facilement interprétable.
 * Peut être utilisé pour la classification de données avec une faible variance.
@@ -492,7 +492,7 @@ La méthode FGDA est particulièrement utile pour les données de haute dimensio
 
 **Utilisations** : Le filtrage géodésique avec analyse discriminante de Fisher est souvent utilisé dans des applications telles que la reconnaissance d'images et la détection d'objets.
 
-**Avantages** : 
+**Avantages** :
 
 * Peut être utilisé pour extraire des caractéristiques discriminantes à partir de données brutes.
 * Peut être utilisé pour la reconnaissance d'images et la détection d'objets.
