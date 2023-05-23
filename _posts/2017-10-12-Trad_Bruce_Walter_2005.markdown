@@ -46,12 +46,12 @@ Nous pouvons convertir les coordonnées polaires sphériques et les représentat
 $$\left( \theta ,\phi \right) \Leftrightarrow \left[ \sin \theta \cos \phi, \sin \theta \sin \phi,\cos \theta \right] \label{eq:1}\tag{1}$${: .Formule}
 
 <figure id="Fig1">
-	<a href="/assets/img/Articles/Walter05/fig1.png" data-lightbox="Walter05" data-title="Figure 1"><img src="/assets/img/Articles/Walter05/fig1.png" alt="Figure 1" style="max-width:25%;"/></a>
-	<figcaption>
-		<b>Figure 1</b> : Exemple de coordonnées polaires sphériques. La direction <b>v</b> peut être entièrement décrite par deux angles <script type="math/tex">\theta_\mathbf{v}</script> et <script type="math/tex">\phi_\mathbf{v}</script>.
-		<script type="math/tex">\theta_\mathbf{v}</script> est l'angle entre <b>v</b> et l'axe z.
-		<script type="math/tex">\phi_\mathbf{v}</script> est l'angle entre l'axe x et la projection de <b>v</b> sur le plan x-y.
-	</figcaption>
+ <a href="/assets/img/Articles/Walter05/fig1.png" data-lightbox="Walter05" data-title="Figure 1"><img src="/assets/img/Articles/Walter05/fig1.png" alt="Figure 1" style="max-width:25%;"/></a>
+ <figcaption>
+  <b>Figure 1</b> : Exemple de coordonnées polaires sphériques. La direction <b>v</b> peut être entièrement décrite par deux angles <script type="math/tex">\theta_\mathbf{v}</script> et <script type="math/tex">\phi_\mathbf{v}</script>.
+  <script type="math/tex">\theta_\mathbf{v}</script> est l'angle entre <b>v</b> et l'axe z.
+  <script type="math/tex">\phi_\mathbf{v}</script> est l'angle entre l'axe x et la projection de <b>v</b> sur le plan x-y.
+ </figcaption>
 </figure>
 
 Le produit scalaire de deux directions est égal au cosinus de l'angle qui les sépare (par exemple, $$\mathbf{v} \cdot \mathbf{z} = \cos \theta_\mathbf{v}$$).
@@ -69,13 +69,13 @@ $$\mathbf{h}=\frac{\mathbf{i} + \mathbf{o}}{\left\lVert \mathbf{i} + \mathbf{o} 
 Le demi-angle est motivé par les microfacettes de la BRDF et produit des reflets plus réalistes que des alternatives telles que Phong (voir, par exemple, `[Fisher 1994, Ngan et al., 2004]`).
 
 <figure id="Fig2">
-	<a href="/assets/img/Articles/Walter05/fig2.png" data-lightbox="Walter05" data-title="Figure 2"><img src="/assets/img/Articles/Walter05/fig2.png" alt="Figure 2" style="max-width:25%;"/></a>
-	<figcaption>
-		<b>Figure 2</b> : Repère utilisé dans les calculs de la BRDF.
-		L'axe z est égal à la normale <script type="math/tex">\mathbf{n}</script> de la surface locale, et les axes x et y se situent dans le plan tangent de la surface.
-		La BRDF est une fonction de deux directions, la direction incidente <script type="math/tex">\mathbf{i}</script> et la direction de sortie <script type="math/tex">\mathbf{o}</script> (par exemple, les directions vers l'œil et la lumière).
-		La demi-direction <script type="math/tex">\mathbf{h}</script> est définie à mi-chemin entre <script type="math/tex">\mathbf{i}</script> et <script type="math/tex">\mathbf{o}</script>, et joue un rôle important dans la BRDF de Ward.
-	</figcaption>
+ <a href="/assets/img/Articles/Walter05/fig2.png" data-lightbox="Walter05" data-title="Figure 2"><img src="/assets/img/Articles/Walter05/fig2.png" alt="Figure 2" style="max-width:25%;"/></a>
+ <figcaption>
+  <b>Figure 2</b> : Repère utilisé dans les calculs de la BRDF.
+  L'axe z est égal à la normale <script type="math/tex">\mathbf{n}</script> de la surface locale, et les axes x et y se situent dans le plan tangent de la surface.
+  La BRDF est une fonction de deux directions, la direction incidente <script type="math/tex">\mathbf{i}</script> et la direction de sortie <script type="math/tex">\mathbf{o}</script> (par exemple, les directions vers l'œil et la lumière).
+  La demi-direction <script type="math/tex">\mathbf{h}</script> est définie à mi-chemin entre <script type="math/tex">\mathbf{i}</script> et <script type="math/tex">\mathbf{o}</script>, et joue un rôle important dans la BRDF de Ward.
+ </figcaption>
 </figure>
 
 ## BRDF de Ward
@@ -136,13 +136,13 @@ Ceci est souvent presque vrai, mais peut causer des erreurs significatives pour 
 Pour obtenir les bons résultats dans ces cas, il faut utiliser les poids d'échantillonnage corrects de l'équation $$\ref{eq:10}$$.
 
 <figure  id="Fig3">
-	<a href="/assets/img/Articles/Walter05/fig3.png" data-lightbox="Walter05" data-title="Figure 3"><img src="/assets/img/Articles/Walter05/fig3.png" alt="Figure 3" style="max-width:75%;"/></a>
-	<figcaption>
-		<b>Figure 3</b> : Voici une boîte diffuse contenant une sphère avec une BRDF de Ward (<script type="math/tex">\rho_s=0.75, \alpha_x=\alpha_y=0.15</script>).
-		L'image de gauche est une solution de référence qui utilise un échantillonnage uniforme de l'hémisphère.
-		L'image du milieu a utilisé l'échantillonnage de Ward mais a supposé des poids uniformes (<script type="math/tex">w(\mathbf{o})=\rho_s</script>), tandis que l'image de droite utilisait les poids d'échantillon corrects (équation <script type="math/tex">\ref{eq:10}</script>).
-		La rangée du bas montre les différences entre les images avec l'échantillonnage de Ward et la référence.
-	</figcaption>
+ <a href="/assets/img/Articles/Walter05/fig3.png" data-lightbox="Walter05" data-title="Figure 3"><img src="/assets/img/Articles/Walter05/fig3.png" alt="Figure 3" style="max-width:75%;"/></a>
+ <figcaption>
+  <b>Figure 3</b> : Voici une boîte diffuse contenant une sphère avec une BRDF de Ward (<script type="math/tex">\rho_s=0.75, \alpha_x=\alpha_y=0.15</script>).
+  L'image de gauche est une solution de référence qui utilise un échantillonnage uniforme de l'hémisphère.
+  L'image du milieu a utilisé l'échantillonnage de Ward mais a supposé des poids uniformes (<script type="math/tex">w(\mathbf{o})=\rho_s</script>), tandis que l'image de droite utilisait les poids d'échantillon corrects (équation <script type="math/tex">\ref{eq:10}</script>).
+  La rangée du bas montre les différences entre les images avec l'échantillonnage de Ward et la référence.
+ </figcaption>
 </figure>
 
 Certains spectateurs peuvent préférer esthétiquement l'image du milieu de la [Figure 3](#Fig3), mais ce sont les images de gauche et de droite qui sont mathématiquement correctes pour la BRDF de Ward.
@@ -219,13 +219,13 @@ p_o\left(\mathbf{o}\right)
 Des résultats similaires pour la demi-direction vers la direction de sortie transformée peuvent être trouvés dans `[Torrance et Sparrow 1967]` et `[Ashikhmin et Shirley 2000]`.
 
 <figure  id="Fig4">
-	<a href="/assets/img/Articles/Walter05/fig4.png" data-lightbox="Walter05" data-title="Figure 4"><img src="/assets/img/Articles/Walter05/fig4.png" alt="Figure 4" style="max-width:25%;"/></a>
-	<figcaption>
-		<b>Figure 4</b> : Système de coordonnées où le vecteur incident <script type="math/tex">\mathbf{i}</script> est l'axe z, et la normale de surface <script type="math/tex">\mathbf{n}</script> se trouve dans le plan x-z (c'est-à-dire <script type="math/tex">\mathbf{n} \cdot \mathbf{y} = 0</script>).
-		Comme sur la [Figure 1](#Fig1), nous pouvons spécifier des directions en utilisant deux angles sphériques, <script type="math/tex">\theta^*</script> et <script type="math/tex">\theta^*</script>.
-		L'étoile indique qu'ils sont relatifs à ce repère.
-		La relation entre <script type="math/tex">\mathbf{h}</script> et <script type="math/tex">\mathbf{o}</script> est, <script type="math/tex">\theta_\mathbf{o}^* = 2\theta_\mathbf{h}^*</script> et <script type="math/tex">\phi_\mathbf{o}^* = \phi_\mathbf{h}^*</script>.
-	</figcaption>
+ <a href="/assets/img/Articles/Walter05/fig4.png" data-lightbox="Walter05" data-title="Figure 4"><img src="/assets/img/Articles/Walter05/fig4.png" alt="Figure 4" style="max-width:25%;"/></a>
+ <figcaption>
+  <b>Figure 4</b> : Système de coordonnées où le vecteur incident <script type="math/tex">\mathbf{i}</script> est l'axe z, et la normale de surface <script type="math/tex">\mathbf{n}</script> se trouve dans le plan x-z (c'est-à-dire <script type="math/tex">\mathbf{n} \cdot \mathbf{y} = 0</script>).
+  Comme sur la [Figure 1](#Fig1), nous pouvons spécifier des directions en utilisant deux angles sphériques, <script type="math/tex">\theta^*</script> et <script type="math/tex">\theta^*</script>.
+  L'étoile indique qu'ils sont relatifs à ce repère.
+  La relation entre <script type="math/tex">\mathbf{h}</script> et <script type="math/tex">\mathbf{o}</script> est, <script type="math/tex">\theta_\mathbf{o}^* = 2\theta_\mathbf{h}^*</script> et <script type="math/tex">\phi_\mathbf{o}^* = \phi_\mathbf{h}^*</script>.
+ </figcaption>
 </figure>
 
 ### Exemple isotrope
@@ -300,13 +300,13 @@ Malheureusement, ces limites d'intervalle tendent à être plutôt lâches, surt
 Au lieu de cela, nous allons essayer de trouver une direction ou un ensemble de paramètres qui est une limite supérieure stricte et correspond à un point dans ou à proximité du volume englobant.
 
 <figure  id="Fig5">
-	<a href="/assets/img/Articles/Walter05/fig5.png" data-lightbox="Walter05" data-title="Figure 5"><img src="/assets/img/Articles/Walter05/fig5.png" alt="Figure 5" style="max-width:50%;"/></a>
-	<figcaption>
-		<b>Figure 5</b> : Limitation de la valeur maximale de la BRDF.
-		Les directions incidentes et normales sont fixes et le point de réflexion est supposé être à l'origine.
-		Nous calculons ensuite une borne supérieure sur <script type="math/tex">f_r\left(\mathbf{i},\mathbf{o}\right)</script> sur un ensemble de directions de sortie définies par un volume de limitation <script type="math/tex">\mathcal{B}</script>.
-		Les directions de sortie autorisées sont <script type="math/tex">\mathbf{o}=\vec{v} / \left\lVert \vec{v} \right\rVert</script> pour tout <script type="math/tex">\vec{v} \in \mathcal{B}</script>.
-	</figcaption>
+ <a href="/assets/img/Articles/Walter05/fig5.png" data-lightbox="Walter05" data-title="Figure 5"><img src="/assets/img/Articles/Walter05/fig5.png" alt="Figure 5" style="max-width:50%;"/></a>
+ <figcaption>
+  <b>Figure 5</b> : Limitation de la valeur maximale de la BRDF.
+  Les directions incidentes et normales sont fixes et le point de réflexion est supposé être à l'origine.
+  Nous calculons ensuite une borne supérieure sur <script type="math/tex">f_r\left(\mathbf{i},\mathbf{o}\right)</script> sur un ensemble de directions de sortie définies par un volume de limitation <script type="math/tex">\mathcal{B}</script>.
+  Les directions de sortie autorisées sont <script type="math/tex">\mathbf{o}=\vec{v} / \left\lVert \vec{v} \right\rVert</script> pour tout <script type="math/tex">\vec{v} \in \mathcal{B}</script>.
+ </figcaption>
 </figure>
 
 ### Limitation Cosinus
@@ -336,10 +336,10 @@ $$
 Un exemple est montré dans la [Figure 6](#Fig6). Notez que nous choisissons la valeur maximum de $$v_z$$ mais pour $$v_x$$ et $$v_y$$ nous choisissons les valeurs qui maximisent ou minimisent leurs valeurs au carré. Ainsi, si $$v_x$$ peut varier de $$-2$$ à $$1$$, alors $$\max{\left(v_x\right)} = 1$$, mais $$\max{\left(v^2_x\right)} = 4$$ et $$\min{\left(v^2_x\right)} = 0$$.
 
 <figure  id="Fig6">
-	<a href="/assets/img/Articles/Walter05/fig6.png" data-lightbox="Walter05" data-title="Figure 6"><img src="/assets/img/Articles/Walter05/fig6.png" alt="Figure 6" style="max-width:50%;"/></a>
-	<figcaption>
-		<b>Figure 6</b> : Exemple de limitation de la valeur maximale de <script type="math/tex">\cos{\theta_\mathbf{o}}</script> à l'aide de l'équation <script type="math/tex">\ref{eq:27}</script>.
-	</figcaption>
+ <a href="/assets/img/Articles/Walter05/fig6.png" data-lightbox="Walter05" data-title="Figure 6"><img src="/assets/img/Articles/Walter05/fig6.png" alt="Figure 6" style="max-width:50%;"/></a>
+ <figcaption>
+  <b>Figure 6</b> : Exemple de limitation de la valeur maximale de <script type="math/tex">\cos{\theta_\mathbf{o}}</script> à l'aide de l'équation <script type="math/tex">\ref{eq:27}</script>.
+ </figcaption>
 </figure>
 
 ### Limitation Isotrope
