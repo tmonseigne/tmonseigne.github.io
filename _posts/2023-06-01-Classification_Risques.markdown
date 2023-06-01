@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Les risques dans la classifications
-date: 2023-05-17
+date: 2023-06-01
 description: Les risques dans la classifications
 img: theme/Classif-Theme.png # Add image post (optional)
 tags: [Explication]
@@ -61,6 +61,9 @@ Pour atténuer ces risques, il est important de surveiller attentivement les per
 {% include code/classification/Resampling.py %}
 ```
 
-![Resampling](../_includes/code/classification/Resampling.png){:style="max-width:50%;"}
+<figure id="Fig1">
+ <a href = "/assets/img/classification/Resampling.png" data-lightbox = "Memo" data-title = "Comparaison des techniques d'échantillonnage"><img src = "/assets/img/classification/Resampling.png" alt = "Comparaison des techniques d'échantillonnage" style = "max-width:50%;"/></a>
+ <figcaption></figcaption>
+</figure>
 
 ## Normalisation des données

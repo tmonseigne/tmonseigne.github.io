@@ -42,7 +42,7 @@ for i in range(4):
     Z = Z.reshape(xx.shape)
     axes[a_i, a_j].contourf(xx, yy, Z, alpha=0.2)
     axes[a_i, a_j].scatter(datasets[i]["x"][:, 0], datasets[i]["x"][:, 1], c= datasets[i]["y"])
-    axes[a_i, a_j].set_title("Oversampled Dataset (ADASYN)")
+    axes[a_i, a_j].set_title(datasets[i]["title"])
 
 plt.tight_layout()
 plt.show()
