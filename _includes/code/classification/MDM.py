@@ -18,7 +18,7 @@ for cl in range(3):
 def euclidean_distance(x1, x2):
     return np.sqrt(np.sum((x1 - x2)**2))
 
-# prédiction de la classe pour un nouvel échantillon
+# prédiction de la classe pour un ensemble de nouvel échantillon
 def predict(X, mean_vectors):
     y_pred = []
     for x in X:
