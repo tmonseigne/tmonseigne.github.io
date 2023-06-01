@@ -23,7 +23,7 @@ print("Precision :", accuracy)
 
 # Tracé des données d'entraînement et de test
 fig, ax = plt.subplots(figsize=(8, 6))
-scatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train, cmap='bwr')
+scatter = ax.scatter(X_train[:, 0], X_train[:, 1], c=y_train)
 handles, labels = scatter.legend_elements()
 ax.legend(handles, ['Classe 0', 'Classe 1'])
 plt.xlabel("Feature 1")
@@ -36,5 +36,5 @@ y_min, y_max = X_train[:, 1].min() - 0.5, X_train[:, 1].max() + 0.5
 xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.1), np.arange(y_min, y_max, 0.1))
 Z = lda.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
-ax.contourf(xx, yy, Z, alpha=0.2, cmap='bwr')
+ax.contourf(xx, yy, Z, alpha=0.2)
 plt.show()
