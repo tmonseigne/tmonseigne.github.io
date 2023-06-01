@@ -3,9 +3,9 @@ layout: post
 title: Géométrie Riemannienne appliquée aux BCI
 date: 2018-10-08
 description: Géométrie Riemannienne appliquée aux BCI
-img: theme/Geo3D-Theme.png # Add image post (optional)
+img: theme/Geo3D-Theme.png
 tags: [Explication]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

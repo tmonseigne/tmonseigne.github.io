@@ -3,9 +3,9 @@ layout: post
 title: Mémo Trigonométrie
 date: 2017-05-04
 description: Mémo Trigonométrie
-img: theme/Memo-Theme.png # Add image post (optional)
+img: theme/Memo-Theme.png
 tags: [Mémos]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

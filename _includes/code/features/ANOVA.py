@@ -1,5 +1,5 @@
-from sklearn.datasets import load_iris
 from scipy.stats import f_oneway
+from sklearn.datasets import load_iris
 
 # Chargement du jeu de données Iris
 iris = load_iris()

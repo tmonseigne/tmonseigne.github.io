@@ -3,9 +3,9 @@ layout: post
 title: Chiffrement Monoalphabétique
 date: 2018-05-12
 description: Explication du Chiffrement Monoalphabétique suivi d'un petit code JavaScript pour chiffrer/déchiffrer
-img: theme/Chiffrement-Theme.png # Add image post (optional)
+img: theme/Chiffrement-Theme.png
 tags: [Chiffrement, Chiffrement Monoalphabétique, Explication, Exemple]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

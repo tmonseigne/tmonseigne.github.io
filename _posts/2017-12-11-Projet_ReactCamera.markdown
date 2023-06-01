@@ -3,9 +3,9 @@ layout: post
 title: Projet ReactCamera
 date: 2017-12-11
 description: 
-img: theme/RVRA-Theme.jpg # Add image post (optional)
+img: theme/RVRA-Theme.jpg
 tags: [Projet Scolaire, Réalité augmentée]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC
