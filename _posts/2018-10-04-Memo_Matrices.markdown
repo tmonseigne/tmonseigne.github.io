@@ -3,9 +3,9 @@ layout: post
 title: Mémo Matrices
 date: 2018-10-04
 description: Mémo Matrices
-img: theme/Memo-Theme.png # Add image post (optional)
+img: theme/Memo-Theme.png
 tags: [Mémos]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

@@ -3,9 +3,9 @@ layout: post
 title: Mémo Géometrie dans l'espace
 date: 2017-05-04
 description: Mémo Géometrie dans l'espace
-img: theme/Memo-Theme.png # Add image post (optional)
+img: theme/Memo-Theme.png
 tags: [Mémos]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC
