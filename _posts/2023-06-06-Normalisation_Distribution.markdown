@@ -4,7 +4,7 @@ title: Normalisation de la distribution d'un signal
 date: 2023-06-06
 description: Normalisation de la distribution d'un signal
 img: theme/Geo3D-Theme.png
-tags: [Explication]
+tags: [Explication, Machine Learning]
 author: Thibaut Monseigne
 ---
 

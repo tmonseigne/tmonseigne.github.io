@@ -4,7 +4,7 @@ title: Les risques dans la classification
 date: 2023-06-01
 description: Les risques dans la classification
 img: theme/Classif-Theme.png
-tags: [Explication]
+tags: [Explication, Machine Learning]
 author: Thibaut Monseigne
 ---
 
