@@ -3,9 +3,9 @@ layout: post
 title: Projet Image Resizer
 date: 2017-12-10
 description: 
-img: theme/TI-Theme.jpg # Add image post (optional)
+img: theme/TI-Theme.jpg
 tags: [Projet Scolaire, Réalité augmentée]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

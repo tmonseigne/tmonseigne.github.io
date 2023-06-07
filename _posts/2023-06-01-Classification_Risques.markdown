@@ -120,7 +120,6 @@ $$
 X_n = \frac{X-\text{Mediane}}{\text{IQR}}
 $${: .Formule}
 
-
 **Exemple python** : [Fichier Python](../_includes/code/classification/Normalisation.py)
 
 ```python

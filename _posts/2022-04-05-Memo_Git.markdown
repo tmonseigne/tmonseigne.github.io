@@ -3,9 +3,9 @@ layout: post
 title: (Très) courte introduction à Git
 date: 2022-04-05
 description: Mémo Git
-img: theme/Memo-Theme.png # Add image post (optional)
+img: theme/Memo-Theme.png
 tags: [Mémos, Explication]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

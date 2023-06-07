@@ -3,9 +3,9 @@ layout: post
 title: Mémo Classification
 date: 2018-10-05
 description: Mémo Classification
-img: theme/Classif-Theme.png # Add image post (optional)
+img: theme/Classif-Theme.png
 tags: [Mémos, Machine Learning]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC

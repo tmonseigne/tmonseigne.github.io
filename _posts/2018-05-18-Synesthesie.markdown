@@ -3,9 +3,9 @@ layout: post
 title: Synesthésie
 date: 2018-05-18
 description: Vulgarisation de la Synesthésie
-img: theme/Synesthesie-Theme.png # Add image post (optional)
+img: theme/Synesthesie-Theme.png
 tags: [Vulgarisation, Explication, Cerveau, Sens]
-author: Thibaut Monseigne # Add name author (optional)
+author: Thibaut Monseigne
 ---
 
 * TOC
