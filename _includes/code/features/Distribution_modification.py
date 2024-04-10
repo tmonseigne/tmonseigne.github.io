@@ -41,7 +41,7 @@ functions = [
         ("Triangular Distribution", np.random.triangular(-3, 0, 8, N)),
         ("Von Mises Distribution", np.random.vonmises(0, 4, N)),
         ("Wald, or inverse Gaussian, Distribution", np.random.wald(3, 2, N)),
-        ("Weibull Distribution", np.random.weibull(5, N)),
+        ("Weibull Distribution", np.random.weibull(5, N))
         ]
 
 transformations = [
@@ -68,6 +68,8 @@ for f in functions:
     normal_data = np.random.normal(np.mean(data), np.std(data), N)
     sns.histplot(normal_data, kde=True, ax=axes[0])
     axes[0].legend(["Datas", "Normal"], title="Distribution")
+
+    plt.show()
 
     i = 1
     for t in transformations:
