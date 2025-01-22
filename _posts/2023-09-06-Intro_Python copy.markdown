@@ -3,7 +3,7 @@ layout: post
 title: (Très) courte introduction à Python
 date: 2023-09-06
 description: (Très) courte introduction à Python ou comment faire de l'analyse de données en Science ouverte ?
-img: theme/Memo-Theme.png
+img: theme/Programmation-Theme.png
 tags: [Explication]
 author: Thibaut Monseigne
 ---
