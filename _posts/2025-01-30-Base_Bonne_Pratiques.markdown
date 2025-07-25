@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bases des bonnes pratiques de programmation
-date: 2024-01-30
+date: 2025-01-30
 description: Quelques informations de base sur de bonnes pratiques de programmation
 img: theme/Programmation-Theme.png
 tags: [Explication]
