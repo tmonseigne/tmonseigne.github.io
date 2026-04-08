@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 740 601.27" width="1000" height="auto">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #507fcc;
+      }
+
+      .st0, .st1 {
+        font-size: 15px;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6 {
+        isolation: isolate;
+      }
+
+      .st0, .st1, .st2, .st4, .st5, .st6 {
+        font-family: Roboto-Regular, Roboto;
+      }
+
+      .st7 {
+        stroke: #4e88e7;
+      }
+
+      .st7, .st8, .st9 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .st10 {
+        fill: #f3f0ff;
+      }
+
+      .st10, .st11, .st12 {
+        fill-rule: evenodd;
+      }
+
+      .st1 {
+        fill: #7862d1;
+      }
+
+      .st2, .st5 {
+        font-size: 20px;
+      }
+
+      .st2, .st6 {
+        fill: #7f64ea;
+      }
+
+      .st8 {
+        stroke: #7f64ea;
+      }
+
+      .st9 {
+        stroke: #969696;
+      }
+
+      .st4, .st5 {
+        fill: #4e88e7;
+      }
+
+      .st4, .st6 {
+        font-size: 25px;
+      }
+
+      .st11 {
+        fill: #edf4ff;
+      }
+
+      .st12 {
+        fill: #f5f5f5;
+      }
+    </style>
+  </defs>
+  <g id="items" class="st3">
+    <g id="blend">
+      <g id="g-root-cp_1_common_1-1_mbppeq48pwy5-fill" data-item-order="-612628">
+        <g id="cp_1_common_1-1_mbppeq48pwy5-fill-merged">
+          <path class="st12" d="M13,78.27H5c-2.21,0-4,1.79-4,4h12v-4ZM85,82.27h264c0-2.21-1.79-4-4-4H85v4ZM13,82.26h0s-12,0-12,0v110h12v-110ZM85,192.26h264v-110H85v110ZM13,192.27H1v8c0,2.21,1.79,4,4,4h8v-12ZM85,204.27h252l12-12H85v12ZM337,204.27v-12h12l-12,12ZM337,204.27l12-12h-12v12Z"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1_common_1-1_mbppeq48pwy5-stroke" data-item-order="-612628">
+        <g id="cp_1_common_1-1_mbppeq48pwy5-stroke">
+          <path class="st9" d="M13,78.27H5c-2.21,0-4,1.79-4,4M349,82.27c0-2.21-1.79-4-4-4H85M349,82.27v110M1,192.27v-110M337,204.27l12-12h-12v12ZM12,204.27h-7c-2.21,0-4-1.79-4-4v-8M337,204.27H85"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1-1_g-1-1_lines_90vo4i48pvda-fill" data-item-order="-612614">
+        <g id="cp_1-1_g-1-1_lines_90vo4i48pvda-fill-merged">
+          <path class="st10" d="M85,212.27c0,2.21-1.79,4-4,4H17c-2.21,0-4-1.79-4-4V76.27c0-5.52,4.48-10,10-10h76c5.52,0,10,4.48,10,10v1h-24v135"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1-1_g-1-1_lines_90vo4i48pvda-stroke" data-item-order="-612614">
+        <g id="cp_1-1_g-1-1_lines_90vo4i48pvda-stroke">
+          <path class="st8" d="M95,66.27H23c-5.52,0-10,4.48-10,10v2M95,66.27c-5.52,0-10,4.48-10,10v2M95,66.27h4c5.52,0,10,4.48,10,10v1M85,212.27V78.27M13,78.27v134M85,212.27c0,2.21-1.79,4-4,4H17c-2.21,0-4-1.79-4-4"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1_common_2-1_90vo4i48pvdb-fill" data-item-order="-612586">
+        <g id="cp_1_common_2-1_90vo4i48pvdb-fill-merged">
+          <path class="st12" d="M13,252.27H5c-2.21,0-4,1.79-4,4h12v-4ZM85,256.27h264c0-2.21-1.79-4-4-4H85v4ZM13,256.26h0s-12,0-12,0v128h12v-128ZM85,384.26h264v-128H85v128ZM13,384.27H1v8c0,2.21,1.79,4,4,4h8v-12ZM85,396.27h252l12-12H85v12ZM337,396.27v-12h12l-12,12ZM337,396.27l12-12h-12v12Z"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1_common_2-1_90vo4i48pvdb-stroke" data-item-order="-612586">
+        <g id="cp_1_common_2-1_90vo4i48pvdb-stroke">
+          <path class="st9" d="M13,252.27H5c-2.21,0-4,1.79-4,4M349,256.27c0-2.21-1.79-4-4-4H85M349,256.27v128M1,384.27v-128M337,396.27l12-12h-12v12ZM12,396.27h-7c-2.21,0-4-1.79-4-4v-8M337,396.27H85"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2-1_g-2-1_lines_dgp68y48pvcw-fill" data-item-order="-612572">
+        <g id="cp_2-1_g-2-1_lines_dgp68y48pvcw-fill-merged">
+          <path class="st10" d="M85,404.27c0,2.21-1.79,4-4,4H17c-2.21,0-4-1.79-4-4v-154c0-5.52,4.48-10,10-10h76c5.52,0,10,4.48,10,10v1h-24v153"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2-1_g-2-1_lines_dgp68y48pvcw-stroke" data-item-order="-612572">
+        <g id="cp_2-1_g-2-1_lines_dgp68y48pvcw-stroke">
+          <path class="st8" d="M95,240.27H23c-5.52,0-10,4.48-10,10v2M95,240.27c-5.52,0-10,4.48-10,10v2M95,240.27h4c5.52,0,10,4.48,10,10v1M85,404.27v-152M13,252.27v152M85,404.27c0,2.21-1.79,4-4,4H17c-2.21,0-4-1.79-4-4"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1_common_3-1_4l260248pw5l-fill" data-item-order="-612546">
+        <g id="cp_1_common_3-1_4l260248pw5l-fill-merged">
+          <path class="st12" d="M13,444.27H5c-2.21,0-4,1.79-4,4h12v-4ZM85,448.27h264c0-2.21-1.79-4-4-4H85v4ZM13,448.26h0s-12,0-12,0v128h12v-128ZM85,576.26h264v-128H85v128ZM13,576.27H1v8c0,2.21,1.79,4,4,4h8v-12ZM85,588.27h252l12-12H85v12ZM337,588.27v-12h12l-12,12ZM337,588.27l12-12h-12v12Z"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1_common_3-1_4l260248pw5l-stroke" data-item-order="-612546">
+        <g id="cp_1_common_3-1_4l260248pw5l-stroke">
+          <path class="st9" d="M13,444.27H5c-2.21,0-4,1.79-4,4M349,448.27c0-2.21-1.79-4-4-4H85M349,448.27v128M1,576.27v-128M337,588.27l12-12h-12v12ZM12,588.27h-7c-2.21,0-4-1.79-4-4v-8M337,588.27H85"/>
+        </g>
+      </g>
+      <g id="g-root-cp_3-1_g-3-1_lines_1qapplu48pxje-fill" data-item-order="-612532">
+        <g id="cp_3-1_g-3-1_lines_1qapplu48pxje-fill-merged">
+          <path class="st10" d="M85,596.27c0,2.21-1.79,4-4,4H17c-2.21,0-4-1.79-4-4v-154c0-5.52,4.48-10,10-10h76c5.52,0,10,4.48,10,10v1h-24v153"/>
+        </g>
+      </g>
+      <g id="g-root-cp_3-1_g-3-1_lines_1qapplu48pxje-stroke" data-item-order="-612532">
+        <g id="cp_3-1_g-3-1_lines_1qapplu48pxje-stroke">
+          <path class="st8" d="M95,432.27H23c-5.52,0-10,4.48-10,10v2M95,432.27c-5.52,0-10,4.48-10,10v2M95,432.27h4c5.52,0,10,4.48,10,10v1M85,596.27v-152M13,444.27v152M85,596.27c0,2.21-1.79,4-4,4H17c-2.21,0-4-1.79-4-4"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2_common_1-2_1lvioki48pv5v-fill" data-item-order="-612498">
+        <g id="cp_2_common_1-2_1lvioki48pv5v-fill-merged">
+          <path class="st12" d="M403,78.27h-8c-2.21,0-4,1.79-4,4h12v-4ZM475,82.27h264c0-2.21-1.79-4-4-4h-260v4ZM403,82.26h0s-12,0-12,0v110h12v-110ZM475,192.26h264v-110h-264v110ZM403,192.27h-12v8c0,2.21,1.79,4,4,4h8v-12ZM475,204.27h252l12-12h-264v12ZM727,204.27v-12h12l-12,12ZM727,204.27l12-12h-12v12Z"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2_common_1-2_1lvioki48pv5v-stroke" data-item-order="-612498">
+        <g id="cp_2_common_1-2_1lvioki48pv5v-stroke">
+          <path class="st9" d="M403,78.27h-8c-2.21,0-4,1.79-4,4M739,82.27c0-2.21-1.79-4-4-4h-260M739,82.27v110M391,192.27v-110M727,204.27l12-12h-12v12ZM402,204.27h-7c-2.21,0-4-1.79-4-4v-8M727,204.27h-252"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1-2_g-1-2_lines_1lvioki48pv5w-fill" data-item-order="-612484">
+        <g id="cp_1-2_g-1-2_lines_1lvioki48pv5w-fill-merged">
+          <path class="st11" d="M475,212.27c0,2.21-1.79,4-4,4h-64c-2.21,0-4-1.79-4-4V76.27c0-5.52,4.48-10,10-10h76c5.52,0,10,4.48,10,10v1h-24v135"/>
+        </g>
+      </g>
+      <g id="g-root-cp_1-2_g-1-2_lines_1lvioki48pv5w-stroke" data-item-order="-612484">
+        <g id="cp_1-2_g-1-2_lines_1lvioki48pv5w-stroke">
+          <path class="st7" d="M485,66.27h-72c-5.52,0-10,4.48-10,10v2M485,66.27c-5.52,0-10,4.48-10,10v2M485,66.27h4c5.52,0,10,4.48,10,10v1M475,212.27V78.27M403,78.27v134M475,212.27c0,2.21-1.79,4-4,4h-64c-2.21,0-4-1.79-4-4"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2_common_2-2_1czvobm48pvyl-fill" data-item-order="-612462">
+        <g id="cp_2_common_2-2_1czvobm48pvyl-fill-merged">
+          <path class="st12" d="M403,252.27h-8c-2.21,0-4,1.79-4,4h12v-4ZM475,256.27h264c0-2.21-1.79-4-4-4h-260v4ZM403,256.26h0s-12,0-12,0v104h12v-104ZM475,360.26h264v-104h-264v104ZM403,360.27h-12v8c0,2.21,1.79,4,4,4h8v-12ZM475,372.27h252l12-12h-264v12ZM727,372.27v-12h12l-12,12ZM727,372.27l12-12h-12v12Z"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2_common_2-2_1czvobm48pvyl-stroke" data-item-order="-612462">
+        <g id="cp_2_common_2-2_1czvobm48pvyl-stroke">
+          <path class="st9" d="M403,252.27h-8c-2.21,0-4,1.79-4,4M739,256.27c0-2.21-1.79-4-4-4h-260M739,256.27v104M391,360.27v-104M727,372.27l12-12h-12v12ZM402,372.27h-7c-2.21,0-4-1.79-4-4v-8M727,372.27h-252"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2-2_g-2-2_lines_18k267648pwqu-fill" data-item-order="-612448">
+        <g id="cp_2-2_g-2-2_lines_18k267648pwqu-fill-merged">
+          <path class="st11" d="M475,380.27c0,2.21-1.79,4-4,4h-64c-2.21,0-4-1.79-4-4v-130c0-5.52,4.48-10,10-10h76c5.52,0,10,4.48,10,10v1h-24v129"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2-2_g-2-2_lines_18k267648pwqu-stroke" data-item-order="-612448">
+        <g id="cp_2-2_g-2-2_lines_18k267648pwqu-stroke">
+          <path class="st7" d="M485,240.27h-72c-5.52,0-10,4.48-10,10v2M485,240.27c-5.52,0-10,4.48-10,10v2M485,240.27h4c5.52,0,10,4.48,10,10v1M475,380.27v-128M403,252.27v128M475,380.27c0,2.21-1.79,4-4,4h-64c-2.21,0-4-1.79-4-4"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2_common_3-2_zof5ya48pxjj-fill" data-item-order="-612426">
+        <g id="cp_2_common_3-2_zof5ya48pxjj-fill-merged">
+          <path class="st12" d="M403,420.27h-8c-2.21,0-4,1.79-4,4h12v-4ZM475,424.27h264c0-2.21-1.79-4-4-4h-260v4ZM403,424.26h0s-12,0-12,0v128h12v-128ZM475,552.26h264v-128h-264v128ZM403,552.27h-12v8c0,2.21,1.79,4,4,4h8v-12ZM475,564.27h252l12-12h-264v12ZM727,564.27v-12h12l-12,12ZM727,564.27l12-12h-12v12Z"/>
+        </g>
+      </g>
+      <g id="g-root-cp_2_common_3-2_zof5ya48pxjj-stroke" data-item-order="-612426">
+        <g id="cp_2_common_3-2_zof5ya48pxjj-stroke">
+          <path class="st9" d="M403,420.27h-8c-2.21,0-4,1.79-4,4M739,424.27c0-2.21-1.79-4-4-4h-260M739,424.27v128M391,552.27v-128M727,564.27l12-12h-12v12ZM402,564.27h-7c-2.21,0-4-1.79-4-4v-8M727,564.27h-252"/>
+        </g>
+      </g>
+      <g id="g-root-cp_3-2_g-3-2_lines_v984wy48pv60-fill" data-item-order="-612412">
+        <g id="cp_3-2_g-3-2_lines_v984wy48pv60-fill-merged">
+          <path class="st11" d="M475,572.27c0,2.21-1.79,4-4,4h-64c-2.21,0-4-1.79-4-4v-154c0-5.52,4.48-10,10-10h76c5.52,0,10,4.48,10,10v1h-24v153"/>
+        </g>
+      </g>
+      <g id="g-root-cp_3-2_g-3-2_lines_v984wy48pv60-stroke" data-item-order="-612412">
+        <g id="cp_3-2_g-3-2_lines_v984wy48pv60-stroke">
+          <path class="st7" d="M485,408.27h-72c-5.52,0-10,4.48-10,10v2M485,408.27c-5.52,0-10,4.48-10,10v2M485,408.27h4c5.52,0,10,4.48,10,10v1M475,572.27v-152M403,420.27v152M475,572.27c0,2.21-1.79,4-4,4h-64c-2.21,0-4-1.79-4-4"/>
+        </g>
+      </g>
+      <g id="g-root-tx_celatabl_142d8te48u495-fill" data-item-order="0">
+        <g id="tx_celatabl_142d8te48u495-fill-merged">
+          <g class="st3">
+            <text class="st0" transform="translate(489 192.2)"><tspan x="0" y="0">Cela établit une relation &quot;est-un&quot;.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_uneclass_7434y48pvyb-fill" data-item-order="0">
+        <g id="tx_uneclass_7434y48pvyb-fill-merged">
+          <g class="st3">
+            <text class="st2" transform="translate(99 114.3)"><tspan x="0" y="0">Une classe contient une </tspan></text>
+            <text class="st2" transform="translate(99 138.3)"><tspan x="0" y="0">instance d&apos;une autre </tspan></text>
+            <text class="st2" transform="translate(99 162.3)"><tspan x="0" y="0">classe.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-ic_1_zqal7m48pwjx-stroke" data-item-order="0">
+        <g id="ic_1_zqal7m48pwjx-stroke">
+          <path class="st8" d="M49,164.27l20-12v-22l-20-12-20,12v22l20,12ZM69,130.27l-20,11-20-11M49,164.27v-23M49,154.27l12-7v-12.6l-12-7-12,7v12.6l12,7Z"/>
+        </g>
+      </g>
+      <g id="g-root-tx_hritage_140htk248u58s-fill" data-item-order="0">
+        <g id="tx_hritage_140htk248u58s-fill-merged">
+          <g class="st3">
+            <text class="st4" transform="translate(526.65 21.39)"><tspan x="0" y="0">Héritage</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_favorise_18i6qxu48sq2q-fill" data-item-order="0">
+        <g id="tx_favorise_18i6qxu48sq2q-fill-merged">
+          <g class="st3">
+            <text class="st1" transform="translate(99 558.2)"><tspan x="0" y="0">Favorise la flexibilité et la </tspan></text>
+            <text class="st1" transform="translate(99 576.2)"><tspan x="0" y="0">modularité.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-ic_puzz_zn67s248rabl-stroke" data-item-order="0">
+        <g id="ic_puzz_zn67s248rabl-stroke">
+          <path class="st8" d="M65.98,324.27v-.5c0-2.49-2.01-4.5-4.5-4.5s-4.5,2.01-4.5,4.5v.5h-5.48v6h.5c2.49,0,4.5,2.01,4.5,4.5s-2.01,4.5-4.5,4.5h-.5v6h18.5c1.1,0,2-.9,2-2v-19h-6.02ZM52,330.27h-.5v-6h-5.02v.5c0,2.49-2.01,4.5-4.5,4.5s-4.5-2.01-4.5-4.5v-.5h-6.48v6h-.5c-2.49,0-4.5,2.01-4.5,4.5s2.01,4.5,4.5,4.5h.5v4c0,1.1.9,2,2,2h18.5v-6h.5c2.49,0,4.5-2.01,4.5-4.5s-2.01-4.5-4.5-4.5ZM51.5,318.27h-.5c-2.49,0-4.5-2.01-4.5-4.5s2.01-4.5,4.5-4.5h.5v-6h-18.5c-1.1,0-2,.9-2,2v4h.5c2.49,0,4.5,2.01,4.5,4.5s-2.01,4.5-4.5,4.5h-.5v6h6.52v.5c0,2.49,2.01,4.5,4.5,4.5s4.5-2.01,4.5-4.5v-.5h5.02l-.04-6ZM65.98,303.27v.5c0,2.49-2.01,4.5-4.5,4.5s-4.5-2.01-4.5-4.5v-.5h-5.48v6h-.5c-2.49,0-4.5,2.01-4.5,4.5s2.01,4.5,4.5,4.5h.5v6h5.5v-.5c0-2.49,2.01-4.5,4.5-4.5s4.5,2.01,4.5,4.5v.5h6v-19c0-1.1-.9-2-2-2h-4.02Z"/>
+        </g>
+      </g>
+      <g id="g-root-tx_intgrati_3d8ma48rc3y-fill" data-item-order="0">
+        <g id="tx_intgrati_3d8ma48rc3y-fill-merged">
+          <g class="st3">
+            <text class="st2" transform="translate(99 288.3)"><tspan x="0" y="0">Intégration d&apos;objets </tspan></text>
+            <text class="st2" transform="translate(99 312.3)"><tspan x="0" y="0">existants pour en former </tspan></text>
+            <text class="st2" transform="translate(99 336.3)"><tspan x="0" y="0">de nouveaux.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-ic_2_v5haea48vh1o-stroke" data-item-order="0">
+        <g id="ic_2_v5haea48vh1o-stroke">
+          <path class="st7" d="M439.72,295.49c-2.72,0-4.92,2.2-4.92,4.92,0,1.64.66,3.2,1.83,4.36,1.16,1.15,2.74,1.79,4.37,1.78,4.22-.03,7.62-3.46,7.62-7.68,0-2.55-1.01-4.99-2.82-6.8s-4.25-2.81-6.8-2.8c-6.63,0-12,5.37-12,12,0,2,0,7,9,13,10.88,7.24,5,21,5,21M441,319.87c1.44-1.16,2.44-2.79,2.82-4.6M441.98,313.27c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2M442.46,329.41c2.21-.23,4.22-1.37,5.56-3.14M446.98,324.51c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>
+        </g>
+      </g>
+      <g id="g-root-tx_extensio_1umsd7m48vjep-fill" data-item-order="0">
+        <g id="tx_extensio_1umsd7m48vjep-fill-merged">
+          <g class="st3">
+            <text class="st5" transform="translate(489 288.3)"><tspan x="0" y="0">Extension des capacités </tspan></text>
+            <text class="st5" transform="translate(489 312.3)"><tspan x="0" y="0">d&apos;une classe initiale.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_seconcen_18gbboi48vimj-fill" data-item-order="0">
+        <g id="tx_seconcen_18gbboi48vimj-fill-merged">
+          <g class="st3">
+            <text class="st0" transform="translate(489 342.2)"><tspan x="0" y="0">Se concentre sur la spécialisation </tspan></text>
+            <text class="st0" transform="translate(489 360.2)"><tspan x="0" y="0">et la réutilisation.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_seconcen_1cy092a48rbwg-fill" data-item-order="0">
+        <g id="tx_seconcen_1cy092a48rbwg-fill-merged">
+          <g class="st3">
+            <text class="st1" transform="translate(99 366.2)"><tspan x="0" y="0">Se concentre sur la construction de </tspan></text>
+            <text class="st1" transform="translate(99 384.2)"><tspan x="0" y="0">fonctionnalités.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_celatabl_1lwrmqq48pxc4-fill" data-item-order="0">
+        <g id="tx_celatabl_1lwrmqq48pxc4-fill-merged">
+          <g class="st3">
+            <text class="st1" transform="translate(99 192.2)"><tspan x="0" y="0">Cela établit une relation &quot;a-un&quot;.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_uneclass_1uonsgy48u493-fill" data-item-order="0">
+        <g id="tx_uneclass_1uonsgy48u493-fill-merged">
+          <g class="st3">
+            <text class="st5" transform="translate(489 114.3)"><tspan x="0" y="0">Une classe étend les </tspan></text>
+            <text class="st5" transform="translate(489 138.3)"><tspan x="0" y="0">fonctionnalités d&apos;une autre </tspan></text>
+            <text class="st5" transform="translate(489 162.3)"><tspan x="0" y="0">classe.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_composit_dhy4f648pxj6-fill" data-item-order="0">
+        <g id="tx_composit_dhy4f648pxj6-fill-merged">
+          <g class="st3">
+            <text class="st6" transform="translate(112.99 21.39)"><tspan x="0" y="0">Composition</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_crerdesv_147d1ia48vhtu-fill" data-item-order="0">
+        <g id="tx_crerdesv_147d1ia48vhtu-fill-merged">
+          <g class="st3">
+            <text class="st5" transform="translate(489 456.3)"><tspan x="0" y="0">Créer des versions </tspan></text>
+            <text class="st5" transform="translate(489 480.3)"><tspan x="0" y="0">spécialisées de classes </tspan></text>
+            <text class="st5" transform="translate(489 504.3)"><tspan x="0" y="0">existantes.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-ic_3d_mbppeq48spaj-stroke" data-item-order="0">
+        <g id="ic_3d_mbppeq48spaj-stroke">
+          <path class="st8" d="M36.69,528.2l3.43-1.87M61.32,528.2l-3.43-1.87M49,506.47v4.84M45.01,499.95l3.99-2.17,3.99,2.17h0v4.35l-3.99,2.17-3.99-2.17v-4.35h0ZM28.78,528.24l3.99-2.17,3.99,2.17h0v4.35l-3.99,2.17-3.99-2.17v-4.35h0ZM61.24,528.24l3.99-2.17,3.99,2.17h0v4.35l-3.99,2.17-3.99-2.17v-4.35h0ZM40.12,516.13l8.88-4.83,8.88,4.83M49,530.64l-8.88-4.83v-9.68l8.88,4.83v9.68ZM49,530.64l8.88-4.83v-9.68l-8.88,4.83v9.68Z"/>
+        </g>
+      </g>
+      <g id="g-root-tx_crerdeso_1q8uaci48sqvc-fill" data-item-order="0">
+        <g id="tx_crerdeso_1q8uaci48sqvc-fill-merged">
+          <g class="st3">
+            <text class="st2" transform="translate(99 480.3)"><tspan x="0" y="0">Créer des objets </tspan></text>
+            <text class="st2" transform="translate(99 504.3)"><tspan x="0" y="0">complexes en combinant </tspan></text>
+            <text class="st2" transform="translate(99 528.3)"><tspan x="0" y="0">des objets plus simples.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-tx_favorise_4pfhlu48vimk-fill" data-item-order="0">
+        <g id="tx_favorise_4pfhlu48vimk-fill-merged">
+          <g class="st3">
+            <text class="st0" transform="translate(489 534.2)"><tspan x="0" y="0">Favorise la réutilisation du code et </tspan></text>
+            <text class="st0" transform="translate(489 552.2)"><tspan x="0" y="0">une hiérarchie claire.</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="g-root-ic_row_mbppeq48u3gj-stroke" data-item-order="0">
+        <g id="ic_row_mbppeq48u3gj-stroke">
+          <path class="st7" d="M417,148.27h18v-14h-18M441,119.27v7h20M441,163.27v-7h20M451,147.27l6-6-6-6M443,141.27h14"/>
+        </g>
+      </g>
+      <g id="g-root-ic_airf_1qf317m48vk0d-stroke" data-item-order="0">
+        <g id="ic_airf_1qf317m48vk0d-stroke">
+          <path class="st7" d="M421.9,481.77c2.76,0,5-2.24,5-5s-2.24-5-5-5-5,2.24-5,5,2.24,5,5,5ZM457.1,481.17c2.43,0,4.4-1.97,4.4-4.4s-1.97-4.4-4.4-4.4-4.4,1.97-4.4,4.4,1.97,4.4,4.4,4.4ZM457.1,496.17c2.43,0,4.4-1.97,4.4-4.4s-1.97-4.4-4.4-4.4-4.4,1.97-4.4,4.4,1.97,4.4,4.4,4.4ZM457.1,511.17c2.43,0,4.4-1.97,4.4-4.4s-1.97-4.4-4.4-4.4-4.4,1.97-4.4,4.4,1.97,4.4,4.4,4.4ZM427.5,511.77l-5.6-9-5.4,9h11ZM417.44,496.77h9v-9h-9v9ZM448.5,469.77h-5v45h5M432.5,492.27h11"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
