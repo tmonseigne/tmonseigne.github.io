@@ -3,8 +3,8 @@ layout: post
 title: (Très) courte introduction à Git
 date: 2022-04-05
 description: Mémo Git
-img: theme/Programmation-Theme.png
-tags: [Mémos, Explication]
+img: theme/Programmation-Outils-Theme.png
+tags: ["Programmation et outils"]
 author: Thibaut Monseigne
 ---
 

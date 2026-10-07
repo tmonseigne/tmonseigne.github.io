@@ -3,8 +3,8 @@ layout: post
 title: Mémo Arithmétique
 date: 2017-05-04
 description: Mémo Arithmétique
-img: theme/Memo-Theme.png
-tags: [Mémos]
+img: theme/Mathematiques-Theme.png
+tags: ["Mathématiques"]
 author: Thibaut Monseigne
 ---
 

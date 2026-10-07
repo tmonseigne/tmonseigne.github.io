@@ -3,8 +3,8 @@ layout: post
 title: Mémo Classification
 date: 2018-10-05
 description: Mémo Classification
-img: theme/Classif-Theme.png
-tags: [Mémos, Machine Learning]
+img: theme/Apprentissage-Automatique-Theme.png
+tags: ["Apprentissage automatique"]
 author: Thibaut Monseigne
 ---
 

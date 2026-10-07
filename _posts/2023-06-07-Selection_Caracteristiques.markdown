@@ -3,8 +3,8 @@ layout: post
 title: Sélection de caractéristiques
 date: 2023-06-07
 description: Sélection de caractéristiques
-img: theme/Classif-Theme.png
-tags: [Explication, Machine Learning]
+img: theme/Apprentissage-Automatique-Theme.png
+tags: ["Apprentissage automatique"]
 author: Thibaut Monseigne
 ---
 

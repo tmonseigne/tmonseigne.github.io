@@ -3,8 +3,8 @@ layout: post
 title: Décomposition du Signal
 date: 2023-05-17
 description: Décomposition du Signal (Transformée de fourier, ondelette, cepstre de fréquence mel)
-img: theme/Geo3D-Theme.png
-tags: [Explication]
+img: theme/Signal-Neurosciences-Theme.png
+tags: ["Signal et neurosciences"]
 author: Thibaut Monseigne
 ---
 

@@ -1,6 +1,8 @@
-import numpy as np
+"""Illustre une interpolation B-spline cubique, ses fonctions de base et leurs coefficients."""
+
 import matplotlib.pyplot as plt
-from scipy.interpolate import BSpline, splrep, splev
+import numpy as np
+from scipy.interpolate import BSpline, splev, splrep
 
 # 1. Signal brut
 x = np.arange(9)
@@ -17,70 +19,70 @@ coeffs = coeffs[:9]
 basis_x = np.linspace(0, 8, 400)
 basis_functions = []
 for i in range(len(coeffs)):
-    c = np.zeros_like(coeffs)
-    c[i] = 1
-    b = BSpline(knots, c, degree)
-    basis_functions.append(b(basis_x))
+	c = np.zeros_like(coeffs)
+	c[i] = 1
+	basis_spline = BSpline(knots, c, degree)
+	basis_functions.append(basis_spline(basis_x))
 
-# 4. Plot
+# 4. Graphique
 fig, axs = plt.subplots(3, 1, figsize=(8, 12), constrained_layout=True)
-# Plot 1 : signal brut
-axs[0].plot(x, fx, 'ko-', label='signal')
+# Graphique 1 : signal brut
+axs[0].plot(x, fx, "ko-", label="signal")
 axs[0].set_title("Signal brut (discret)")
 axs[0].set_xlabel("x")
 axs[0].set_ylabel("f(x)")
-axs[0].grid(True, linestyle='--', linewidth=0.75)
+axs[0].grid(True, linestyle="--", linewidth=0.75)
 
-# Plot 2 : fonctions de base seules
+# Graphique 2 : fonctions de base seules
 colors = plt.cm.tab10(np.linspace(0, 1, len(coeffs)))
 for i, b in enumerate(basis_functions):
-    axs[1].plot(basis_x, b, label=f"$B_{{{i}}}(x)$", color=colors[i])
+	axs[1].plot(basis_x, b, label=f"$B_{{{i}}}(x)$", color=colors[i])
 axs[1].set_title("Fonctions de base B-spline $B_i(x)$")
 axs[1].set_xlabel("x")
 axs[1].set_ylabel("$B_i(x)$")
-axs[1].legend(ncol=4, fontsize="small", loc='upper right')
-axs[1].grid(True, linestyle='--', linewidth=0.75)
+axs[1].legend(ncol=4, fontsize="small", loc="upper right")
+axs[1].grid(True, linestyle="--", linewidth=0.75)
 
-# Plot 3 : combinaison spline
-axs[2].plot(basis_x, spline_curve, 'b-', label="approximation spline")
-axs[2].plot(np.arange(len(coeffs)), coeffs, 'ro', label="coefficients $c_i$")
+# Graphique 3 : combinaison spline
+axs[2].plot(basis_x, spline_curve, "b-", label="approximation spline")
+axs[2].plot(np.arange(len(coeffs)), coeffs, "ro", label="coefficients $c_i$")
 axs[2].set_title("Approximation spline et coefficients")
 axs[2].set_xlabel("x")
 axs[2].set_ylabel("f(x)")
-axs[2].grid(True, linestyle='--', linewidth=0.75)
+axs[2].grid(True, linestyle="--", linewidth=0.75)
 axs[2].legend()
 plt.show()
 
-# 4. Plot
+# 4. Graphique
 fig, axs = plt.subplots(1, 2, figsize=(32, 9), constrained_layout=True)
 
-# Plot 2 : fonctions de base seules
+# Graphique 2 : fonctions de base seules
 colors = plt.cm.tab10(np.linspace(0, 1, len(coeffs)))
 for i, b in enumerate(basis_functions):
-    axs[0].plot(basis_x, b, label=f"$B_{{{i}}}(x)$", color=colors[i])
+	axs[0].plot(basis_x, b, label=f"$B_{{{i}}}(x)$", color=colors[i])
 axs[0].set_title("Fonctions de base B-spline $B_i(x)$")
 axs[0].set_xlabel("x")
 axs[0].set_ylabel("$B_i(x)$")
-axs[0].legend(ncol=4, fontsize="small", loc='upper right')
-axs[0].grid(True, linestyle='--', linewidth=0.75)
+axs[0].legend(ncol=4, fontsize="small", loc="upper right")
+axs[0].grid(True, linestyle="--", linewidth=0.75)
 
 for i, b in enumerate(basis_functions):
-    axs[1].plot(basis_x, coeffs[i]*b, label=f"$B_{{{i}}}(x)$", color=colors[i])
-axs[1].set_title("Fonctions de base B-spline pondérées $c_i \cdot B_i(x)$")
+	axs[1].plot(basis_x, coeffs[i] * b, label=f"$B_{{{i}}}(x)$", color=colors[i])
+axs[1].set_title(r"Fonctions de base B-spline pondérées $c_i \cdot B_i(x)$")
 axs[1].set_xlabel("x")
 axs[1].set_ylabel("$B_i(x)$")
-axs[1].legend(ncol=4, fontsize="small", loc='upper right')
-axs[1].grid(True, linestyle='--', linewidth=0.75)
+axs[1].legend(ncol=4, fontsize="small", loc="upper right")
+axs[1].grid(True, linestyle="--", linewidth=0.75)
 plt.show()
 
-# 4. Plot
+# 4. Graphique
 fig, axs = plt.subplots(1, 1, figsize=(16, 9), constrained_layout=True)
-axs.plot(x, fx, 'ko--', label='signal', linewidth=0.75)
-axs.plot(basis_x, spline_curve, '-', label="approximation spline")
-axs.plot(np.arange(len(coeffs)), coeffs, 'o:', label="coefficients $c_i$", linewidth=0.75)
+axs.plot(x, fx, "ko--", label="signal", linewidth=0.75)
+axs.plot(basis_x, spline_curve, "-", label="approximation spline")
+axs.plot(np.arange(len(coeffs)), coeffs, "o:", label="coefficients $c_i$", linewidth=0.75)
 axs.set_title("Approximation spline et coefficients")
 axs.set_xlabel("x")
 axs.set_ylabel("f(x)")
-axs.grid(True, linestyle='--', linewidth=0.75)
+axs.grid(True, linestyle="--", linewidth=0.75)
 axs.legend()
 plt.show()

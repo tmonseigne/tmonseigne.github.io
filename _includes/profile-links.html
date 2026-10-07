@@ -1,0 +1,13 @@
+{% comment %}Ordre commun des références : Site, GitHub, ORCID, LinkedIn.{% endcomment %}
+{% if site.website %}
+<li class="website"><a href="https://{{site.website}}" target="_blank" rel="noopener noreferrer" aria-label="Site personnel" title="Site personnel"><i class="fa fa-solid fa-globe" aria-hidden="true"></i>{% if include.with_labels %}<span>Site</span>{% endif %}</a></li>
+{% endif %}
+{% if site.github %}
+<li class="github"><a href="https://github.com/{{site.github}}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-brands fa-github" aria-hidden="true"></i>{% if include.with_labels %}<span>GitHub</span>{% endif %}</a></li>
+{% endif %}
+{% if site.orcid %}
+<li class="orcid"><a href="https://orcid.org/{{site.orcid}}" target="_blank" rel="noopener noreferrer" aria-label="ORCID" title="ORCID : {{site.orcid}}"><i class="fa fa-brands fa-orcid" aria-hidden="true"></i>{% if include.with_labels %}<span>ORCID</span>{% endif %}</a></li>
+{% endif %}
+{% if site.linkedin %}
+<li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-brands fa-linkedin-in" aria-hidden="true"></i>{% if include.with_labels %}<span>LinkedIn</span>{% endif %}</a></li>
+{% endif %}

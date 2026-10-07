@@ -1,33 +1,65 @@
-$(document).ready(function () {
+"use strict";
 
-	// Menu Settings
-	$('.menu-icon, .menu-icon-close').click(function (e) {
-		e.preventDefault();
-		$('.flex-container').toggleClass('active');
-	});
+/** Initialise la navigation et la recherche après le contenu de la page. */
+function initializeSite() {
+	const searchButton = document.querySelector(".search-icon");
+	const searchBox = document.querySelector(".search-box");
+	const searchInput = document.getElementById("search-input");
 
-	// Search Settings
-	$('.search-icon').on('click', function (e) {
-		e.preventDefault();
-		$('.search-box').toggleClass('search-active');
+	/** Ferme la recherche et synchronise son indication d’accessibilité. */
+	function closeSearch() {
+		searchBox?.classList.remove("search-active");
+		searchButton?.setAttribute("aria-expanded", "false");
+	}
 
-		if ($('.search-box').hasClass('search-active')) {
-			$('.search-icon-close').on('click', function (e) {
-				e.preventDefault();
-				$('.search-box').removeClass('search-active');
-			});
+	searchButton?.addEventListener("click", () => {
+		const opened = searchBox.classList.toggle("search-active");
+		searchButton.setAttribute("aria-expanded", String(opened));
+		if (opened) {
+			searchInput.focus();
 		}
 	});
+	document.querySelector(".search-icon-close")?.addEventListener("click", () => {
+		closeSearch();
+		searchButton.focus();
+	});
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Escape" && searchBox?.classList.contains("search-active") &&
+			!document.body.classList.contains("lb-disable-scrolling")) {
+			closeSearch();
+			searchButton?.focus();
+		}
+	});
+	document.querySelector(".search-form")?.addEventListener("submit", (event) => event.preventDefault());
 
-	// LevelBar
-	//$('.level-bar-inner').css('width', '0');
-//
-	//$(window).on('load', function () {
-	//	$('.level-bar-inner').each(function () {
-	//		var itemWidth = $(this).data('level');
-	//		$(this).animate({	width: itemWidth	}, 800);
-	//	});
-//
-	//});
+	if (searchInput) {
+		/** Échappe les métadonnées avant leur insertion dans les résultats HTML. */
+		function escapeHtml(value) {
+			const text = document.createElement("span");
+			text.textContent = value;
+			return text.innerHTML.replaceAll('"', "&quot;");
+		}
+		SimpleJekyllSearch({
+			searchInput,
+			resultsContainer: document.getElementById("results-container"),
+			json: searchInput.dataset.searchUrl,
+			searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+			templateMiddleware: (property, value) => escapeHtml(value),
+			noResultsText: "Aucun résultat",
+			fuzzy: false
+		});
+	}
 
-});
+	if (document.querySelector("[data-lightbox]")) {
+		lightbox.option({
+			wrapAround: true,
+			disableScrolling: true,
+			albumLabel: "Image %1 sur %2",
+			fadeDuration: 200,
+			imageFadeDuration: 200,
+			resizeDuration: 200
+		});
+	}
+}
+
+initializeSite();

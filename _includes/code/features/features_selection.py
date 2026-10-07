@@ -1,123 +1,173 @@
-""" Fichier définissant plusieurs fonctions basiques de sélection de features. """
+"""Illustre plusieurs méthodes de sélection de caractéristiques sur le jeu de données Iris."""
 
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import f_classif, SelectKBest
-from sklearn.feature_selection import RFE
-from sklearn.feature_selection import SelectFromModel
+from sklearn.feature_selection import RFE, SelectFromModel, SelectKBest, f_classif
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
-##################################################
-def remove_low_variance_features(X, threshold):
-    # Calcule la variance de chaque feature
-    variances = np.var(X, axis=0)
 
-    # Sélectionne les features avec une variance supérieure au seuil
-    selected_features = np.where(variances > threshold)[0]
+# --------------------------------------------------
+def remove_low_variance_features(features: np.ndarray, threshold: float) -> np.ndarray:
+	"""
+	Conserve les caractéristiques dont la variance dépasse le seuil.
 
-    # Retourne les données avec les features sélectionnées
-    return X[:, selected_features]
+	:param features: Matrice des échantillons en lignes et des caractéristiques en colonnes.
+	:param threshold: Seuil strict de variance pour conserver une caractéristique.
+	:return: Matrice des échantillons limitée aux caractéristiques sélectionnées.
+	"""
+	# Calcule la variance de chaque caractéristique
+	variances = np.var(features, axis=0)
 
-##################################################
-def remove_highly_correlated_features(X, threshold):
-    # Calcule la matrice de corrélation
-    corr_matrix = pd.DataFrame(X).corr().abs()
+	# Sélectionne les caractéristiques avec une variance supérieure au seuil
+	selected_features = np.where(variances > threshold)[0]
 
-    # Sélectionne les features non corrélées
-    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
-    correlated_features = [column for column in upper.columns if any(upper[column] > threshold)]
-    selected_features = [i for i in range(X.shape[1]) if i not in correlated_features]
+	# Retourne les données avec les caractéristiques sélectionnées
+	return features[:, selected_features]
 
-    # Retourne les données avec les features sélectionnées
-    return X[:, selected_features]
 
-##################################################
-def select_k_best_features(X, y, k):
-    # Applique le test ANOVA pour sélectionner les k meilleures features
-    selector = SelectKBest(score_func=f_classif, k=k)
-    X_new = selector.fit_transform(X, y)
+# --------------------------------------------------
+def remove_highly_correlated_features(features: np.ndarray, threshold: float) -> np.ndarray:
+	"""
+	Élimine les caractéristiques trop corrélées à une colonne précédente.
 
-    # Retourne les données avec les features sélectionnées
-    return X_new
+	:param features: Matrice des échantillons en lignes et des caractéristiques en colonnes.
+	:param threshold: Seuil strict de corrélation absolue entre zéro et un.
+	:return: Matrice des échantillons limitée aux caractéristiques sélectionnées.
+	"""
+	# Calcule la matrice de corrélation
+	corr_matrix = pd.DataFrame(features).corr().abs()
 
-##################################################
-def rfe_feature_selection(X, y, n_features):
-    # Initialise le modèle de classification
-    model = LogisticRegression()
+	# Sélectionne les caractéristiques non corrélées
+	upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
+	correlated_features = [column for column in range(features.shape[1]) if any(upper.iloc[:, column] > threshold)]
+	selected_features = [i for i in range(features.shape[1]) if i not in correlated_features]
 
-    # Sélectionne les n_features meilleures features à l'aide de RFE
-    rfe = RFE(estimator=model, n_features_to_select=n_features)
-    X_new = rfe.fit_transform(X, y)
+	# Retourne les données avec les caractéristiques sélectionnées
+	return features[:, selected_features]
 
-    # Retourne les données avec les features sélectionnées
-    return X_new
 
-##################################################
-def feature_importances(X, y, threshold):
-    # Appliquer un modèle basé sur des arbres (Random Forest)
-    model = RandomForestClassifier()
-    model.fit(X, y)
-    # Obtenir l'importance des features
-    importances = model.feature_importances_
+# --------------------------------------------------
+def select_k_best_features(features: np.ndarray, labels: np.ndarray, k: int) -> np.ndarray:
+	"""
+	Sélectionne les meilleures caractéristiques selon le test ANOVA.
 
-    # Sélectionne les features avec une importance supérieure au seuil
-    selected_features = np.where(importances > threshold)[0]
+	:param features: Matrice des échantillons en lignes et des caractéristiques en colonnes.
+	:param labels: Identifiant de classe pour chaque échantillon.
+	:param k: Nombre de caractéristiques à conserver.
+	:return: Matrice des échantillons limitée aux caractéristiques sélectionnées.
+	"""
+	# Applique le test ANOVA pour sélectionner les k meilleures caractéristiques
+	selector = SelectKBest(score_func=f_classif, k=k)
+	selected_features = selector.fit_transform(features, labels)
 
-    # Retourne les données avec les features sélectionnées
-    return X[:, selected_features]
+	# Retourne les données avec les caractéristiques sélectionnées
+	return selected_features
 
-##################################################
-def l1_regularization(X, y):
-    # Appliquer la régression logistique avec pénalité L1
-    model = LogisticRegression(penalty='l1', solver='liblinear')
-    model.fit(X, y)
 
-    # Sélectionner les features avec des coefficients non nuls
-    sfm = SelectFromModel(model, prefit=True)
+# --------------------------------------------------
+def rfe_feature_selection(features: np.ndarray, labels: np.ndarray, n_features: int) -> np.ndarray:
+	"""
+	Sélectionne les caractéristiques par élimination récursive avec une régression logistique.
 
-    # Retourne les données avec les features sélectionnées
-    return sfm.transform(X)
+	:param features: Matrice des échantillons en lignes et des caractéristiques en colonnes.
+	:param labels: Identifiant de classe pour chaque échantillon.
+	:param n_features: Nombre de caractéristiques à conserver.
+	:return: Matrice des échantillons limitée aux caractéristiques sélectionnées.
+	"""
+	# Initialise le modèle de classification
+	model = LogisticRegression()
 
-##################################################
+	# Sélectionne les n_caractéristiques meilleures caractéristiques à l'aide de RFE
+	rfe = RFE(estimator=model, n_features_to_select=n_features)
+	selected_features = rfe.fit_transform(features, labels)
+
+	# Retourne les données avec les caractéristiques sélectionnées
+	return selected_features
+
+
+# --------------------------------------------------
+def feature_importances(features: np.ndarray, labels: np.ndarray, threshold: float) -> np.ndarray:
+	"""
+	Sélectionne les caractéristiques importantes selon une forêt aléatoire.
+
+	:param features: Matrice des échantillons en lignes et des caractéristiques en colonnes.
+	:param labels: Identifiant de classe pour chaque échantillon.
+	:param threshold: Seuil strict d’importance pour conserver une caractéristique.
+	:return: Matrice des échantillons limitée aux caractéristiques sélectionnées.
+	"""
+	# Appliquer un modèle basé sur des arbres (Random Forest)
+	model = RandomForestClassifier()
+	model.fit(features, labels)
+	# Obtenir l'importance des caractéristiques
+	importances = model.feature_importances_
+
+	# Sélectionne les caractéristiques avec une importance supérieure au seuil
+	selected_features = np.where(importances > threshold)[0]
+
+	# Retourne les données avec les caractéristiques sélectionnées
+	return features[:, selected_features]
+
+
+# --------------------------------------------------
+def l1_regularization(features: np.ndarray, labels: np.ndarray) -> np.ndarray:
+	"""
+	Sélectionne les caractéristiques par une régression logistique pénalisée en norme L1.
+
+	:param features: Matrice des échantillons en lignes et des caractéristiques en colonnes.
+	:param labels: Identifiant de classe pour chaque échantillon.
+	:return: Matrice des échantillons limitée aux caractéristiques sélectionnées.
+	"""
+	# Appliquer la régression logistique avec pénalité L1
+	model = LogisticRegression(penalty="l1", solver="liblinear")
+	model.fit(features, labels)
+
+	# Sélectionner les caractéristiques avec des coefficients non nuls
+	sfm = SelectFromModel(model, prefit=True)
+
+	# Retourne les données avec les caractéristiques sélectionnées
+	return sfm.transform(features)
+
+
+# --------------------------------------------------
 # Chargement du jeu de données d'iris
 iris = load_iris()
-X = iris.data  # Features
-y = iris.target  # Variable cible
+features = iris.data  # Features
+labels = iris.target  # Variable cible
 
-# Standardisation des features
+# Standardisation des caractéristiques
 scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+scaled_features = scaler.fit_transform(features)
 
-print("Features d'origine :", X_scaled.shape[1])
+print("Caractéristiques d'origine :", scaled_features.shape[1])
 
 # 1. Variance
 threshold = 0.1  # Seuil de variance
-X_filtered_variance = remove_low_variance_features(X, threshold)
-print("Features après sélection de variance :", X_filtered_variance.shape[1])
+variance_features = remove_low_variance_features(features, threshold)
+print("Caractéristiques après sélection de variance :", variance_features.shape[1])
 
 # 2. Corrélation
 threshold = 0.7  # Seuil de corrélation
-X_filtered_correlation = remove_highly_correlated_features(X_scaled, threshold)
-print("Features après sélection de corrélation :", X_filtered_correlation.shape[1])
+uncorrelated_features = remove_highly_correlated_features(scaled_features, threshold)
+print("Caractéristiques après sélection de corrélation :", uncorrelated_features.shape[1])
 
 # 3. Univariate Selection (ANOVA)
-k = 2  # Nombre de features à sélectionner
-X_selected_features = select_k_best_features(X_scaled, y, k)
-print("Features sélectionnées par ANOVA :", X_selected_features.shape[1])
+k = 2  # Nombre de caractéristiques à sélectionner
+anova_features = select_k_best_features(scaled_features, labels, k)
+print("Caractéristiques sélectionnées par ANOVA :", anova_features.shape[1])
 
 # 4. Recursive Feature Elimination (RFE)
-n_features = 3  # Nombre de features à sélectionner
-X_rfe_features = rfe_feature_selection(X_scaled, y, n_features)
-print("Features sélectionnées par RFE :", X_rfe_features.shape[1])
+n_features = 3  # Nombre de caractéristiques à sélectionner
+rfe_features = rfe_feature_selection(scaled_features, labels, n_features)
+print("Caractéristiques sélectionnées par RFE :", rfe_features.shape[1])
 
 # 5. Feature Importance
-threshold = 0.05  # Seuil d'importance des features
-X_features_importance = feature_importances(X_scaled, y, threshold)
-print("Features sélectionnées par importance :", X_features_importance.shape[1])
+threshold = 0.05  # Seuil d'importance des caractéristiques
+important_features = feature_importances(scaled_features, labels, threshold)
+print("Caractéristiques sélectionnées par importance :", important_features.shape[1])
 
 # 6. L1 Regularization
-X_l1_regularization = l1_regularization(X_scaled, y)
-print("Features sélectionnées par L1 Regularization :", X_l1_regularization.shape[1])
+l1_features = l1_regularization(scaled_features, labels)
+print("Caractéristiques sélectionnées par L1 Regularization :", l1_features.shape[1])

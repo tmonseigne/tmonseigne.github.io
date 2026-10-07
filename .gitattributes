@@ -1,0 +1,9 @@
+# Préserve les fins de ligne des sources maison sous Windows.
+_includes/code/**/*.py text eol=lf
+_includes/*.html text eol=lf
+_layouts/*.html text eol=lf
+_pages/*.html text eol=lf
+index.html text eol=lf
+assets/css/*.css text eol=lf
+# La bibliothèque tierce conserve ses conventions existantes.
+assets/css/lightbox.css !text !eol

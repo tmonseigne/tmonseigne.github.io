@@ -3,8 +3,8 @@ layout: post
 title: Mémo Espace Vectoriel
 date: 2017-05-04
 description: Mémo Espace Vectoriel
-img: theme/Memo-Theme.png
-tags: [Mémos]
+img: theme/Mathematiques-Theme.png
+tags: ["Mathématiques"]
 author: Thibaut Monseigne
 ---
 

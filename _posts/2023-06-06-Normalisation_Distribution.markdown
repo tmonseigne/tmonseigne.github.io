@@ -3,8 +3,8 @@ layout: post
 title: Normalisation de la distribution d'un signal
 date: 2023-06-06
 description: Normalisation de la distribution d'un signal
-img: theme/Geo3D-Theme.png
-tags: [Explication, Machine Learning]
+img: theme/Signal-Neurosciences-Theme.png
+tags: ["Signal et neurosciences"]
 author: Thibaut Monseigne
 ---
 

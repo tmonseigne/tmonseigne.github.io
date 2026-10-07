@@ -3,8 +3,8 @@ layout: post
 title: Géométrie Riemannienne appliquée aux BCI
 date: 2018-10-08
 description: Géométrie Riemannienne appliquée aux BCI
-img: theme/Geo3D-Theme.png
-tags: [Explication]
+img: theme/Signal-Neurosciences-Theme.png
+tags: ["Signal et neurosciences"]
 author: Thibaut Monseigne
 ---
 

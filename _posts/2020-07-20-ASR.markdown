@@ -3,8 +3,8 @@ layout: post
 title: Artifact Subspace Reconstruction (ASR) - Reconstruction du Sous-espace d'Artéfact (RSA)
 date: 2020-07-20
 description: Artifact Subspace Reconstruction (ASR) - Reconstruction du Sous-espace d'Artéfact (RSA)
-img: theme/Geo3D-Theme.png
-tags: [Explication]
+img: theme/Signal-Neurosciences-Theme.png
+tags: ["Signal et neurosciences"]
 author: Thibaut Monseigne
 ---
 

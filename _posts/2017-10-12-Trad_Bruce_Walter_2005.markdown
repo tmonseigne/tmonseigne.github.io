@@ -4,7 +4,7 @@ title: Traduction &#58; Notes sur la BRDF de Ward
 date: 2017-05-04
 description: Traduction &#58; Notes sur la BRDF de Ward
 img: theme/Trad-Theme.png
-tags: [Traduction, Article, 3D]
+tags: ["Imagerie et 3D"]
 author: Thibaut Monseigne
 ---
 

@@ -1,180 +1,152 @@
-/*!
- * Metro UI 4 Jekyll v2.0.32 (http://a-g-f.github.com/metro-ui-jekyll/)
- * A port of Metro UI CSS made for Jekyll maintained by Alfred G. Fischer
- * Metro UI CSS Copyright 2012-2015 Sergey Pimenov
- * Metro UI 4 Jekyll Copyright 2014-2015 Alfred G. Fischer
- * Both licensed under http://opensource.org/licenses/MIT
- */
+"use strict";
 
-! function (a) {
-    a.widget("metro.carousel", {
-        version: "1.0.0",
-        options: {
-            auto: !0,
-            period: 2e3,
-            duration: 500,
-            effect: "slowdown",
-            direction: "left",
-            markers: {
-                show: !0,
-                type: "default",
-                position: "left"
-            },
-            controls: !0,
-            stop: !0
-        },
-        _slides: {},
-        _currentIndex: 0,
-        _interval: 0,
-        _outPosition: 0,
-        _create: function () {
-            var a = this,
-                b = this.options,
-                c = carousel = this.element,
-                d = carousel.find(".controls");
-            void 0 != c.data("auto") && (b.auto = c.data("auto")), void 0 != c.data("period") && (b.period = c.data("period")), void 0 != c.data("duration") && (b.duration = c.data("duration")), void 0 != c.data("effect") && (b.effect = c.data("effect")), void 0 != c.data("direction") && (b.direction = c.data("direction")), void 0 != c.data("width") && (b.width = c.data("width")), void 0 != c.data("height") && (b.height = c.data("height")), void 0 != c.data("stop") && (b.stop = c.data("stop")), void 0 != c.data("controls") && (b.controls = c.data("controls")), void 0 != c.data("markersShow") && (b.markers.show = c.data("markersShow")), void 0 != c.data("markersType") && (b.markers.type = c.data("markersType")), void 0 != c.data("markersPosition") && (b.markers.position = c.data("markersPosition")), carousel.css({
-                width: this.options.width,
-                height: this.options.height
-            }), this._slides = carousel.find(".slide"), this._slides.length <= 1 || (this.options.markers !== !1 && this.options.markers.show && this._slides.length > 1 && this._markers(a), this.options.controls && this._slides.length > 1 ? (carousel.find(".controls.left").on("click", function () {
-                a._slideTo("prior")
-            }), carousel.find(".controls.right").on("click", function () {
-                a._slideTo("next")
-            })) : d.hide(), this.options.stop && carousel.on("mouseenter", function () {
-                clearInterval(a._interval)
-            }).on("mouseleave", function () {
-                a.options.auto && (a._autoStart(), a.options.period)
-            }), this.options.auto && this._autoStart())
-        },
-        _autoStart: function () {
-            var a = this;
-            this._interval = setInterval(function () {
-                a._slideTo("left" == a.options.direction ? "next" : "prior")
-            }, this.options.period)
-        },
-        _slideTo: function (b) {
-            var c, d = this._slides[this._currentIndex];
-            switch (void 0 == b && (b = "next"), "prior" === b ? (this._currentIndex -= 1, this._currentIndex < 0 && (this._currentIndex = this._slides.length - 1), this._outPosition = this.element.width()) : "next" === b && (this._currentIndex += 1, this._currentIndex >= this._slides.length && (this._currentIndex = 0), this._outPosition = -this.element.width()), c = this._slides[this._currentIndex], this.options.effect) {
-                case "switch":
-                    this._effectSwitch(d, c);
-                    break;
-                case "slowdown":
-                    this._effectSlowdown(d, c, this.options.duration);
-                    break;
-                case "fade":
-                    this._effectFade(d, c, this.options.duration);
-                    break;
-                default:
-                    this._effectSlide(d, c, this.options.duration)
-            }
-            var e = this.element,
-                f = this;
-            e.find(".markers ul li a").each(function () {
-                var b = a(this).data("num");
-                b === f._currentIndex ? a(this).parent().addClass("active") : a(this).parent().removeClass("active")
-            })
-        },
-        _slideToSlide: function (a) {
-            var b = this._slides[this._currentIndex],
-                c = this._slides[a];
-            switch (this._outPosition = a > this._currentIndex ? -this.element.width() : this.element.width(), this.options.effect) {
-                case "switch":
-                    this._effectSwitch(b, c);
-                    break;
-                case "slowdown":
-                    this._effectSlowdown(b, c, this.options.duration);
-                    break;
-                case "fade":
-                    this._effectFade(b, c, this.options.duration);
-                    break;
-                default:
-                    this._effectSlide(b, c, this.options.duration)
-            }
-            this._currentIndex = a
-        },
-        _markers: function (b) {
-            var c, d, e, f;
-            for (c = a('<div class="markers ' + this.options.markers.type + '" />'), d = a("<ul></ul>").appendTo(c), f = 0; f < this._slides.length; f++) e = a('<li><a href="javascript:void(0)" data-num="' + f + '"></a></li>'), 0 === f && e.addClass("active"), e.appendTo(d);
-            switch (d.find("li a").removeClass("active").on("click", function () {
-                var c = a(this),
-                    e = c.data("num");
-                return d.find("li").removeClass("active"), c.parent().addClass("active"), e == b._currentIndex ? !0 : (b._slideToSlide(e), !0)
-            }), c.appendTo(this.element), this.options.markers.position) {
-                case "top-left":
-                    c.css({
-                        left: "10px",
-                        right: "auto",
-                        bottom: "auto",
-                        top: "10px"
-                    });
-                    break;
-                case "top-right":
-                    c.css({
-                        left: "auto",
-                        right: "10px",
-                        bottom: "auto",
-                        top: "0px"
-                    });
-                    break;
-                case "top-center":
-                    c.css({
-                        left: this.element.width() / 2 - c.width() / 2,
-                        right: "auto",
-                        bottom: "auto",
-                        top: "0px"
-                    });
-                    break;
-                case "bottom-left":
-                    c.css({
-                        left: "10px",
-                        right: "auto"
-                    });
-                    break;
-                case "bottom-right":
-                    c.css({
-                        right: "10px",
-                        left: "auto"
-                    });
-                    break;
-                case "bottom-center":
-                    c.css({
-                        left: this.element.width() / 2 - c.width() / 2,
-                        right: "auto"
-                    })
-            }
-        },
-        _effectSwitch: function (b, c) {
-            a(b).hide(), a(c).css({
-                left: 0
-            }).show()
-        },
-        _effectSlide: function (b, c, d) {
-            a(b).animate({
-                left: this._outPosition
-            }, d), a(c).css("left", -1 * this._outPosition).show().animate({
-                left: 0
-            }, d)
-        },
-        _effectSlowdown: function (b, c, d) {
-            var e = {
-                duration: d,
-                easing: "doubleSqrt"
-            };
-            a.easing.doubleSqrt = function (a) {
-                return Math.sqrt(Math.sqrt(a))
-            }, a(b).animate({
-                left: this._outPosition
-            }, e), a(c).css("left", -1 * this._outPosition).show().animate({
-                left: 0
-            }, e)
-        },
-        _effectFade: function (b, c, d) {
-            a(b).fadeOut(d), a(c).css({
-                left: 0
-            }).fadeIn(d)
-        },
-        _destroy: function () {},
-        _setOption: function (a, b) {
-            this._super("_setOption", a, b)
-        }
-    })
-}(jQuery);
+/** Initialise une galerie autonome : navigation, clavier et défilement automatique des médias. */
+function initializeCarousel(carousel) {
+	const slides = [...carousel.querySelectorAll(".slide")];
+	if (!slides.length) {
+		return;
+	}
+	const hasVideos = Boolean(carousel.querySelector("video"));
+	const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+	const SlideInterval = 2000;
+	const FadeDuration = 1000;
+	let transitionSequence = 0;
+	let index = 0;
+	let timer = null;
+	let visible = false;
+	let paused = false;
+	const title = carousel.closest("section")?.querySelector("h1")?.textContent || "Galerie";
+	carousel.setAttribute("role", "region");
+	carousel.setAttribute("aria-roledescription", "carrousel");
+	carousel.setAttribute("aria-label", title);
+	carousel.tabIndex = 0;
+
+	const markers = document.createElement("div");
+	markers.className = "markers";
+	const list = document.createElement("ul");
+	markers.append(list);
+	carousel.append(markers);
+	const buttons = slides.map((slide, number) => {
+		const item = document.createElement("li");
+		const button = document.createElement("button");
+		button.type = "button";
+		button.setAttribute("aria-label", `Afficher l’aperçu ${number + 1} sur ${slides.length}`);
+		button.addEventListener("click", () => showSlide(number));
+		item.append(button);
+		list.append(item);
+		slide.setAttribute("role", "group");
+		slide.setAttribute("aria-label", `Aperçu ${number + 1} sur ${slides.length}`);
+		return button;
+	});
+
+	/** Arrête le minuteur avant chaque modification de son état. */
+	function stopTimer() {
+		window.clearInterval(timer);
+		timer = null;
+	}
+
+	/** Ne défile pas pendant une interaction, hors écran ou sous une image agrandie. */
+	function refreshTimer() {
+		stopTimer();
+		const playing = [...slides[index].querySelectorAll("video")].some(video => !video.paused && !video.ended);
+		if (playing || paused || reducedMotion.matches || !visible || document.hidden ||
+			carousel.matches(":hover") || carousel.contains(document.activeElement) ||
+			document.body.classList.contains("lb-disable-scrolling")) {
+			return;
+		}
+		timer = window.setInterval(() => showSlide(index + 1), SlideInterval);
+	}
+
+	/** Superpose les deux images pendant le fondu, sans passage par un fond blanc. */
+	function showSlide(nextIndex) {
+		const previous = slides[index];
+		index = (nextIndex + slides.length) % slides.length;
+		const current = slides[index];
+		const sequence = ++transitionSequence;
+		const fading = previous !== current && !reducedMotion.matches;
+		if (previous !== current) {
+			previous.querySelectorAll("video").forEach(video => video.pause());
+		}
+		slides.forEach((slide, number) => {
+			// Une nouvelle commande interrompt proprement la transition précédente.
+			slide.getAnimations().forEach(animation => animation.cancel());
+			slide.hidden = slide !== current && !(fading && slide === previous);
+			slide.inert = slide !== current;
+			slide.setAttribute("aria-hidden", String(slide !== current));
+			slide.classList.toggle("is-current", slide === current);
+			buttons[number].setAttribute("aria-current", String(number === index));
+		});
+		if (fading) {
+			// L’image précédente reste opaque sous la nouvelle jusqu’à la fin du fondu.
+			const animation = current.animate([{opacity: 0}, {opacity: 1}], {
+				duration: FadeDuration,
+				easing: "ease-in-out"
+			});
+			animation.finished.then(() => {
+				if (sequence === transitionSequence) {
+					previous.hidden = true;
+				}
+			}).catch(() => {
+				// Une navigation rapide annule normalement l’animation en cours.
+			});
+		}
+		refreshTimer();
+	}
+
+	carousel.querySelector(".controls.left")?.addEventListener("click", () => showSlide(index - 1));
+	carousel.querySelector(".controls.right")?.addEventListener("click", () => showSlide(index + 1));
+	carousel.addEventListener("keydown", event => {
+		// Les commandes natives de la vidéo conservent leurs raccourcis.
+		if (event.target.closest("video") || event.altKey || event.ctrlKey || event.metaKey) {
+			return;
+		}
+		const positions = {ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: slides.length - 1};
+		if (Object.hasOwn(positions, event.key)) {
+			event.preventDefault();
+			showSlide(positions[event.key]);
+		}
+	});
+	if (slides.length > 1) {
+		const pauseButton = document.createElement("button");
+		pauseButton.type = "button";
+		pauseButton.className = "carousel-pause";
+		/** Présente explicitement l’action disponible au lecteur. */
+		function updatePauseButton() {
+			pauseButton.textContent = paused ? "▶" : "Ⅱ";
+			pauseButton.setAttribute("aria-label", paused ? "Reprendre le diaporama" : "Mettre le diaporama en pause");
+			pauseButton.setAttribute("aria-pressed", String(paused));
+		}
+		pauseButton.addEventListener("click", () => {
+			paused = !paused;
+			updatePauseButton();
+			refreshTimer();
+		});
+		updatePauseButton();
+		carousel.append(pauseButton);
+	}
+	// La lecture suspend le diaporama ; une pause ou une fin de vidéo le relance.
+	carousel.querySelectorAll("video").forEach(video => {
+		video.addEventListener("play", stopTimer);
+		video.addEventListener("pause", refreshTimer);
+		video.addEventListener("ended", refreshTimer);
+	});
+	carousel.classList.toggle("carousel-video", hasVideos);
+	carousel.addEventListener("mouseenter", stopTimer);
+	carousel.addEventListener("mouseleave", refreshTimer);
+	carousel.addEventListener("focusin", stopTimer);
+	carousel.addEventListener("focusout", () => window.setTimeout(refreshTimer, 0));
+	document.addEventListener("visibilitychange", refreshTimer);
+	reducedMotion.addEventListener("change", refreshTimer);
+	// Lightbox ajoute cette classe à l’ouverture et la retire à la fermeture.
+	new MutationObserver(refreshTimer).observe(document.body, {attributes: true, attributeFilter: ["class"]});
+	new IntersectionObserver(entries => {
+		visible = entries[0].isIntersecting;
+		if (!visible) {
+			slides[index].querySelectorAll("video").forEach(video => video.pause());
+		}
+		refreshTimer();
+	}, {threshold: 0.1}).observe(carousel);
+	showSlide(0);
+}
+
+document.querySelectorAll(".carousel").forEach(initializeCarousel);

@@ -1,33 +1,28 @@
 <header class="main-header">
 	<div class="wrapper">
 		<div class="header-flex">
-			<div class="menu-icon-container">
-				<span class="menu-icon">
-					<i class="fa fa-bars" aria-hidden="true"></i>
-				</span>
-			</div>
-			<nav class="main-nav">
-				<span class="menu-icon-close">
-					<i class="fa fa-times" aria-hidden="true"></i>
-				</span>
-				<ul>
-					<li><a href="{{site.baseurl}}/">Projets</a></li>
-					<li><a href="{{site.baseurl}}/tags">Catégories/Étiquettes</a></li>
-					<li><a href="{{site.baseurl}}/cv">Curriculum Vitæ</a></li>
-					<li><a href="{{site.baseurl}}/portfolio">Portfolio Graphique</a></li>
-					<li><a href="{{site.baseurl}}/publications">Publications</a></li>
-					<li><a href="{{site.baseurl}}/about">À propos</a></li>
-				</ul>
-			</nav>
-			<p class="logo">
-				<a href="{{site.baseurl}}/">{{ site.author }}</a>
-			</p>
+			<button type="button" class="theme-toggle" role="switch" aria-checked="false" aria-label="Mode sombre">
+				<i class="fa fa-solid fa-sun" aria-hidden="true"></i>
+				<i class="fa fa-solid fa-moon" aria-hidden="true"></i>
+				<span class="theme-toggle-thumb" aria-hidden="true"></span>
+			</button>
+			<p class="logo"><a href="{{ '/' | relative_url }}">{{ site.author | escape }}</a></p>
 			<div class="search-icon-container">
-				<span class="search-icon">
-					<a><i class="fa fa-search" aria-hidden="true"></i></a>
-				</span>
+				<button type="button" class="search-icon" aria-label="Rechercher" aria-controls="site-search" aria-expanded="false">
+					<i class="fa fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+				</button>
 			</div>
 		</div>
+		<nav id="main-navigation" class="main-nav" aria-label="Navigation principale">
+			<ul>
+				{% for item in site.data.navigation %}
+				{% assign current = false %}
+				{% if page.url == item.url %}{% assign current = true %}{% endif %}
+				{% if item.url == '/' and page.layout == 'post' %}{% assign current = true %}{% endif %}
+				{% if item.url == '/' and page.url contains '/page' %}{% assign current = true %}{% endif %}
+				<li><a href="{{ item.url | relative_url }}"{% if current %} aria-current="{% if page.url == item.url %}page{% else %}location{% endif %}"{% endif %}>{{ item.title | escape }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
 	</div>
 </header>
-<!-- End Header -->
