@@ -4,7 +4,7 @@ title: Synesthésie
 date: 2018-05-18
 description: Vulgarisation de la Synesthésie
 img: theme/Synesthesie-Theme.png
-tags: [Vulgarisation, Explication, Cerveau, Sens]
+tags: ["Signal et neurosciences"]
 author: Thibaut Monseigne
 ---
 

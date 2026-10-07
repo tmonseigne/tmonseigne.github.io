@@ -3,8 +3,8 @@ layout: post
 title: Ajustement 3D par Splines d'Images PSF expérimentales
 date: 2025-07-25
 description: Calcul du Z d'images ponctuelles par fit spline 3D à partir de PSF expérimentales
-img: theme/Geo3D-Theme.png
-tags: [Explication]
+img: theme/Imagerie-3D-Theme.png
+tags: ["Imagerie et 3D"]
 author: Thibaut Monseigne
 ---
 

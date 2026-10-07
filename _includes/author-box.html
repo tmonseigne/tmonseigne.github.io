@@ -1,48 +1,24 @@
-<section class="author-box">
-  <img src="{{site.baseurl}}/assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{site.author}}" class="author-img">
+{% comment %}Profil commun : complet sur À propos, compact dans le pied de page.{% endcomment %}
+<section class="author-box{% if include.full %} author-box--full about-container{% endif %}" aria-label="Présentation de {{ site.author | escape }}">
+  <div class="author-portrait">
+    {% unless include.full %}<a href="{{ '/about/' | relative_url }}" aria-label="À propos de {{ site.author | escape }}">{% endunless %}
+    <img src="{{ '/assets/img/' | append: site.author-pic | relative_url }}" alt="{{ site.author | escape }}" class="author-img" width="120" height="120" loading="lazy">
+    {% unless include.full %}</a>{% endunless %}
+  </div>
   <div class="author-desc">
-    <h2>{{site.author}}</h2>
-    <p>{{site.about-author}}</p>
-    <ul>
-     {% if site.email %}
-        <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
+    {% if include.full %}<h1>{{ site.author | escape }}</h1>{% else %}<h2>{{ site.author | escape }}</h2>{% endif %}
+    <p class="author-subtitle">{{ site.data.author.title | escape }}</p>
+    <ul class="contact-list" aria-label="Coordonnées et profils">
+      {% if site.email %}
+      <li class="email"><a href="mailto:{{ site.email }}" aria-label="Envoyer un courriel" title="Envoyer un courriel"><i class="fa fa-regular fa-envelope" aria-hidden="true"></i></a></li>
       {% endif %}
-
       {% if site.phone %}
-        <li class="phone"><a href="tel:{{site.phone}}"><i class="fa fa-phone"></i></a></li>
+      <li class="phone"><a href="tel:{{ site.phone }}" aria-label="Téléphone" title="Téléphone"><i class="fa fa-solid fa-phone" aria-hidden="true"></i></a></li>
       {% endif %}
-
-      {% if site.website %}
-        <li class="website"><a href="http://{{site.website}}" target="_blank"><i class="fa fa-globe"></i></a></li>
-      {% endif %}
-
-      {% if site.viadeo %}
-        <li class="viadeo"><a href="http://www.viadeo.com/p/{{site.viadeo}}" target="_blank"><i class="fa fa-viadeo"></i></a></li>
-      {% endif %}
-
-      {% if site.linkedin %}
-        <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-      {% endif %}
-
-      {% if site.github %}
-        <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
-      {% endif %}
-
-      {% if site.twitter %}
-        <li class="twitter"><a href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      {% endif %}
-
-      {% if site.facebook %}
-        <li class="facebook"><a href="https://facebook.com/{{site.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-      {% endif %}
-
-      {% if site.instagram %}
-        <li class="instagram"><a href="https://instagram.com/{{site.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
-      {% endif %}
-
-      {% if site.pinterest %}
-        <li class="pinterest"><a href="https://pinterest.com/{{site.pinterest}}" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-      {% endif %}
+      {% include profile-links.html %}
     </ul>
   </div>
+  {% if include.full and site.data.author.biography %}
+  <div class="author-bio"><p>{{ site.data.author.biography | escape }}</p></div>
+  {% endif %}
 </section>

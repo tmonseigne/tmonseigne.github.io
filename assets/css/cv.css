@@ -13,7 +13,7 @@
 	display: flex;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #8f98a3;
+	border-bottom: 1px solid var(--muted);
 	margin-bottom: -40px;
 }
 
@@ -45,13 +45,15 @@
 }
 
 .cv .cv-author li a {
+	display: inline-flex;
+	align-items: center;
 	overflow-wrap: anywhere;
 }
 /* ======= Title ======= */
 .cv .cv-title {
 	text-transform: uppercase;
 	font-size: 24px;
-	color: #2d7788;
+	color: var(--teal);
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 20px;
@@ -71,7 +73,7 @@
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
-	background: #2d7788;
+	background: var(--badge);
 	text-align: center;
 	padding-top: 8px;
 	font-size: 16px;
@@ -82,7 +84,7 @@
 .cv {
 	margin-bottom: 60px;
 	font-size: 12px;
-	color: #222222;
+	color: var(--text);
 }
 
 .cv .xp-item {
@@ -110,11 +112,11 @@
 	position: absolute;
 	right: 0;
 	top: 0;
-	color: #8f98a3;
+	color: var(--muted);
 }
 
 .cv .xp-company, .school {
-	color: #8f98a3;
+	color: var(--muted);
 }
 
 .cv .xp-details{
@@ -139,7 +141,7 @@
 }
 .cv .skill-group .level-bar {
 	height: 12px;
-	background: #D0D0D0;
+	background: var(--border);
 }
 .cv .skill-group .level-bar-inner {
 	height: 12px;

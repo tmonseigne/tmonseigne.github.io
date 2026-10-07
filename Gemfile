@@ -2,9 +2,12 @@
 
 source "https://rubygems.org"
 
-# gem "rails"
-gem "jekyll"
+gem "jekyll", "~> 4.4"
 gem "jekyll-paginate"
 gem "jekyll-sitemap"
-gem "wdm"
+# Surveillance native des fichiers sous Windows uniquement.
+gem "wdm", "~> 0.2.0", platforms: :windows
 gem "webrick"
+# Dépendances explicites pour les versions récentes de Ruby.
+gem "csv"
+gem "base64"

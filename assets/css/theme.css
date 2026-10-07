@@ -1,0 +1,93 @@
+/* Palette commune : le mode clair conserve les couleurs du site. */
+:root {
+    color-scheme: light;
+    --background: #fff;
+    --surface: #fff;
+    --text: #3e3e40;
+    --heading: #311e3e;
+    --accent: #87314e;
+    --muted: #666;
+    --border: #d9d9d9;
+    --footer: #efefef;
+    --soft: #f5f5f5;
+    --teal: #2d7788;
+    --badge: #2d7788;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --background: #17191f;
+    --surface: #20232b;
+    --text: #dedfe5;
+    --heading: #f0e9f5;
+    --accent: #ef9db9;
+    --muted: #afb3c0;
+    --border: #444958;
+    --footer: #20232b;
+    --soft: #2a2e38;
+    --teal: #80cbd8;
+    --badge: #315f6b;
+}
+
+/* Le bouton occupe la case libre à gauche, sans décentrer le nom. */
+.theme-toggle {
+    display: none;
+    grid-column: 1;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 52px;
+    height: 28px;
+    padding: 0 7px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--soft);
+    color: var(--heading);
+    cursor: pointer;
+    font-size: 12px;
+}
+.theme-ready .theme-toggle { display: inline-flex; }
+.theme-toggle-thumb {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--surface);
+    box-shadow: 0 1px 4px #0004;
+    transition: transform .2s ease;
+}
+.theme-toggle .fa { position: relative; z-index: 1; }
+[data-theme="dark"] .theme-toggle-thumb { transform: translateX(24px); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* Éléments dont la palette est propre au code ou aux anciennes tables HTML. */
+[data-theme="dark"] .search-form .search,
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background-color: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+}
+[data-theme="dark"] tr[bgcolor] { background-color: var(--soft); }
+[data-theme="dark"] .highlighter-rouge { color: #e9a79b; }
+[data-theme="dark"] .highlight { background: #252b36; color: var(--text); }
+[data-theme="dark"] .highlight :is(.o, .ow, .nv, .vc, .vg, .vi, .w) { color: #dedfe5; }
+[data-theme="dark"] .highlight :is(.c, .cm, .c1, .cs) { color: #91c99c; }
+[data-theme="dark"] .highlight :is(.k, .kc, .kd, .kn, .kp, .kr, .kt, .gp) { color: #bfa9ef; }
+[data-theme="dark"] .highlight :is(.m, .mf, .mh, .mi, .mo, .il) { color: #efb57b; }
+[data-theme="dark"] .highlight :is(.s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss) { color: #f1a59f; }
+[data-theme="dark"] .highlight :is(.na, .nb, .nc, .no, .nd, .ne, .nf, .nl, .nn, .nt, .bp, .cp) { color: #82cdda; }
+[data-theme="dark"] .highlight :is(.gh, .gu, .gt) { color: #91c99c; }
+[data-theme="dark"] .highlight :is(.err, .gd, .gr) { background: #542e38; color: #ffc1bd; }
+[data-theme="dark"] .highlight .gi { background: #264337; color: #b9ebc8; }
+[data-theme="dark"] .highlight .hll { background: #494531; }
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-toggle-thumb { transition: none; }
+}
+@media print {
+    .theme-toggle { display: none !important; }
+}

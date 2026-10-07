@@ -1,20 +1,13 @@
 ---
 layout: home-page
-title: Tags
+title: Catégories et étiquettes
 permalink: /tags/
 ---
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 
 <section class="blog-tags">
-  <h1>Catégories/Étiquettes des projets</h1>
-  <ul class="tags">
-<!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <li ><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
-  {% endunless %}{% endfor %}
-  </ul>
+  <h1>Catégories des articles</h1>
 <!--cycles through tag list and creates subheader for each tag name...-->
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
@@ -23,10 +16,8 @@ permalink: /tags/
     {% for post in site.tags[this_word] %}{% if post.title != null %}
     <div class="tag-list">
         <span><a href="{{ post.url }}">{{ post.title }}</a></span>
-        <small><span>| {{ post.date | date_to_string }}</span></small>
+        <small><span>| <time datetime="{{ post.date | date_to_xmlschema }}">{% include date-fr.html date=post.date %}</time></span></small>
     </div>
     {% endif %}{% endfor %}
   {% endunless %}{% endfor %}
 </section>
-
-{% include author-box.html %}

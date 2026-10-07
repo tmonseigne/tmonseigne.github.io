@@ -3,8 +3,8 @@ layout: post
 title: Mémo Matrices
 date: 2018-10-04
 description: Mémo Matrices
-img: theme/Memo-Theme.png
-tags: [Mémos]
+img: theme/Mathematiques-Theme.png
+tags: ["Mathématiques"]
 author: Thibaut Monseigne
 ---
 

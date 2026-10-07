@@ -4,7 +4,7 @@ title: Projet Image Resizer
 date: 2017-12-10
 description: 
 img: theme/TI-Theme.jpg
-tags: [Projet Scolaire, Réalité augmentée]
+tags: ["Imagerie et 3D"]
 author: Thibaut Monseigne
 ---
 

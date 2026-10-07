@@ -4,10 +4,11 @@ title: Portfolio Graphique
 permalink: /portfolio/
 ---
 
-<div class="small-wrapper">
+<div class="portfolio-page">
+	<div class="portfolio-grid">
 
-	<h1>Architecture (Intérieur)</h1>
-	<center>
+	<section class="portfolio-gallery">
+		<h1>Architecture (Intérieur)</h1>
 		<div class="carousel" id="CarouselInterieur">
 			<div class="slide">
 				<a href="/assets/img/3Dart/interieur/Chambre_01.jpg" data-lightbox="Interieur" data-title="Conception d'une chambre de bébé évolutive 01">
@@ -117,13 +118,13 @@ permalink: /portfolio/
 					<img src="/assets/img/3Dart/interieur/SDB_05.jpg" alt="Conception d'une salle de bain chaude" />
 				</a>
 			</div>
-			<a class="controls left"></a>
-			<a class="controls right"></a>
+			<button type="button" class="controls left" aria-label="Aperçu précédent"></button>
+			<button type="button" class="controls right" aria-label="Aperçu suivant"></button>
 		</div>
-	</center>
+	</section>
 
-	<h1>Architecture (Extérieur)</h1>
-	<center>
+	<section class="portfolio-gallery">
+		<h1>Architecture (Extérieur)</h1>
 		<div class="carousel" id="CarouselExterieur">
 			<div class="slide">
 				<a href="/assets/img/3Dart/exterieur/Maison_01.jpg" data-lightbox="Exterieur" data-title="Prototype de maison familiale">
@@ -155,13 +156,13 @@ permalink: /portfolio/
 					<img src="/assets/img/3Dart/exterieur/Terrasse.jpg" alt="Conception d'une extension de maison en ville avec terrasse" />
 				</a>
 			</div>
-			<a class="controls left"></a>
-			<a class="controls right"></a>
+			<button type="button" class="controls left" aria-label="Aperçu précédent"></button>
+			<button type="button" class="controls right" aria-label="Aperçu suivant"></button>
 		</div>
-	</center>
+	</section>
 
-	<h1>Mobilier</h1>
-	<center>
+	<section class="portfolio-gallery">
+		<h1>Mobilier</h1>
 		<div class="carousel" id="CarouselMobilier">
 			<div class="slide">
 				<a href="/assets/img/3Dart/mobilier/Bureau.jpg" data-lightbox="Mobilier" data-title="Conception d'un bureau ergonomique pour un magasin d'orthopédie">
@@ -208,14 +209,14 @@ permalink: /portfolio/
 					<img src="/assets/img/3Dart/mobilier/Meuble_SDB_03.jpg" alt="Conception d'un meuble de salle de bain zen" />
 				</a>
 			</div>
-			<a class="controls left"></a>
-			<a class="controls right"></a>
+			<button type="button" class="controls left" aria-label="Aperçu précédent"></button>
+			<button type="button" class="controls right" aria-label="Aperçu suivant"></button>
 		</div>
-	</center>
+	</section>
 
 
-	<h1>Divers</h1>
-	<center>
+	<section class="portfolio-gallery">
+		<h1>Divers</h1>
 		<div class="carousel" id="CarouselDivers">
 			<div class="slide">
 				<a href="/assets/img/3Dart/divers/Angels.jpg" data-lightbox="Divers" data-title="Angels">
@@ -257,13 +258,13 @@ permalink: /portfolio/
 					<img src="/assets/img/3Dart/divers/Moto.jpg" alt="Moto" />
 				</a>
 			</div>
-			<a class="controls left"></a>
-			<a class="controls right"></a>
+			<button type="button" class="controls left" aria-label="Aperçu précédent"></button>
+			<button type="button" class="controls right" aria-label="Aperçu suivant"></button>
 		</div>
-	</center>
+	</section>
 
-	<h1>Animations</h1>
-	<center>
+	<section class="portfolio-gallery">
+		<h1>Animations</h1>
 		<div class="carousel" id="CarouselVideo">
 			<div class="slide">
 				<video src="/assets/img/3Dart/anim/Faren_Sombrepierre.webm" controls loop>
@@ -295,76 +296,12 @@ permalink: /portfolio/
 					Votre navigateur ne gère pas l'élément <code>video</code>.
 				</video>
 			</div>
-			<a class="controls left"></a>
-			<a class="controls right"></a>
+			<button type="button" class="controls left" aria-label="Aperçu précédent"></button>
+			<button type="button" class="controls right" aria-label="Aperçu suivant"></button>
 		</div>
-	</center>
+	</section>
 
-	<script>
-		$(function () {
-			$("#CarouselInterieur").carousel({
-				effect: 'fade',
-				markers: {
-					show: true,
-					type: 'cycle',
-					position: 'bottom-center'
-				}
-			});
-		})
-	</script>
+	</div>
 
-	<script>
-		$(function () {
-			$("#CarouselExterieur").carousel({
-				effect: 'fade',
-				markers: {
-					show: true,
-					type: 'cycle',
-					position: 'bottom-center'
-				}
-			});
-		})
-	</script>
-
-	<script>
-		$(function () {
-			$("#CarouselMobilier").carousel({
-				effect: 'fade',
-				markers: {
-					show: true,
-					type: 'cycle',
-					position: 'bottom-center'
-				}
-			});
-		})
-	</script>
-
-	<script>
-		$(function () {
-			$("#CarouselDivers").carousel({
-				effect: 'fade',
-				markers: {
-					show: true,
-					type: 'cycle',
-					position: 'bottom-center'
-				}
-			});
-		})
-	</script>
-
-	<script>
-		$(function () {
-			$("#CarouselVideo").carousel({
-				effect: 'fade',
-				markers: {
-					show: true,
-					type: 'cycle',
-					position: 'top-center'
-				}
-			});
-		})
-	</script>
-
-	{% include author-box.html %}
 </div>
-<!-- End Small Wrapper -->
+<!-- Fin du portfolio -->

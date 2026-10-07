@@ -5,41 +5,37 @@ description: > # this means to ignore newlines until "baseurl:"
   Site de Thibaut Monseigne.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tmonseigne.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author: Thibaut Monseigne
 author-pic: Ange.jpg
-about-author: Ingénieur Recherche et Développement en Interface Cerveau-Machine.
 
 # Contact links
-email: monseignethibaut@gmail.com
 website: tmonseigne.github.io
+orcid: 0000-0003-3516-8631
 linkedin: thibaut-monseigne
 github: tmonseigne # Add your Github handle
-bitbucket: Rack07 # Add your Github handle
 
 # Paginate
-paginate: 6
+paginate: 8
 paginate_path: /page:num/
-
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
 
 # Build settings
 markdown: kramdown
-
-#toc: # Marche pas
-#  min_level: 1
-#  max_level: 3
 
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
 include: [_pages]
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+# Les sources de travail restent dans le dépôt mais ne sont pas publiées.
+exclude:
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - yarn.lock
+  - README.md
+  - LICENSE
+  - proto
+  - "**/*.psd"

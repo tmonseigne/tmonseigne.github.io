@@ -4,7 +4,7 @@ title: Projet ReactCamera
 date: 2017-12-11
 description: 
 img: theme/RVRA-Theme.jpg
-tags: [Projet Scolaire, Réalité augmentée]
+tags: ["Imagerie et 3D"]
 author: Thibaut Monseigne
 ---
 

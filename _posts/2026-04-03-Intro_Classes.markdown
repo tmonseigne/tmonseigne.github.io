@@ -3,8 +3,8 @@ layout: post
 title: (Très) courte introduction aux classes
 date: 2026-04-03
 description: Comprendre les classes en Python et la programmation orientée objet
-img: theme/Programmation-Theme.png
-tags: [Explication]
+img: theme/Programmation-Outils-Theme.png
+tags: ["Programmation et outils"]
 author: Thibaut Monseigne
 ---
 

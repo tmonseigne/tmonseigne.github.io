@@ -3,8 +3,8 @@ layout: post
 title: Qu'est-ce qui Détermine la Vitesse d'un Programme ?
 date: 2025-07-15
 description: la vitesse d'exécutiond'un programme
-img: theme/Programmation-Theme.png
-tags: [Explication]
+img: theme/Programmation-Outils-Theme.png
+tags: ["Programmation et outils"]
 author: Thibaut Monseigne
 ---
 

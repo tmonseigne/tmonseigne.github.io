@@ -1,14 +1,14 @@
-<div class="search-box">
+<div id="site-search" class="search-box" role="search">
   <div class="wrapper">
     <div class="search-grid">
       <form class="search-form">
         <div id="search-container">
-          <input type="text" id="search-input" class="search" placeholder="Search">
+          <input type="text" id="search-input" class="search" placeholder="Rechercher" aria-label="Rechercher dans les articles" data-search-url="{{ '/search.json' | relative_url }}">
         </div>
       </form>
       <ul id="results-container" class="results-search"></ul>
       <div class="icon-close-container">
-        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <button type="button" class="search-icon-close" aria-label="Fermer la recherche"><i class="fa fa-solid fa-xmark" aria-hidden="true"></i></button>
       </div>
     </div>
   </div>

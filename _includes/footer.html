@@ -1,5 +1,6 @@
 <footer class="main-footer">
-  <div class="copyright">
-    <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+  <div class="wrapper">
+    {% include author-box.html %}
+    <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author | escape }}</p>
   </div>
-</footer> <!-- End Footer -->
+</footer>

@@ -1,0 +1,4 @@
+{%- comment -%}Date lisible en français, indépendante de la langue du système.{%- endcomment -%}
+{%- assign months = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," -%}
+{%- assign month_index = include.date | date: "%m" | minus: 1 -%}
+{{- include.date | date: "%-d" }} {{ months[month_index] }} {{ include.date | date: "%Y" -}}

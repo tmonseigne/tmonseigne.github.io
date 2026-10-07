@@ -5,7 +5,7 @@
 
 .ceda-error {
 	padding: 10px 14px;
-	border-left: 3px solid #87314e;
-	background: #f7f5f8;
-	color: #87314e;
+	border-left: 3px solid var(--accent);
+	background: var(--soft);
+	color: var(--accent);
 }

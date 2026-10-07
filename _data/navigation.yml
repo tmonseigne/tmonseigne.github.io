@@ -1,0 +1,13 @@
+# Rubriques visibles dans l’en-tête, dans leur ordre d’affichage.
+- title: Articles
+  url: /
+- title: Catégories
+  url: /tags/
+- title: CV
+  url: /cv/
+- title: Portfolio
+  url: /portfolio/
+- title: Publications
+  url: /publications/
+- title: À propos
+  url: /about/
