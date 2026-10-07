@@ -1,5 +1,11 @@
 
 /* ======= Base ======= */
+.cv-wrapper {
+	width: 830px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
 .cv .cv-author {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -12,27 +18,35 @@
 }
 
 .cv .cv-author ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 12px 24px;
+	width: 100%;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 .cv .cv-author ul li span {
-    display: inline-block;  
-    vertical-align: middle;     
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.cv .cv-author li{
+.cv .cv-author li {
+	display: flex;
+	align-items: center;
 	min-height: 35px;
-	float:left;
-	display:inline;
+	min-width: 0;
 }
-#double li	{ width:50%;}
-/*
-#triple li	{ width:33.333%; }
-#quad li	{ width:25%; }
-#six li		{ width:16.666%; }
-*/
+
+.cv .cv-author li .fa {
+	flex-shrink: 0;
+}
+
+.cv .cv-author li a {
+	overflow-wrap: anywhere;
+}
 /* ======= Title ======= */
 .cv .cv-title {
 	text-transform: uppercase;
